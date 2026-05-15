@@ -1,0 +1,125 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Priorities | Stacy R. Hall</title><link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"><style>* { box-sizing: border-box; margin: 0; padding: 0; }
+:root { --sp:#533afd; --sph:#4434d4; --sn:#061b31; --ss:#64748b; --sl:#273951; --sb:#e5edf5; --sw:#ffffff; --sd:#1c1e54; --bdr:1px solid #e5edf5; --ssp:rgba(50,50,93,0.25) 0px 30px 45px -30px,rgba(0,0,0,0.1) 0px 18px 36px -18px; --ssa:rgba(23,23,23,0.08) 0px 15px 35px 0px; }
+body { font-family:'Source Sans 3',-apple-system,system-ui,sans-serif; color:var(--sn); background:var(--sw); -webkit-font-smoothing:antialiased; line-height:1.4; font-weight:300; }
+a { color:var(--sp); text-decoration:none; } a:hover { color:var(--sph); }
+nav { position:sticky; top:0; background:rgba(255,255,255,0.95); backdrop-filter:blur(12px); border-bottom:var(--bdr); z-index:100; padding:0 48px; }
+.ni { max-width:1080px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; height:72px; }
+.logo { font-size:20px; font-weight:300; color:var(--sn); text-decoration:none; letter-spacing:-0.3px; } .logo strong { font-weight:600; }
+.nl { display:flex; gap:40px; list-style:none; } .nl a { font-size:14px; font-weight:400; color:var(--sn); text-decoration:none; transition:color 0.15s; letter-spacing:0.2px; } .nl a:hover { color:var(--sp); }
+.nc { background:var(--sp); color:white !important; padding:10px 20px; border-radius:4px; font-weight:500; transition:background 0.15s; } .nc:hover { background:var(--sph); }
+footer { background:var(--sn); color:white; padding:56px 48px; }
+.fc { max-width:600px; margin:0 auto; text-align:center; }
+.ft { display:flex; gap:24px; justify-content:center; margin:20px 0; flex-wrap:wrap; } .ft a { font-size:14px; color:rgba(255,255,255,0.6); }
+.fs { display:flex; gap:16px; justify-content:center; margin:12px 0; } .fs a { font-size:13px; color:rgba(255,255,255,0.4); }
+.fcp { font-size:12px; color:rgba(255,255,255,0.3); margin-top:10px; }
+.ph { background:linear-gradient(180deg,#f8f9fc 0%,#fff 100%); border-bottom:var(--bdr); padding:80px 48px 60px; text-align:center; }
+.ph h1 { font-size:38px; font-weight:300; letter-spacing:-1px; color:var(--sn); margin-bottom:12px; } .ph h1 strong { font-weight:600; }
+.ph p { font-size:16px; color:var(--ss); max-width:500px; margin:0 auto; }
+.sec { padding:72px 48px; }
+.secw { background:#f8f9fc; }
+.sech { background:var(--sn); color:white; }
+.secdp { background:linear-gradient(135deg,var(--sp) 0%,var(--sd) 100%); color:white; }
+.cn { max-width:1000px; margin:0 auto; }
+.st { font-size:28px; font-weight:300; letter-spacing:-0.5px; color:var(--sn); margin-bottom:28px; } .st strong { font-weight:600; }
+.cd { background:var(--sw); border:var(--bdr); border-radius:8px; padding:28px; box-shadow:var(--ssa); }
+.badge { display:inline-flex; align-items:center; gap:8px; color:var(--ss); font-size:13px; font-weight:400; letter-spacing:0.3px; margin-bottom:16px; } .badge svg { width:16px; height:16px; color:var(--sp); }
+.cdn { background:var(--sw); border:var(--bdr); border-radius:8px; padding:24px 32px; margin-top:32px; display:inline-block; box-shadow:var(--ssa); }
+.cdnl { font-size:11px; font-weight:500; color:var(--ss); text-transform:uppercase; letter-spacing:1px; margin-bottom:14px; }
+.cdnns { display:flex; gap:20px; align-items:center; }
+.cdu { text-align:center; }
+.cdnh { font-size:28px; font-weight:600; color:var(--sn); display:block; letter-spacing:-0.5px; }
+.cdu span { font-size:11px; color:var(--ss); text-transform:uppercase; letter-spacing:0.5px; }
+.cdns { font-size:28px; font-weight:300; color:var(--ss); }
+.g3 { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+.g2 { display:grid; grid-template-columns:repeat(2,1fr); gap:28px; }
+.btn1 { background:var(--sp); color:white; padding:13px 26px; border-radius:4px; font-size:15px; font-weight:500; text-decoration:none; transition:all 0.2s; display:inline-block; box-shadow:var(--ssa); } .btn1:hover { background:var(--sph); box-shadow:var(--ssp); transform:translateY(-1px); color:white; }
+.btn2 { background:transparent; color:var(--sp); padding:13px 26px; border-radius:4px; font-size:15px; font-weight:500; text-decoration:none; transition:all 0.2s; border:1px solid rgba(83,58,253,0.3); display:inline-block; } .btn2:hover { background:rgba(83,58,253,0.05); border-color:var(--sp); }
+.ic { width:52px; height:52px; background:rgba(83,58,253,0.08); border-radius:50%; display:flex; align-items:center; justify-content:center; margin-bottom:16px; } .ic i { color:var(--sp); font-size:20px; }
+.fg { margin-bottom:14px; } .fg label { display:block; font-size:14px; font-weight:500; color:var(--sl); margin-bottom:6px; } .fg input, .fg textarea, .fg select { width:100%; padding:12px 14px; border:var(--bdr); border-radius:4px; font-size:15px; font-family:inherit; font-weight:300; } .fg input:focus, .fg textarea:focus, .fg select:focus { outline:none; border-color:var(--sp); } .fg textarea { min-height:120px; resize:vertical; }
+.sb { background:var(--sp); color:white; border:none; padding:13px; border-radius:4px; font-size:15px; font-weight:500; cursor:pointer; width:100%; box-shadow:var(--ssa); } .sb:hover { background:var(--sph); box-shadow:var(--ssp); }
+.sn { font-size:40px; font-weight:600; color:var(--sp); letter-spacing:-1px; }
+.tl { position:relative; padding-left:80px; } .tl::before { content:''; position:absolute; left:27px; top:0; bottom:0; width:2px; background:var(--sb); }
+.ti { margin-bottom:28px; position:relative; }
+.td { position:absolute; left:-53px; top:0; width:54px; height:54px; background:var(--sp); border-radius:50%; display:flex; align-items:center; justify-content:center; } .td i { color:white; font-size:18px; }
+.tc { background:var(--sw); border:var(--bdr); border-radius:8px; padding:22px; box-shadow:var(--ssa); }
+.ty { font-size:11px; font-weight:600; color:var(--sp); text-transform:uppercase; letter-spacing:0.5px; margin-bottom:5px; }
+.tc h3 { font-size:16px; font-weight:600; color:var(--sn); margin-bottom:5px; }
+.tc p { font-size:14px; color:var(--ss); }
+.q { font-size:22px; font-weight:300; line-height:1.5; margin-bottom:16px; letter-spacing:-0.3px; }
+.hs { background:linear-gradient(180deg,#fff 0%,#f8f9fc 100%); padding:80px 48px; }
+.hi { max-width:1080px; margin:0 auto; display:grid; grid-template-columns:1fr 360px; gap:64px; align-items:center; }
+.ht h1 { font-size:48px; font-weight:300; letter-spacing:-1.4px; line-height:1.05; color:var(--sn); margin-bottom:20px; } .ht h1 strong { font-weight:600; } .ht h1 .a { color:var(--sp); }
+.ht p { font-size:16px; color:var(--ss); line-height:1.65; margin-bottom:28px; max-width:480px; }
+.ha { display:flex; gap:14px; flex-wrap:wrap; }
+.hi img { width:100%; border-radius:8px; box-shadow:var(--ssp); }
+.vc { text-align:center; padding:28px 20px; background:var(--sw); border:var(--bdr); border-radius:8px; box-shadow:var(--ssa); }
+.vc h3 { font-size:16px; font-weight:600; color:var(--sn); margin-bottom:8px; }
+.vc p { font-size:14px; color:var(--ss); }
+.vc2 { background:var(--sw); border:var(--bdr); border-radius:8px; padding:24px; text-align:center; box-shadow:var(--ssa); }
+.vc2 h3 { font-size:15px; font-weight:600; color:var(--sn); margin-bottom:8px; }
+.vc2 p { font-size:14px; color:var(--ss); margin-bottom:16px; }
+.ds { background:var(--sp); color:white; padding:56px 48px; text-align:center; }
+.ds h2 { font-size:26px; font-weight:600; margin-bottom:12px; }
+.ds p { opacity:0.85; margin-bottom:24px; font-size:15px; }
+.dbtn { background:white; color:var(--sp); padding:12px 28px; border-radius:4px; font-weight:600; font-size:15px; text-decoration:none; display:inline-block; }
+.si { width:100%; border-radius:8px; box-shadow:var(--ssp); }
+@media(max-width:768px){ .g3,.g2{grid-template-columns:1fr} .hi{grid-template-columns:1fr} .hi img{order:-1} }</style></head><body><nav><div class="ni"><a href="index.html" class="logo">Stacy <strong>Hall</strong></a><ul class="nl"><li><a href="about.html">About</a></li><li><a href="priorities.html">Priorities</a></li><li><a href="accomplishments.html">Accomplishments</a></li><li><a href="contact.html" class="nc">Donate</a></li></ul></div></nav>
+<div class="ph"><h1>My <strong>Priorities</strong></h1><p>7 core issues I've championed — and will keep fighting for — on Fairfax City Council.</p></div>
+<section class="sec secw">
+  <div class="cn" style="max-width:700px;text-align:center;">
+    <div class="badge"><svg viewBox="0 0 16 16" fill="none"><path d="M8 0l1.8 5.5H16l-4.5 3.3 1.7 5.2L8 11l-5.2 3 1.7-5.2L0 5.5h6.2z" fill="currentColor"/></svg>Nonpartisan</div>
+    <h2 style="font-size:22px;font-weight:300;letter-spacing:-0.5px;margin-bottom:12px;color:var(--sn);">These Aren't Democrat or Republican Issues</h2>
+    <p style="font-size:15px;color:var(--ss);line-height:1.7;">These are Fairfax issues — the things that make our city work for everyone. I govern to solve problems, not to score political points.</p>
+  </div>
+</section>
+<section class="sec">
+  <div class="cn">
+    <div style="display:flex;flex-direction:column;gap:40px;">
+      <div class="g2" style="align-items:center;gap:40px;">
+        <div class="ic"><i class="fas fa-shield-alt"></i></div>
+        <div><h3 style="font-size:20px;font-weight:600;margin-bottom:8px;">1. Public Safety</h3><p style="font-size:14px;color:var(--ss);line-height:1.7;margin-bottom:10px;">Fully funded police & fire with community-oriented policing that builds trust between officers and residents.</p><p style="font-size:14px;color:var(--ss);line-height:1.7;"><strong>I'll continue:</strong> Advocate for competitive first responder compensation and keep emergency response times among the best in the region.</p></div>
+      </div>
+      <div class="g2" style="align-items:center;gap:40px;flex-direction:row-reverse;">
+        <div class="ic"><i class="fas fa-calculator"></i></div>
+        <div><h3 style="font-size:20px;font-weight:600;margin-bottom:8px;">2. Fiscal Responsibility</h3><p style="font-size:14px;color:var(--ss);line-height:1.7;margin-bottom:10px;">As a CPA, every number is my responsibility. Under my tenure, Fairfax achieved an AA bond rating and an 8.5% tax rate reduction.</p><p style="font-size:14px;color:var(--ss);line-height:1.7;"><strong>I'll continue:</strong> Every dollar tracked, every expense justified. Efficient government that delivers results.</p></div>
+      </div>
+      <div class="g2" style="align-items:center;gap:40px;">
+        <div class="ic"><i class="fas fa-tree"></i></div>
+        <div><h3 style="font-size:20px;font-weight:600;margin-bottom:8px;">3. Environment & Parks</h3><p style="font-size:14px;color:var(--ss);line-height:1.7;margin-bottom:10px;">Fairfax's tree canopy and green spaces are what make our city special. I've championed park expansions and environmental protections.</p><p style="font-size:14px;color:var(--ss);line-height:1.7;"><strong>I'll continue:</strong> Push for sustainable development, increase green infrastructure, and protect our parks.</p></div>
+      </div>
+      <div class="g2" style="align-items:center;gap:40px;flex-direction:row-reverse;">
+        <div class="ic"><i class="fas fa-eye"></i></div>
+        <div><h3 style="font-size:20px;font-weight:600;margin-bottom:8px;">4. Transparency</h3><p style="font-size:14px;color:var(--ss);line-height:1.7;margin-bottom:10px;">Government works for you — and you have a right to know what it's doing. I've championed open meetings, accessible budgets, and clear communication.</p><p style="font-size:14px;color:var(--ss);line-height:1.7;"><strong>I'll continue:</strong> Online budget tracking tools, regular town halls, public access to all Council decisions.</p></div>
+      </div>
+      <div class="g2" style="align-items:center;gap:40px;">
+        <div class="ic"><i class="fas fa-graduation-cap"></i></div>
+        <div><h3 style="font-size:20px;font-weight:600;margin-bottom:8px;">5. Strong Schools</h3><p style="font-size:14px;color:var(--ss);line-height:1.7;margin-bottom:10px;">Great schools are the foundation of a thriving city. Consistent advocate for adequate funding, safe facilities, and programs that set kids up for success.</p><p style="font-size:14px;color:var(--ss);line-height:1.7;"><strong>I'll continue:</strong> Maintain close partnership with the school board and support teacher retention and modern facilities.</p></div>
+      </div>
+      <div class="g2" style="align-items:center;gap:40px;flex-direction:row-reverse;">
+        <div class="ic"><i class="fas fa-road"></i></div>
+        <div><h3 style="font-size:20px;font-weight:600;margin-bottom:8px;">6. Infrastructure</h3><p style="font-size:14px;color:var(--ss);line-height:1.7;margin-bottom:10px;">Potholes, aging water mains, failing traffic signals — not glamorous, but they matter. I've prioritized infrastructure maintenance and modernization.</p><p style="font-size:14px;color:var(--ss);line-height:1.7;"><strong>I'll continue:</strong> Capital improvement program, state funding advocacy, and keeping our streets and utilities in good repair.</p></div>
+      </div>
+      <div class="g2" style="align-items:center;gap:40px;">
+        <div class="ic"><i class="fas fa-handshake"></i></div>
+        <div><h3 style="font-size:20px;font-weight:600;margin-bottom:8px;">7. Community & Engagement</h3><p style="font-size:14px;color:var(--ss);line-height:1.7;margin-bottom:10px;">A strong city is built by engaged residents. I've worked to lower barriers to civic participation and expand public comment opportunities.</p><p style="font-size:14px;color:var(--ss);line-height:1.7;"><strong>I'll continue:</strong> Regular town halls, expanded community events, and ensuring every resident has a voice at City Hall.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="sec sedp">
+  <div class="cn" style="text-align:center;max-width:700px;">
+    <p class="q" style="margin-bottom:10px;">"It takes courage to ask questions. It takes even more courage to stand up for what you believe in, even when it isn't the popular opinion."</p>
+    <cite style="font-size:14px;font-style:normal;color:rgba(255,255,255,0.6);">— Stacy R. Hall</cite>
+  </div>
+</section>
+<section class="sec sech">
+  <div class="cn" style="text-align:center;">
+    <h2 style="font-size:26px;font-weight:300;letter-spacing:-0.5px;margin-bottom:12px;">Agree With These Priorities?</h2>
+    <p style="color:rgba(255,255,255,0.65);max-width:440px;margin:0 auto 24px;font-size:15px;">Join us in building a stronger future for Fairfax. Your voice matters.</p>
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+      <a href="contact.html" class="btn1" style="background:white;color:var(--sp);">Contact Me</a>
+      <a href="accomplishments.html" class="btn2" style="color:white;border-color:rgba(255,255,255,0.3);">See Accomplishments →</a>
+    </div>
+  </div>
+</section>
+<footer><div class="fc"><p style="font-weight:600;font-size:16px;">Stacy R. Hall · Fairfax City Council</p><div class="ft"><a href="index.html">Home</a><a href="about.html">About</a><a href="priorities.html">Priorities</a><a href="accomplishments.html">Accomplishments</a><a href="contact.html">Contact</a></div><div class="fs"><a href="https://www.facebook.com/stacyrhall">Facebook</a><a href="https://www.instagram.com/shall279">Instagram</a><a href="https://www.linkedin.com/in/stacyrhall">LinkedIn</a></div><p class="fcp">© 2025 Stacy For Fairfax. Paid for and authorized by Stacy For Fairfax.</p></div></footer></body></html>
