@@ -3,656 +3,142 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Stacy For Fairfax — Website Design Options</title>
+  <title>Stacy for Fairfax — Design Comparison</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    
-    :root {
-      --navy: #1a365d;
-      --gold: #d69e2e;
-      --dark: #1a1a1a;
-      --gray: #6b7280;
-      --light: #f9fafb;
-      --border: #e5e7eb;
-    }
-    
-    body {
-      font-family: 'Inter', -apple-system, system-ui, sans-serif;
-      color: var(--dark);
-      background: var(--light);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-    
-    header {
-      background: var(--navy);
-      color: white;
-      padding: 64px 24px;
-      text-align: center;
-    }
-    
-    header h1 {
-      font-size: 36px;
-      font-weight: 700;
-      letter-spacing: -0.5px;
-      margin-bottom: 12px;
-    }
-    
-    header h1 span { color: var(--gold); }
-    
-    header p {
-      font-size: 18px;
-      opacity: 0.85;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-    
-    main {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 64px 24px;
-    }
-    
-    .intro {
-      text-align: center;
-      margin-bottom: 56px;
-    }
-    
-    .intro h2 {
-      font-size: 28px;
-      font-weight: 600;
-      margin-bottom: 12px;
-    }
-    
-    .intro p {
-      color: var(--gray);
-      font-size: 17px;
-      max-width: 700px;
-      margin: 0 auto;
-    }
-    
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 32px;
-    }
-    
-    @media (max-width: 900px) {
-      .card-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
-    }
-    
-    .card {
-      background: white;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 4px 12px rgba(0,0,0,0.05);
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1), 0 12px 32px rgba(0,0,0,0.08);
-    }
-    
-    .card-preview {
-      background: #f3f4f6;
-      height: 300px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-bottom: 1px solid var(--border);
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .card-preview::after {
-      content: 'Click to preview →';
-      position: absolute;
-      bottom: 12px;
-      right: 12px;
-      background: var(--navy);
-      color: white;
-      font-size: 11px;
-      font-weight: 600;
-      padding: 6px 12px;
-      border-radius: 6px;
-      opacity: 0;
-      transition: opacity 0.2s;
-    }
-    
-    .card:hover .card-preview::after { opacity: 1; }
-    
-    /* Mini preview frames */
-    .preview-frame {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-    }
-    
-    /* Notion preview */
-    .preview-notion {
-      background: #f6f5f4;
-      padding: 20px;
-    }
-    
-    .preview-notion .topbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 16px;
-      padding-bottom: 12px;
-      border-bottom: 1px solid rgba(0,0,0,0.08);
-    }
-    
-    .preview-notion .topbar .logo {
-      font-size: 12px;
-      font-weight: 700;
-      color: var(--navy);
-    }
-    
-    .preview-notion .topbar .nav {
-      display: flex;
-      gap: 8px;
-    }
-    
-    .preview-notion .topbar .nav span {
-      width: 30px;
-      height: 4px;
-      background: #ddd;
-      border-radius: 2px;
-    }
-    
-    .preview-notion .content {
-      display: flex;
-      gap: 16px;
-      flex: 1;
-    }
-    
-    .preview-notion .text-side {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      justify-content: center;
-    }
-    
-    .preview-notion .badge {
-      width: 100px;
-      height: 16px;
-      background: #f2f9ff;
-      border-radius: 8px;
-    }
-    
-    .preview-notion .title {
-      height: 20px;
-      background: linear-gradient(90deg, var(--navy) 30%, #2563eb 30%, #2563eb 60%, var(--navy) 60%);
-      background-size: 200% 100%;
-      border-radius: 3px;
-    }
-    
-    .preview-notion .subtitle {
-      height: 10px;
-      background: #e5e5e5;
-      border-radius: 2px;
-      width: 90%;
-    }
-    
-    .preview-notion .btns {
-      display: flex;
-      gap: 6px;
-      margin-top: 8px;
-    }
-    
-    .preview-notion .btn-blue {
-      width: 80px;
-      height: 24px;
-      background: #0075de;
-      border-radius: 3px;
-    }
-    
-    .preview-notion .btn-gray {
-      width: 60px;
-      height: 24px;
-      background: rgba(0,0,0,0.06);
-      border-radius: 3px;
-    }
-    
-    .preview-notion .img-side {
-      width: 90px;
-      background: #ddd;
-      border-radius: 8px;
-      overflow: hidden;
-    }
-    
-    .preview-notion .img-side img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: 0.9;
-    }
-    
-    /* Stripe preview */
-    .preview-stripe {
-      background: linear-gradient(180deg, #fff 0%, #f8f9fc 100%);
-      padding: 20px;
-    }
-    
-    .preview-stripe .topbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 16px;
-      padding-bottom: 10px;
-      border-bottom: 1px solid #e5edf5;
-    }
-    
-    .preview-stripe .topbar .logo {
-      font-size: 12px;
-      font-weight: 300;
-      color: #061b31;
-    }
-    
-    .preview-stripe .topbar .logo strong { font-weight: 600; }
-    
-    .preview-stripe .topbar .nav {
-      display: flex;
-      gap: 8px;
-    }
-    
-    .preview-stripe .topbar .nav span {
-      width: 30px;
-      height: 4px;
-      background: #e5edf5;
-      border-radius: 2px;
-    }
-    
-    .preview-stripe .content {
-      display: flex;
-      gap: 16px;
-      flex: 1;
-    }
-    
-    .preview-stripe .text-side {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      justify-content: center;
-    }
-    
-    .preview-stripe .badge {
-      width: 120px;
-      height: 12px;
-      background: rgba(100,116,139,0.15);
-      border-radius: 3px;
-    }
-    
-    .preview-stripe .title {
-      height: 20px;
-      background: linear-gradient(90deg, #061b31 30%, #533afd 30%, #533afd 55%, #061b31 55%);
-      background-size: 200% 100%;
-      border-radius: 3px;
-    }
-    
-    .preview-stripe .subtitle {
-      height: 10px;
-      background: #e5e5e5;
-      border-radius: 2px;
-      width: 85%;
-    }
-    
-    .preview-stripe .btns {
-      display: flex;
-      gap: 6px;
-      margin-top: 8px;
-    }
-    
-    .preview-stripe .btn-purple {
-      width: 80px;
-      height: 24px;
-      background: #533afd;
-      border-radius: 3px;
-    }
-    
-    .preview-stripe .btn-ghost {
-      width: 60px;
-      height: 24px;
-      background: transparent;
-      border: 1px solid rgba(83,58,253,0.3);
-      border-radius: 3px;
-    }
-    
-    .preview-stripe .img-side {
-      width: 90px;
-      background: #ddd;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 4px 12px rgba(50,50,93,0.15);
-    }
-    
-    .preview-stripe .img-side img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: 0.9;
-    }
-    
-    /* Airbnb preview */
-    .preview-airbnb {
-      background: linear-gradient(135deg, #fff5f5 0%, #fff 50%, #f0fff4 100%);
-      padding: 20px;
-    }
-    
-    .preview-airbnb .content {
-      display: flex;
-      gap: 12px;
-      flex: 1;
-    }
-    
-    .preview-airbnb .text-side {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      justify-content: center;
-    }
-    
-    .preview-airbnb .badge {
-      width: 80px;
-      height: 14px;
-      background: rgba(255,56,92,0.15);
-      border-radius: 10px;
-    }
-    
-    .preview-airbnb .title {
-      height: 18px;
-      background: linear-gradient(90deg, #222 40%, #ff385c 40%, #ff385c 55%, #222 55%);
-      background-size: 200% 100%;
-      border-radius: 3px;
-    }
-    
-    .preview-airbnb .subtitle {
-      height: 8px;
-      background: #e5e5e5;
-      border-radius: 2px;
-      width: 95%;
-    }
-    
-    .preview-airbnb .btns {
-      display: flex;
-      gap: 6px;
-      margin-top: 6px;
-    }
-    
-    .preview-airbnb .btn-red {
-      width: 76px;
-      height: 26px;
-      background: #ff385c;
-      border-radius: 6px;
-    }
-    
-    .preview-airbnb .btn-outline {
-      width: 60px;
-      height: 26px;
-      background: white;
-      border: 1px solid rgba(0,0,0,0.1);
-      border-radius: 6px;
-    }
-    
-    .preview-airbnb .img-side {
-      width: 90px;
-      background: #ddd;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    
-    .preview-airbnb .img-side img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: 0.9;
-    }
-    
-    /* Card body */
-    .card-body { padding: 24px; }
-    
-    .card-number {
-      display: inline-block;
-      background: var(--navy);
-      color: white;
-      font-size: 11px;
-      font-weight: 700;
-      padding: 4px 10px;
-      border-radius: 4px;
-      margin-bottom: 12px;
-    }
-    
-    .card-title {
-      font-size: 22px;
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-    
-    .card-desc {
-      color: var(--gray);
-      font-size: 15px;
-      margin-bottom: 20px;
-      line-height: 1.5;
-    }
-    
-    .card-traits {
-      list-style: none;
-      margin-bottom: 20px;
-    }
-    
-    .card-traits li {
-      font-size: 13px;
-      color: var(--gray);
-      padding: 4px 0;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    
-    .card-traits li::before {
-      content: '✓';
-      color: var(--gold);
-      font-weight: 700;
-    }
-    
-    .card-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--navy);
-      color: white;
-      text-decoration: none;
-      padding: 12px 20px;
-      border-radius: 8px;
-      font-size: 14px;
-      font-weight: 600;
-      transition: background 0.2s;
-    }
-    
-    .card-link:hover { background: #234876; }
-    
-    .card-link svg {
-      width: 16px;
-      height: 16px;
-    }
-    
-    .rec-badge {
-      background: linear-gradient(135deg, var(--gold) 0%, #e6b800 100%);
-      color: var(--navy);
-      font-size: 10px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      padding: 4px 10px;
-      border-radius: 4px;
-      margin-left: 8px;
-    }
-    
-    footer {
-      text-align: center;
-      padding: 40px 24px;
-      color: var(--gray);
-      font-size: 14px;
-      border-top: 1px solid var(--border);
-    }
-    
-    footer a {
-      color: var(--navy);
-      text-decoration: none;
-    }
-    
-    footer a:hover { text-decoration: underline; }
+    body { font-family: 'Inter', sans-serif; background: #0f0f10; color: #fff; min-height: 100vh; padding: 60px 40px; }
+    header { text-align: center; margin-bottom: 60px; }
+    h1 { font-size: 36px; font-weight: 700; letter-spacing: -1px; margin-bottom: 12px; }
+    header p { color: rgba(255,255,255,0.5); font-size: 16px; max-width: 600px; margin: 0 auto; }
+    .compare-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; max-width: 1400px; margin: 0 auto; }
+    .design-card { background: #1a1a1c; border-radius: 20px; overflow: hidden; border: 1px solid rgba(255,255,255,0.06); transition: transform 0.2s; }
+    .design-card:hover { transform: translateY(-4px); }
+    .card-preview { height: 420px; overflow: hidden; position: relative; }
+    .card-preview iframe { width: 100%; height: 100%; border: none; transform: scale(0.5); transform-origin: top left; width: 200%; height: 200%; }
+    .card-info { padding: 28px; }
+    .card-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: rgba(255,255,255,0.35); margin-bottom: 8px; }
+    .card-name { font-size: 22px; font-weight: 700; margin-bottom: 8px; }
+    .card-tagline { font-size: 14px; color: rgba(255,255,255,0.5); margin-bottom: 20px; line-height: 1.5; }
+    .card-desc { font-size: 13px; color: rgba(255,255,255,0.4); line-height: 1.65; margin-bottom: 24px; }
+    .card-specs { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 24px; }
+    .spec { font-size: 11px; background: rgba(255,255,255,0.06); padding: 4px 10px; border-radius: 20px; color: rgba(255,255,255,0.4); }
+    .card-links { display: flex; flex-direction: column; gap: 8px; }
+    .btn-view { display: block; text-align: center; padding: 12px; border-radius: 8px; font-size: 14px; font-weight: 600; text-decoration: none; transition: all 0.15s; }
+    .btn-full { background: #fff; color: #000; }
+    .btn-full:hover { background: #e5e5e5; color: #000; }
+    .btn-pages { background: rgba(255,255,255,0.08); color: #fff; border: 1px solid rgba(255,255,255,0.12); }
+    .btn-pages:hover { background: rgba(255,255,255,0.12); }
+    .page-links { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; margin-top: 8px; }
+    .page-link { font-size: 11px; color: rgba(255,255,255,0.35); text-decoration: none; padding: 4px 8px; background: rgba(255,255,255,0.04); border-radius: 4px; text-align: center; transition: all 0.15s; }
+    .page-link:hover { background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.6); }
+    .notion .card-name { color: #0075de; }
+    .notion .btn-full { background: #0075de; color: white; }
+    .stripe .card-name { color: #533afd; }
+    .stripe .btn-full { background: #533afd; color: white; }
+    .airbnb .card-name { color: #ff385c; }
+    .airbnb .btn-full { background: #ff385c; color: white; }
+    footer { text-align: center; margin-top: 60px; color: rgba(255,255,255,0.25); font-size: 13px; }
+    footer a { color: rgba(255,255,255,0.4); }
+    @media(max-width: 1100px) { .compare-grid { grid-template-columns: 1fr; max-width: 500px; } }
   </style>
 </head>
 <body>
   <header>
-    <h1>Stacy <span>For Fairfax</span></h1>
-    <p>Three design directions for the new campaign website — click any option to preview it live with real photos</p>
+    <h1>Choose Stacy's New Website Design</h1>
+    <p>Three complete design directions — each with all 5 pages fully built. Click "View Full Site" to explore each one live. Pick your favorite.</p>
   </header>
-  
-  <main>
-    <div class="intro">
-      <h2>Choose a Design Direction</h2>
-      <p>Each option uses Stacy's real photo and Fairfax imagery. Click "View Live" to see the full interactive prototype — including the countdown timer and hover effects.</p>
-    </div>
-    
-    <div class="card-grid">
-      <!-- Notion -->
-      <div class="card">
-        <div class="card-preview">
-          <div class="preview-frame preview-notion">
-            <div class="topbar">
-              <div class="logo">StacyHall</div>
-              <div class="nav"><span></span><span></span><span></span></div>
-            </div>
-            <div class="content">
-              <div class="text-side">
-                <div class="badge"></div>
-                <div class="title"></div>
-                <div class="subtitle"></div>
-                <div class="subtitle" style="width:70%"></div>
-                <div class="btns">
-                  <div class="btn-blue"></div>
-                  <div class="btn-gray"></div>
-                </div>
-              </div>
-              <div class="img-side">
-                <img src="../images/stacy-portrait.jpg" alt="Stacy">
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card-body">
-          <span class="card-number">Option A</span>
-          <h3 class="card-title">Notion Warm</h3>
-          <p class="card-desc">Calm, clean, and approachable. The editorial-style layout says "I'm reasonable and trustworthy" — like a community newsletter meets modern design.</p>
-          <ul class="card-traits">
-            <li>Warm off-white background</li>
-            <li>Subtle blue accents</li>
-            <li>Clean Inter typography</li>
-            <li>Minimal, breathable layout</li>
-          </ul>
-          <a href="001-notion-warm/index.html" class="card-link" target="_blank">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            View Live Prototype
-          </a>
-        </div>
+  <div class="compare-grid">
+    <!-- NOTION-WARM -->
+    <div class="design-card notion">
+      <div class="card-preview">
+        <iframe src="../001-notion-warm/index.html"></iframe>
       </div>
-      
-      <!-- Stripe -->
-      <div class="card">
-        <div class="card-preview">
-          <div class="preview-frame preview-stripe">
-            <div class="topbar">
-              <div class="logo">Stacy <strong>Hall</strong></div>
-              <div class="nav"><span></span><span></span><span></span></div>
-            </div>
-            <div class="content">
-              <div class="text-side">
-                <div class="badge"></div>
-                <div class="title"></div>
-                <div class="subtitle"></div>
-                <div class="subtitle" style="width:70%"></div>
-                <div class="btns">
-                  <div class="btn-purple"></div>
-                  <div class="btn-ghost"></div>
-                </div>
-              </div>
-              <div class="img-side">
-                <img src="../images/stacy-portrait.jpg" alt="Stacy">
-              </div>
-            </div>
+      <div class="card-info">
+        <div class="card-label">Design A</div>
+        <div class="card-name">Notion Warm</div>
+        <div class="card-tagline">Clean, minimal, professional</div>
+        <div class="card-desc">Inspired by Notion's interface — Inter font, warm off-white backgrounds, blue (#0075de) accents. Approachable and professional. Best for: readers, detail-oriented voters.</div>
+        <div class="card-specs">
+          <span class="spec">Inter font</span>
+          <span class="spec">Blue #0075de</span>
+          <span class="spec">Warm white</span>
+          <span class="spec">Minimal cards</span>
+          <span class="spec">Timeline layout</span>
+        </div>
+        <div class="card-links">
+          <a href="../001-notion-warm/index.html" class="btn-view btn-full" target="_blank">View Full Site →</a>
+          <div class="page-links">
+            <a href="../001-notion-warm/index.html" class="page-link" target="_blank">Home</a>
+            <a href="../001-notion-warm/about.html" class="page-link" target="_blank">About</a>
+            <a href="../001-notion-warm/priorities.html" class="page-link" target="_blank">Priorities</a>
+            <a href="../001-notion-warm/accomplishments.html" class="page-link" target="_blank">Accomplishments</a>
+            <a href="../001-notion-warm/contact.html" class="page-link" target="_blank">Contact</a>
           </div>
-        </div>
-        <div class="card-body">
-          <span class="card-number">Option B</span>
-          <h3 class="card-title">Stripe Premium <span class="rec-badge">Recommended</span></h3>
-          <p class="card-desc">Sleek, modern, professional. The tech-industry standard for "we know what we're doing." Premium shadows and light typography project competence and leadership.</p>
-          <ul class="card-traits">
-            <li>Navy &amp; purple accent</li>
-            <li>Light weight typography (300)</li>
-            <li>Multi-layer premium shadows</li>
-            <li>Dark stat bar for credibility</li>
-          </ul>
-          <a href="002-stripe-premium/index.html" class="card-link" target="_blank">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            View Live Prototype
-          </a>
-        </div>
-      </div>
-      
-      <!-- Airbnb -->
-      <div class="card">
-        <div class="card-preview">
-          <div class="preview-frame preview-airbnb">
-            <div class="content">
-              <div class="text-side">
-                <div class="badge"></div>
-                <div class="title"></div>
-                <div class="subtitle"></div>
-                <div class="subtitle" style="width:80%"></div>
-                <div class="subtitle" style="width:60%"></div>
-                <div class="btns">
-                  <div class="btn-red"></div>
-                  <div class="btn-outline"></div>
-                </div>
-              </div>
-              <div class="img-side">
-                <img src="../images/stacy-portrait.jpg" alt="Stacy">
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card-body">
-          <span class="card-number">Option C</span>
-          <h3 class="card-title">Airbnb Friendly</h3>
-          <p class="card-desc">Warm, welcoming, community-focused. Coral accents and rounded corners feel energetic and approachable — the split layout with photo puts a personal face front and center.</p>
-          <ul class="card-traits">
-            <li>Coral/red accent (energetic)</li>
-            <li>Split layout with photo</li>
-            <li>Rounded corners, friendly buttons</li>
-            <li>Personality-forward design</li>
-          </ul>
-          <a href="003-airbnb-friendly/index.html" class="card-link" target="_blank">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            View Live Prototype
-          </a>
         </div>
       </div>
     </div>
-  </main>
-  
+    <!-- STRIPE-PREMIUM -->
+    <div class="design-card stripe">
+      <div class="card-preview">
+        <iframe src="../002-stripe-premium/index.html"></iframe>
+      </div>
+      <div class="card-info">
+        <div class="card-label">Design B</div>
+        <div class="card-name">Stripe Premium</div>
+        <div class="card-tagline">Sophisticated, trust-building</div>
+        <div class="card-desc">Inspired by Stripe's design system — Source Sans 3, purple (#533afd) + navy, premium shadows and spacing. Communicates financial competence and modern professionalism. Best for: business voters, donors.</div>
+        <div class="card-specs">
+          <span class="spec">Source Sans 3</span>
+          <span class="spec">Purple #533afd</span>
+          <span class="spec">Navy dark</span>
+          <span class="spec">Premium shadows</span>
+          <span class="spec">Gradient hero</span>
+        </div>
+        <div class="card-links">
+          <a href="../002-stripe-premium/index.html" class="btn-view btn-full" target="_blank">View Full Site →</a>
+          <div class="page-links">
+            <a href="../002-stripe-premium/index.html" class="page-link" target="_blank">Home</a>
+            <a href="../002-stripe-premium/about.html" class="page-link" target="_blank">About</a>
+            <a href="../002-stripe-premium/priorities.html" class="page-link" target="_blank">Priorities</a>
+            <a href="../002-stripe-premium/accomplishments.html" class="page-link" target="_blank">Accomplishments</a>
+            <a href="../002-stripe-premium/contact.html" class="page-link" target="_blank">Contact</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- AIRBNB-FRIENDLY -->
+    <div class="design-card airbnb">
+      <div class="card-preview">
+        <iframe src="../003-airbnb-friendly/index.html"></iframe>
+      </div>
+      <div class="card-info">
+        <div class="card-label">Design C</div>
+        <div class="card-name">Airbnb Friendly</div>
+        <div class="card-tagline">Warm, approachable, energetic</div>
+        <div class="card-desc">Inspired by Airbnb's warm aesthetic — DM Sans, coral red (#ff385c), rounded corners (16px), soft shadows. Feels personal and community-focused. Best for: community-oriented voters, first-time participants.</div>
+        <div class="card-specs">
+          <span class="spec">DM Sans</span>
+          <span class="spec">Coral #ff385c</span>
+          <span class="spec">Warm gradient</span>
+          <span class="spec">16px rounded</span>
+          <span class="spec">Equal grid hero</span>
+        </div>
+        <div class="card-links">
+          <a href="../003-airbnb-friendly/index.html" class="btn-view btn-full" target="_blank">View Full Site →</a>
+          <div class="page-links">
+            <a href="../003-airbnb-friendly/index.html" class="page-link" target="_blank">Home</a>
+            <a href="../003-airbnb-friendly/about.html" class="page-link" target="_blank">About</a>
+            <a href="../003-airbnb-friendly/priorities.html" class="page-link" target="_blank">Priorities</a>
+            <a href="../003-airbnb-friendly/accomplishments.html" class="page-link" target="_blank">Accomplishments</a>
+            <a href="../003-airbnb-friendly/contact.html" class="page-link" target="_blank">Contact</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <footer>
-    <p>Design prototypes for <a href="https://norrin302.github.io/stacyforfairfax-site/" target="_blank">Stacy R. Hall for Fairfax City Council</a></p>
-    <p style="margin-top: 8px;">Built with ❤️ for the 2025 campaign</p>
+    <p>All images confirmed from stacyforfairfax.com · Free hosting via GitHub Pages · <a href="https://github.com/norrin302/stacyforfairfax-site">View Source on GitHub</a></p>
   </footer>
 </body>
 </html>
