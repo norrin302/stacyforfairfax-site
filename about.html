@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Stacy | Stacy R. Hall for Fairfax City Council</title>
+    <meta name="description" content="Meet Stacy R. Hall - Fairfax City Council member, finance professional, and community advocate since 2011.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        :root {
+            --navy: #1a365d;
+            --navy-light: #2c5282;
+            --gold: #d69e2e;
+            --gold-light: #ecc94b;
+            --red: #c53030;
+            --cream: #fffaf0;
+            --light-gray: #f7f7f7;
+            --dark-gray: #2d3748;
+            --medium-gray: #718096;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Source Sans 3', sans-serif;
+            color: var(--dark-gray);
+            line-height: 1.6;
+            background: #fff;
+        }
+        
+        /* Navigation - same as index */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255,255,255,0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+        
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--navy);
+            text-decoration: none;
+        }
+        
+        .nav-logo span { color: var(--gold); }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-gray);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover { color: var(--navy); }
+        
+        .nav-cta {
+            background: var(--navy) !important;
+            color: white !important;
+            padding: 0.6rem 1.2rem;
+            border-radius: 50px;
+            transition: all 0.3s !important;
+        }
+        
+        .nav-cta:hover {
+            background: var(--navy-light) !important;
+            transform: translateY(-2px);
+        }
+        
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--navy);
+        }
+        
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 50%, #3182ce 100%);
+            color: white;
+            padding: 10rem 2rem 5rem;
+            text-align: center;
+        }
+        
+        .page-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .page-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Section Styles */
+        section { padding: 5rem 2rem; }
+        .section-container { max-width: 1200px; margin: 0 auto; }
+        
+        /* About Full */
+        .about-full { background: var(--light-gray); }
+        
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 4rem;
+            align-items: start;
+        }
+        
+        .about-image-placeholder {
+            width: 100%;
+            aspect-ratio: 4/5;
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .about-image-placeholder i {
+            font-size: 5rem;
+            margin-bottom: 1rem;
+            opacity: 0.6;
+        }
+        
+        .about-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: var(--navy);
+            margin-bottom: 1.5rem;
+        }
+        
+        .about-content h2 span { color: var(--gold); }
+        
+        .about-text {
+            color: var(--medium-gray);
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+        
+        .about-text p { margin-bottom: 1rem; }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .info-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+        
+        .info-card h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--navy);
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .info-card h3 i { color: var(--gold); }
+        
+        .info-card p {
+            color: var(--medium-gray);
+            font-size: 0.95rem;
+        }
+        
+        /* Values Section */
+        .values { background: white; }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        
+        .value-card {
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .value-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+        }
+        
+        .value-icon i {
+            font-size: 2rem;
+            color: white;
+        }
+        
+        .value-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: var(--navy);
+            margin-bottom: 1rem;
+        }
+        
+        .value-card p {
+            color: var(--medium-gray);
+        }
+        
+        /* Timeline */
+        .timeline-section { background: var(--cream); }
+        
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: var(--gold);
+            transform: translateX(-50%);
+        }
+        
+        .timeline-item {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        
+        .timeline-item:nth-child(odd) { flex-direction: row; }
+        .timeline-item:nth-child(even) { flex-direction: row-reverse; }
+        
+        .timeline-content {
+            flex: 1;
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+        
+        .timeline-content::before {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: var(--gold);
+            border-radius: 50%;
+            top: 2rem;
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-content::before { right: -3.5rem; }
+        .timeline-item:nth-child(even) .timeline-content::before { left: -3.5rem; }
+        
+        .timeline-year {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--navy);
+            margin-bottom: 0.5rem;
+        }
+        
+        .timeline-content h3 {
+            color: var(--dark-gray);
+            margin-bottom: 0.5rem;
+        }
+        
+        .timeline-content p {
+            color: var(--medium-gray);
+            font-size: 0.95rem;
+        }
+        
+        /* Family Section */
+        .family {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .family h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .family p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+        }
+        
+        .family-icons {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+        
+        .family-icon-item {
+            text-align: center;
+        }
+        
+        .family-icon-item i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--gold);
+        }
+        
+        .family-icon-item span {
+            display: block;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        /* CTA */
+        .cta {
+            background: var(--gold);
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+        
+        .cta h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--navy);
+            margin-bottom: 1rem;
+        }
+        
+        .cta p {
+            color: var(--navy);
+            opacity: 0.8;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.9rem 1.8rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-size: 1rem;
+        }
+        
+        .btn-primary {
+            background: var(--navy);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: var(--navy-light);
+            transform: translateY(-3px);
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: var(--navy);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--navy);
+            color: white;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark-gray);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        
+        footer p { opacity: 0.7; font-size: 0.9rem; }
+        footer a { color: var(--gold); text-decoration: none; }
+        
+        /* Responsive */
+        @media (max-width: 968px) {
+            .about-grid { grid-template-columns: 1fr; }
+            .values-grid { grid-template-columns: 1fr; }
+            .info-grid { grid-template-columns: 1fr; }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .mobile-toggle { display: block; }
+            .page-header h1 { font-size: 2rem; }
+            .timeline::before { left: 0; }
+            .timeline-item { flex-direction: column !important; }
+            .timeline-item .timeline-content::before { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo"><span>Stacy</span> For Fairfax</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="priorities.html">Priorities</a></li>
+                <li><a href="accomplishments.html">Accomplishments</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html" class="nav-cta">Donate</a></li>
+            </ul>
+            <button class="mobile-toggle"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <h1>Meet Stacy</h1>
+        <p>A lifelong learner, small business owner, and dedicated advocate for Fairfax families.</p>
+    </div>
+
+    <!-- About Full -->
+    <section class="about-full">
+        <div class="section-container">
+            <div class="about-grid">
+                <div class="about-image-placeholder">
+                    <i class="fas fa-user-circle"></i>
+                    <p style="font-size: 1.1rem;">Professional Photo<br>of Stacy</p>
+                    <p style="font-size: 0.9rem; opacity: 0.7; margin-top: 0.5rem;">Fairfax City Council<br>Since 2022</p>
+                </div>
+                <div class="about-content">
+                    <h2>My Story <span>in Fairfax</span></h2>
+                    
+                    <div class="about-text">
+                        <p>As the daughter of small business owners in Wilmington, DE, I grew up in a bagel and Italian bread bakery. My mom was a public high school teacher, and I remember many nights spent together watching her grade tests and papers on the couch. I learned the value of hard work at a very early age, working in our bagel shops and bakery. My parents taught me and my sister to work hard and play hard, and I've practiced this philosophy my entire life.</p>
+                        
+                        <p>I graduated from the <strong>University of Delaware — go Blue Hens!!</strong> — with a Bachelors of Science in Finance and minors in Economics and Biology. I played field hockey and lacrosse in middle and high school, and t-ball and softball through elementary and middle school.</p>
+                        
+                        <p>I relocated to the DC metro area in 2001 and have lived in Fairfax since 2011 with my husband and two sons and our two dogs. When we moved here, I was pregnant with our second child and our oldest was almost 2. They have been so fortunate to grow up in our community, attend our city schools, and have many of the same friends now that they made in preschool and kindergarten.</p>
+                        
+                        <p><strong>Fairfax City truly is a gem, and I want to help protect, maintain and enhance what makes us shine.</strong></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="info-grid" style="margin-top: 3rem;">
+                <div class="info-card">
+                    <h3><i class="fas fa-briefcase"></i> Professional Background</h3>
+                    <p>Controller for a company advancing care and innovation in the animal health sector. Prior to that, 9 years as a public accountant. I also run my own small business providing accounting, bookkeeping, and tax services right here in the city.</p>
+                </div>
+                <div class="info-card">
+                    <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+                    <p>B.S. in Finance from University of Delaware with minors in Economics and Biology. Committed to educational excellence for all Fairfax students.</p>
+                </div>
+                <div class="info-card">
+                    <h3><i class="fas fa-running"></i> Family Life</h3>
+                    <p>Married with two sons attending Fairfax High School (and the Academy!), plus two dogs. You can find us at FHS football and basketball games!</p>
+                </div>
+                <div class="info-card">
+                    <h3><i class="fas fa-heart"></i> Community Involvement</h3>
+                    <p>Regular presence at city events including Rock The Block and other family-friendly gatherings throughout Fairfax.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values -->
+    <section class="values">
+        <div class="section-container">
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; color: var(--navy); text-align: center; margin-bottom: 3rem;">What Drives Me</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon"><i class="fas fa-balance-scale"></i></div>
+                    <h3>Integrity</h3>
+                    <p>Doing the right thing, even when it's hard. Transparency in decision-making and accountability to residents.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon"><i class="fas fa-handshake"></i></div>
+                    <h3>Service</h3>
+                    <p>City Council isn't about politics — it's about serving the people who call Fairfax home.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon"><i class="fas fa-lightbulb"></i></div>
+                    <h3>Questions</h3>
+                    <p>It takes courage to ask questions. I believe in informed decision-making and representing your voice.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="timeline-section">
+        <div class="section-container">
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; color: var(--navy); text-align: center; margin-bottom: 3rem;">My Journey</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">1970s</div>
+                        <h3>Born in Wilmington, DE</h3>
+                        <p>Daughter of small business owners who ran a bagel and Italian bread bakery. Learned work ethic early.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">1990s</div>
+                        <h3>University of Delaware</h3>
+                        <p>Earned B.S. in Finance, minors in Economics and Biology. Played field hockey and lacrosse.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2001</div>
+                        <h3>Moved to DC Metro Area</h3>
+                        <p>Began my career in the DC area, working in finance and accounting.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2011</div>
+                        <h3>Called Fairfax Home</h3>
+                        <p>Moved to Fairfax City with my family. Started our family and raised two sons in our community.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2022</div>
+                        <h3>Elected to City Council</h3>
+                        <p>Honored to be elected by my neighbors to serve on Fairfax City Council.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2025</div>
+                        <h3>Seeking Re-Election</h3>
+                        <p>Asking for your vote to continue serving Fairfax and building our future together.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Family -->
+    <section class="family">
+        <div class="section-container">
+            <h2>Life Outside Council</h2>
+            <p>When I'm not in council meetings, I'm cheering on our local sports teams, walking our dogs, or enjoying all the family-friendly events that make Fairfax special.</p>
+            <div class="family-icons">
+                <div class="family-icon-item">
+                    <i class="fas fa-dog"></i>
+                    <span>Dog Mom</span>
+                </div>
+                <div class="family-icon-item">
+                    <i class="fas fa-futbol"></i>
+                    <span>FHS Football</span>
+                </div>
+                <div class="family-icon-item">
+                    <i class="fas fa-basketball"></i>
+                    <span>FHS Basketball</span>
+                </div>
+                <div class="family-icon-item">
+                    <i class="fas fa-hiking"></i>
+                    <span>Hiking & Walking</span>
+                </div>
+                <div class="family-icon-item">
+                    <i class="fas fa-umbrella-beach"></i>
+                    <span>Boating & Water Sports</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="section-container">
+            <h2>Want to Know More?</h2>
+            <p>I'm always happy to connect with residents. Reach out anytime!</p>
+            <div class="cta-buttons">
+                <a href="contact.html" class="btn btn-primary"><i class="fas fa-envelope"></i> Contact Me</a>
+                <a href="priorities.html" class="btn btn-secondary"><i class="fas fa-flag"></i> My Priorities</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p><strong>Stacy R. Hall for Fairfax City Council</strong></p>
+        <p style="margin-top: 0.5rem;">Paid for and authorized by Stacy For Fairfax</p>
+        <p style="margin-top: 1rem;">
+            <a href="index.html">Home</a> | 
+            <a href="about.html">About</a> | 
+            <a href="priorities.html">Priorities</a> | 
+            <a href="accomplishments.html">Accomplishments</a> | 
+            <a href="contact.html">Contact</a>
+        </p>
+        <p style="margin-top: 2rem;">&copy; 2025 Stacy For Fairfax. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Mobile nav toggle
+        document.querySelector('.mobile-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

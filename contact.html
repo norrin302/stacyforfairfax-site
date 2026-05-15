@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Stacy | Stacy R. Hall for Fairfax City Council</title>
+    <meta name="description" content="Get in touch with Stacy R. Hall, candidate for Fairfax City Council. Questions, comments, or volunteer opportunities welcome.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        :root {
+            --navy: #1a365d;
+            --navy-light: #2c5282;
+            --gold: #d69e2e;
+            --gold-light: #ecc94b;
+            --red: #c53030;
+            --cream: #fffaf0;
+            --light-gray: #f7f7f7;
+            --dark-gray: #2d3748;
+            --medium-gray: #718096;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Source Sans 3', sans-serif;
+            color: var(--dark-gray);
+            line-height: 1.6;
+            background: #fff;
+        }
+        
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255,255,255,0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+        
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--navy);
+            text-decoration: none;
+        }
+        
+        .nav-logo span { color: var(--gold); }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-gray);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover { color: var(--navy); }
+        
+        .nav-cta {
+            background: var(--navy) !important;
+            color: white !important;
+            padding: 0.6rem 1.2rem;
+            border-radius: 50px;
+        }
+        
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--navy);
+        }
+        
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+            color: white;
+            padding: 10rem 2rem 4rem;
+            text-align: center;
+        }
+        
+        .page-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .page-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            padding: 5rem 2rem;
+            background: var(--light-gray);
+        }
+        
+        .section-container { max-width: 1200px; margin: 0 auto; }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 4rem;
+        }
+        
+        .contact-info h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: var(--navy);
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-info > p {
+            color: var(--medium-gray);
+            margin-bottom: 2rem;
+            font-size: 1.05rem;
+        }
+        
+        .contact-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .contact-method {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .contact-method-icon {
+            width: 55px;
+            height: 55px;
+            background: var(--navy);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .contact-method-icon i {
+            color: white;
+            font-size: 1.3rem;
+        }
+        
+        .contact-method-text h4 {
+            color: var(--dark-gray);
+            font-weight: 600;
+            margin-bottom: 0.2rem;
+        }
+        
+        .contact-method-text p {
+            margin: 0;
+            color: var(--medium-gray);
+        }
+        
+        .contact-method-text a {
+            color: var(--navy);
+            text-decoration: none;
+        }
+        
+        .contact-method-text a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Form */
+        .contact-form-wrapper {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+        }
+        
+        .contact-form-wrapper h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--navy);
+            margin-bottom: 0.5rem;
+        }
+        
+        .contact-form-wrapper > p {
+            color: var(--medium-gray);
+            margin-bottom: 2rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            color: var(--dark-gray);
+            margin-bottom: 0.5rem;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--gold);
+        }
+        
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        
+        .form-submit {
+            width: 100%;
+            padding: 1.1rem;
+            background: var(--navy);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .form-submit:hover {
+            background: var(--navy-light);
+            transform: translateY(-2px);
+        }
+        
+        .form-disclaimer {
+            margin-top: 1rem;
+            font-size: 0.8rem;
+            color: var(--medium-gray);
+            text-align: center;
+        }
+        
+        /* Volunteer Section */
+        .volunteer-section {
+            padding: 5rem 2rem;
+            background: white;
+        }
+        
+        .volunteer-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        
+        .volunteer-card {
+            background: var(--light-gray);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        
+        .volunteer-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+        
+        .volunteer-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--navy);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+        }
+        
+        .volunteer-icon i {
+            font-size: 2rem;
+            color: white;
+        }
+        
+        .volunteer-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: var(--navy);
+            margin-bottom: 0.75rem;
+        }
+        
+        .volunteer-card p {
+            color: var(--medium-gray);
+            font-size: 0.95rem;
+        }
+        
+        /* Social Links */
+        .social-section {
+            padding: 4rem 2rem;
+            background: var(--navy);
+            color: white;
+            text-align: center;
+        }
+        
+        .social-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .social-section p {
+            opacity: 0.8;
+            margin-bottom: 2rem;
+        }
+        
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+        
+        .social-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+        
+        .social-icon:hover {
+            background: var(--gold);
+            transform: translateY(-5px);
+        }
+        
+        .social-icon i {
+            font-size: 1.5rem;
+            color: white;
+        }
+        
+        /* CTA */
+        .cta-section {
+            padding: 4rem 2rem;
+            background: var(--gold);
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--navy);
+            margin-bottom: 1rem;
+        }
+        
+        .cta-section p {
+            color: var(--navy);
+            opacity: 0.8;
+            margin-bottom: 2rem;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.9rem 1.8rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .btn-primary { background: var(--navy); color: white; }
+        .btn-primary:hover { background: var(--navy-light); transform: translateY(-3px); }
+        .btn-red { background: var(--red); color: white; }
+        .btn-red:hover { background: #e53e3e; transform: translateY(-3px); }
+        
+        footer {
+            background: var(--dark-gray);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        
+        footer p { opacity: 0.7; font-size: 0.9rem; }
+        footer a { color: var(--gold); text-decoration: none; }
+        
+        @media (max-width: 968px) {
+            .contact-grid { grid-template-columns: 1fr; }
+            .volunteer-grid { grid-template-columns: 1fr; }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .mobile-toggle { display: block; }
+            .page-header h1 { font-size: 2rem; }
+            .form-row { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo"><span>Stacy</span> For Fairfax</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="priorities.html">Priorities</a></li>
+                <li><a href="accomplishments.html">Accomplishments</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html" class="nav-cta">Donate</a></li>
+            </ul>
+            <button class="mobile-toggle"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <h1>Get In Touch</h1>
+        <p>Have a question, concern, or idea for our city? I'd love to hear from you!</p>
+    </div>
+
+    <!-- Contact Form -->
+    <section class="contact-section">
+        <div class="section-container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>Let's Start a Conversation</h2>
+                    <p>Send me a message or ask me a question using this form. I will do my best to get back to you soon! Whether you have a concern about our city, an idea for improvement, or just want to say hello — I want to hear from you.</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="contact-method-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-method-text">
+                                <h4>Email</h4>
+                                <p><a href="mailto:info@stacyforfairfax.com">info@stacyforfairfax.com</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="contact-method-icon">
+                                <i class="fab fa-facebook-f"></i>
+                            </div>
+                            <div class="contact-method-text">
+                                <h4>Facebook</h4>
+                                <p>Stacy For Fairfax</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="contact-method-icon">
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                            <div class="contact-method-text">
+                                <h4>Instagram</h4>
+                                <p>@stacyforfairfax</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="contact-method-icon">
+                                <i class="fab fa-linkedin-in"></i>
+                            </div>
+                            <div class="contact-method-text">
+                                <h4>LinkedIn</h4>
+                                <p>Stacy Hall</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-wrapper">
+                    <h3>Send a Message</h3>
+                    <p>Questions, comments, or concerns — all are welcome.</p>
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" placeholder="Full Name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="topic">Topic</label>
+                            <select id="topic" name="topic">
+                                <option value="">Select a topic...</option>
+                                <option value="question">General Question</option>
+                                <option value="concern">Community Concern</option>
+                                <option value="idea">Idea or Suggestion</option>
+                                <option value="volunteer">Volunteering</option>
+                                <option value="event">Event Appearance</option>
+                                <option value="media">Media Inquiry</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="What's on your mind? Questions, concerns, or ideas for our city..." required></textarea>
+                        </div>
+                        <button type="submit" class="form-submit">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                        <p class="form-disclaimer">This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Volunteer -->
+    <section class="volunteer-section">
+        <div class="section-container">
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; color: var(--navy); text-align: center; margin-bottom: 3rem;">Ways to Get Involved</h2>
+            <div class="volunteer-grid">
+                <div class="volunteer-card">
+                    <div class="volunteer-icon"><i class="fas fa-hands-helping"></i></div>
+                    <h3>Volunteer</h3>
+                    <p>Join our team of dedicated volunteers. Help with events, canvassing, and spreading the word about Stacy's campaign.</p>
+                </div>
+                <div class="volunteer-card">
+                    <div class="volunteer-icon"><i class="fas fa-donate"></i></div>
+                    <h3>Donate</h3>
+                    <p>Every contribution helps us reach more voters. Your support makes a real difference in this election.</p>
+                </div>
+                <div class="volunteer-card">
+                    <div class="volunteer-icon"><i class="fas fa-sign"></i></div>
+                    <h3>Yard Sign</h3>
+                    <p>Request a yard sign to show your support for Stacy. Place it in your yard or business!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social -->
+    <section class="social-section">
+        <div class="section-container">
+            <h2>Follow the Campaign</h2>
+            <p>Stay updated with the latest news, events, and campaign updates.</p>
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank" class="social-icon" title="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" class="social-icon" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://linkedin.com" target="_blank" class="social-icon" title="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="mailto:info@stacyforfairfax.com" class="social-icon" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="section-container">
+            <h2>Ready to Support Stacy?</h2>
+            <p>Every vote counts. Every volunteer matters. Every dollar helps.</p>
+            <a href="mailto:info@stacyforfairfax.com" class="btn btn-red"><i class="fas fa-donate"></i> Donate Today</a>
+        </div>
+    </section>
+
+    <footer>
+        <p><strong>Stacy R. Hall for Fairfax City Council</strong></p>
+        <p style="margin-top: 0.5rem;">Paid for and authorized by Stacy For Fairfax</p>
+        <p style="margin-top: 1rem;">
+            <a href="index.html">Home</a> | <a href="about.html">About</a> | 
+            <a href="priorities.html">Priorities</a> | <a href="accomplishments.html">Accomplishments</a> | 
+            <a href="contact.html">Contact</a>
+        </p>
+        <p style="margin-top: 2rem;">&copy; 2025 Stacy For Fairfax. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelector('.mobile-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+        
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! This form is for demonstration. In production, it would send an email to info@stacyforfairfax.com');
+        });
+    </script>
+</body>
+</html>

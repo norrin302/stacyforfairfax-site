@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Priorities | Stacy R. Hall for Fairfax City Council</title>
+    <meta name="description" content="Stacy Hall's priorities for Fairfax: Public Safety, Fiscal Responsibility, Environment, Transparency, and Strong Schools.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        :root {
+            --navy: #1a365d;
+            --navy-light: #2c5282;
+            --gold: #d69e2e;
+            --gold-light: #ecc94b;
+            --red: #c53030;
+            --cream: #fffaf0;
+            --light-gray: #f7f7f7;
+            --dark-gray: #2d3748;
+            --medium-gray: #718096;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Source Sans 3', sans-serif;
+            color: var(--dark-gray);
+            line-height: 1.6;
+            background: #fff;
+        }
+        
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255,255,255,0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+        
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--navy);
+            text-decoration: none;
+        }
+        
+        .nav-logo span { color: var(--gold); }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-gray);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover { color: var(--navy); }
+        
+        .nav-cta {
+            background: var(--navy) !important;
+            color: white !important;
+            padding: 0.6rem 1.2rem;
+            border-radius: 50px;
+        }
+        
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--navy);
+        }
+        
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 50%, #3182ce 100%);
+            color: white;
+            padding: 10rem 2rem 5rem;
+            text-align: center;
+        }
+        
+        .page-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .page-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        section { padding: 5rem 2rem; }
+        .section-container { max-width: 1000px; margin: 0 auto; }
+        
+        /* Intro */
+        .intro {
+            background: var(--light-gray);
+            text-align: center;
+        }
+        
+        .intro h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--navy);
+            margin-bottom: 1.5rem;
+        }
+        
+        .intro p {
+            font-size: 1.15rem;
+            color: var(--medium-gray);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* Nonpartisan */
+        .nonpartisan {
+            background: white;
+        }
+        
+        .nonpartisan-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .nonpartisan-icon {
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+        }
+        
+        .nonpartisan-icon i {
+            font-size: 5rem;
+            color: white;
+        }
+        
+        .nonpartisan-text h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: var(--navy);
+            margin-bottom: 1.5rem;
+        }
+        
+        .nonpartisan-text h2 span { color: var(--gold); }
+        
+        .nonpartisan-text p {
+            color: var(--medium-gray);
+            margin-bottom: 1rem;
+        }
+        
+        /* Priority Sections */
+        .priority-section {
+            padding: 5rem 2rem;
+        }
+        
+        .priority-section:nth-child(odd) { background: var(--light-gray); }
+        .priority-section:nth-child(even) { background: white; }
+        
+        .priority-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 4rem;
+            align-items: start;
+        }
+        
+        .priority-content.reverse { grid-template-columns: 1.5fr 1fr; }
+        .priority-content.reverse .priority-icon { order: 2; }
+        
+        .priority-icon {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .priority-icon i {
+            font-size: 3rem;
+            color: white;
+        }
+        
+        .priority-text h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--navy);
+            margin-bottom: 1rem;
+        }
+        
+        .priority-text > p {
+            color: var(--medium-gray);
+            margin-bottom: 1.5rem;
+        }
+        
+        .priority-text ul {
+            list-style: none;
+        }
+        
+        .priority-text li {
+            padding: 0.75rem 0;
+            padding-left: 2rem;
+            position: relative;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .priority-text li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: var(--gold);
+            position: absolute;
+            left: 0;
+        }
+        
+        .priority-text strong { color: var(--navy); }
+        
+        /* Quote */
+        .quote-section {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+            color: white;
+            text-align: center;
+            padding: 5rem 2rem;
+        }
+        
+        .quote-section blockquote {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            font-style: italic;
+        }
+        
+        .quote-section cite {
+            opacity: 0.8;
+        }
+        
+        /* CTA */
+        .cta {
+            background: var(--gold);
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+        
+        .cta h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--navy);
+            margin-bottom: 1rem;
+        }
+        
+        .cta p {
+            color: var(--navy);
+            opacity: 0.8;
+            margin-bottom: 2rem;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.9rem 1.8rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .btn-primary { background: var(--navy); color: white; }
+        .btn-primary:hover { background: var(--navy-light); transform: translateY(-3px); }
+        .btn-secondary { background: white; color: var(--navy); }
+        .btn-secondary:hover { background: var(--navy); color: white; }
+        
+        footer {
+            background: var(--dark-gray);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        
+        footer p { opacity: 0.7; font-size: 0.9rem; }
+        footer a { color: var(--gold); text-decoration: none; }
+        
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .mobile-toggle { display: block; }
+            .page-header h1 { font-size: 2rem; }
+            .nonpartisan-content { grid-template-columns: 1fr; }
+            .priority-content, .priority-content.reverse { grid-template-columns: 1fr; }
+            .priority-content.reverse .priority-icon { order: 0; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo"><span>Stacy</span> For Fairfax</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="priorities.html">Priorities</a></li>
+                <li><a href="accomplishments.html">Accomplishments</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html" class="nav-cta">Donate</a></li>
+            </ul>
+            <button class="mobile-toggle"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <h1>My Priorities</h1>
+        <p>I love our city — these 6.2 square miles and ~24,000 people are our home. I want to keep our charm and small town feel, support our local businesses, and preserve our green spaces and waterways.</p>
+    </div>
+
+    <!-- Nonpartisan Intro -->
+    <section class="intro">
+        <div class="section-container">
+            <h2>Why I'm <span style="color: var(--gold);">Nonpartisan</span></h2>
+            <p>I think many of the concerns our residents have do not fall along party lines, and do not require a Republican or a Democrat to make a decision. Rather, it takes a council dedicated to open dialogue, communication and putting the needs of our current and future residents first.</p>
+        </div>
+    </section>
+
+    <section class="nonpartisan">
+        <div class="section-container">
+            <div class="nonpartisan-content">
+                <div class="nonpartisan-icon">
+                    <i class="fas fa-hands-helping"></i>
+                </div>
+                <div class="nonpartisan-text">
+                    <h2>It Takes <span>Courage</span> to Ask Questions</h2>
+                    <p>Asking questions and raising concerns is not an indication of opposition to a project — it's part of my responsibility to ensure I'm representing our residents and making the most informed decision possible on their behalf.</p>
+                    <p><strong>Regardless of your political affiliation</strong>, I ask that your vote is made in the best interest of our city, and not be based on politics that live outside these 6.2 miles. As a City Council member, I know I work for YOU, a city resident, who has chosen to call our beautiful city home.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Public Safety -->
+    <section class="priority-section">
+        <div class="priority-content">
+            <div class="priority-icon"><i class="fas fa-shield-alt"></i></div>
+            <div class="priority-text">
+                <h2>Public Safety & Security</h2>
+                <p>We need to ensure our neighborhoods, businesses, parks, paths and downtown areas are welcoming, and residents feel safe at all times. Every resident, old, young or anywhere in between, deserves to feel safe.</p>
+                <ul>
+                    <li>Address residents' concerns about <strong>rising crime</strong> with additional resources</li>
+                    <li>Ensure our police department is <strong>fully staffed</strong> and capable</li>
+                    <li>Work to help those experiencing homelessness with access to <strong>shelters, financial assistance</strong> and housing programs</li>
+                    <li>Support <strong>comprehensive services</strong> including case management, job training, and mental health services</li>
+                    <li>Promote affordable housing initiatives and rent subsidies</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Environment -->
+    <section class="priority-section">
+        <div class="priority-content reverse">
+            <div class="priority-text">
+                <h2>Environment & Green Spaces</h2>
+                <p>We must protect and maintain our beautiful parks and other green spaces for our residents now, and for generations to come. There are many options to add bike/pedestrian paths both in and around our city, <strong>without destroying our forests and trees</strong>.</p>
+                <ul>
+                    <li><strong>Preserve our forests</strong> — we must protect the few forests we have left</li>
+                    <li>Promote use of <strong>renewable energy</strong>, clean energy and green buildings</li>
+                    <li>Support the <strong>Climate and Energy Manager</strong> role in FY2027 budget</li>
+                    <li>Restrict hours for <strong>gas-powered leaf blowers</strong> and propose bans on Sundays/federal holidays</li>
+                    <li>Provide <strong>rebates on electric leaf blowers</strong> and lawn equipment for residents and landscaping companies</li>
+                    <li>Ensure areas are <strong>well-lit and well maintained</strong> for walking, biking, and scootering</li>
+                </ul>
+            </div>
+            <div class="priority-icon"><i class="fas fa-leaf"></i></div>
+        </div>
+    </section>
+
+    <!-- Fiscal Responsibility -->
+    <section class="priority-section">
+        <div class="priority-content">
+            <div class="priority-icon"><i class="fas fa-balance-scale"></i></div>
+            <div class="priority-text">
+                <h2>Fiscal Responsibility</h2>
+                <p>Fiscal responsibility is about making sound financial decisions that support sustainable growth and stability, ensuring resources are used efficiently and effectively for the benefit of current and future generations.</p>
+                <ul>
+                    <li><strong>Needs vs. wants</strong> should be identified, and decisions made to ensure needs are met first</li>
+                    <li>Build <strong>trust with the public</strong> through open and transparent financial conversations</li>
+                    <li>Support strong City Manager leadership to restore trust</li>
+                    <li>Ensure residents understand the <strong>budget, tax rates</strong> and struggles we face</li>
+                    <li>Make <strong>data-driven decisions</strong> with proper research and analysis</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transparency -->
+    <section class="priority-section">
+        <div class="priority-content reverse">
+            <div class="priority-text">
+                <h2>Transparency & Community Engagement</h2>
+                <p>Each project should consider our existing residents, yet plan for common sense growth. I have continued to advocate for greater transparency and more open communication between our city's leaders and residents.</p>
+                <ul>
+                    <li>City Council leaders should <strong>represent the voice of our residents</strong></li>
+                    <li>Require <strong>outreach to communities</strong>, especially those most impacted by projects</li>
+                    <li>Hold <strong>conversations and open houses</strong> to ensure we understand all residents</li>
+                    <li>Consider potential <strong>impact to existing infrastructure</strong></li>
+                    <li>Explore <strong>both pros and cons</strong> for residents before making decisions</li>
+                    <li>Ensure projects serve the needs of residents <strong>today</strong>, not just abstract future goals</li>
+                </ul>
+            </div>
+            <div class="priority-icon"><i class="fas fa-comments"></i></div>
+        </div>
+    </section>
+
+    <!-- Strong Schools -->
+    <section class="priority-section">
+        <div class="priority-content">
+            <div class="priority-icon"><i class="fas fa-graduation-cap"></i></div>
+            <div class="priority-text">
+                <h2>Strong City Schools</h2>
+                <p>I recognize the importance of a strong public school system and I support improvements to our schools so our students have safe, secure, modern and innovative learning spaces. Our students are the future.</p>
+                <ul>
+                    <li>Support <strong>improvements to our schools</strong> for safe and modern learning spaces</li>
+                    <li>Proud that my kids attended <strong>Providence Elementary</strong>, <strong>Katherine Johnson Middle School</strong>, and <strong>Fairfax High School</strong></li>
+                    <li>Advocated for an <strong>educational feasibility study</strong> to assess our FCPS agreement</li>
+                    <li>Support knowing what it might cost to run our <strong>own school system</strong></li>
+                    <li>Make <strong>data-driven decisions</strong> about pros and cons for students, families, and taxpayers</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Housing -->
+    <section class="priority-section">
+        <div class="priority-content reverse">
+            <div class="priority-text">
+                <h2>Housing & Affordability</h2>
+                <p>Working to ensure Fairfax remains accessible to families at all stages of life. Cities with robust affordable housing initiatives tend to have higher success rates in helping individuals secure stable housing.</p>
+                <ul>
+                    <li>Balance growth with <strong>preserving our community character</strong></li>
+                    <li>Ensure housing options exist for <strong>teachers, first responders, and essential workers</strong></li>
+                    <li>Support <strong>affordable housing initiatives</strong> and rent subsidies</li>
+                    <li>Work with <strong>housing programs</strong> for those in need</li>
+                    <li>Help those experiencing homelessness or close to it with <strong>comprehensive support services</strong></li>
+                </ul>
+            </div>
+            <div class="priority-icon"><i class="fas fa-home"></i></div>
+        </div>
+    </section>
+
+    <!-- Walkability -->
+    <section class="priority-section">
+        <div class="priority-content">
+            <div class="priority-icon"><i class="fas fa-walking"></i></div>
+            <div class="priority-text">
+                <h2>Walkability & Connectivity</h2>
+                <p>Whether you are walking your dog, riding your bike, or renting one of the many scooters and bikes in the city, areas should be well-lit and well maintained for everyone to enjoy.</p>
+                <ul>
+                    <li>Add <strong>bike/pedestrian paths</strong> in and around our city</li>
+                    <li>Ensure areas are <strong>well-lit and well maintained</strong></li>
+                    <li>Support <strong>alternative transportation options</strong> including scooters and bikes</li>
+                    <li>Connect neighborhoods to <strong>parks, downtown, and schools</strong></li>
+                    <li>Make Fairfax <strong>accessible to everyone</strong>, regardless of age or ability</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote -->
+    <section class="quote-section">
+        <div class="section-container">
+            <blockquote>"It takes courage to ask questions. It takes even more courage to stand up for what you believe in, even when it isn't the popular opinion."</blockquote>
+            <cite>— Stacy R. Hall</cite>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="section-container">
+            <h2>Agree With These Priorities?</h2>
+            <p>Join us in building a stronger future for Fairfax.</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="contact.html" class="btn btn-primary"><i class="fas fa-envelope"></i> Contact Me</a>
+                <a href="accomplishments.html" class="btn btn-secondary"><i class="fas fa-trophy"></i> See Accomplishments</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p><strong>Stacy R. Hall for Fairfax City Council</strong></p>
+        <p style="margin-top: 0.5rem;">Paid for and authorized by Stacy For Fairfax</p>
+        <p style="margin-top: 1rem;">
+            <a href="index.html">Home</a> | <a href="about.html">About</a> | 
+            <a href="priorities.html">Priorities</a> | <a href="accomplishments.html">Accomplishments</a> | 
+            <a href="contact.html">Contact</a>
+        </p>
+        <p style="margin-top: 2rem;">&copy; 2025 Stacy For Fairfax. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelector('.mobile-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

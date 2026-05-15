@@ -1,0 +1,1603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stacy R. Hall for Fairfax City Council | Re-Elect 2025</title>
+    <meta name="description" content="Re-elect Stacy R. Hall for Fairfax City Council. Experienced, Transparent, and Dedicated to Serving Our Community.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        :root {
+            --navy: #1a365d;
+            --navy-light: #2c5282;
+            --gold: #d69e2e;
+            --gold-light: #ecc94b;
+            --red: #c53030;
+            --cream: #fffaf0;
+            --light-gray: #f7f7f7;
+            --dark-gray: #2d3748;
+            --medium-gray: #718096;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Source Sans 3', sans-serif;
+            color: var(--dark-gray);
+            line-height: 1.6;
+            background: #fff;
+        }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255,255,255,0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        nav.scrolled {
+            box-shadow: 0 4px 30px rgba(0,0,0,0.15);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+        
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--navy);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .nav-logo span {
+            color: var(--gold);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-gray);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+            position: relative;
+        }
+        
+        .nav-links a:hover {
+            color: var(--navy);
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: width 0.3s;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .nav-cta {
+            background: var(--navy) !important;
+            color: white !important;
+            padding: 0.6rem 1.2rem;
+            border-radius: 50px;
+            transition: all 0.3s !important;
+        }
+        
+        .nav-cta:hover {
+            background: var(--navy-light) !important;
+            transform: translateY(-2px);
+        }
+        
+        .nav-cta::after {
+            display: none !important;
+        }
+        
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--navy);
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 50%, #3182ce 100%);
+            position: relative;
+            overflow: hidden;
+            padding-top: 80px;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 80%;
+            height: 200%;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.5;
+        }
+        
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-text {
+            color: white;
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero h1 span {
+            color: var(--gold-light);
+        }
+        
+        .hero-tagline {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.9rem 1.8rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-size: 1rem;
+        }
+        
+        .btn-primary {
+            background: var(--gold);
+            color: var(--navy);
+        }
+        
+        .btn-primary:hover {
+            background: var(--gold-light);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(214, 158, 46, 0.4);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .btn-secondary:hover {
+            background: white;
+            color: var(--navy);
+            transform: translateY(-3px);
+        }
+        
+        .btn-red {
+            background: var(--red);
+            color: white;
+        }
+        
+        .btn-red:hover {
+            background: #e53e3e;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(197, 48, 48, 0.4);
+        }
+        
+        .hero-image {
+            position: relative;
+        }
+        
+        .hero-image-frame {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+            transform: perspective(1000px) rotateY(-5deg);
+            transition: transform 0.5s;
+        }
+        
+        .hero-image-frame:hover {
+            transform: perspective(1000px) rotateY(0deg);
+        }
+        
+        .hero-image-frame img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .hero-image-placeholder {
+            width: 100%;
+            aspect-ratio: 4/5;
+            background: linear-gradient(145deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+            border: 3px solid rgba(255,255,255,0.3);
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .hero-image-placeholder i {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            opacity: 0.7;
+        }
+        
+        /* Section Styles */
+        section {
+            padding: 6rem 2rem;
+        }
+        
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-label {
+            display: inline-block;
+            color: var(--gold);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.85rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: var(--navy);
+            margin-bottom: 1rem;
+        }
+        
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--medium-gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* About Section */
+        .about {
+            background: var(--light-gray);
+        }
+        
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .about-image {
+            position: relative;
+        }
+        
+        .about-image-main {
+            width: 100%;
+            aspect-ratio: 1;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+        }
+        
+        .about-image-placeholder {
+            width: 100%;
+            aspect-ratio: 1;
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .about-image-placeholder i {
+            font-size: 5rem;
+            margin-bottom: 1rem;
+            opacity: 0.6;
+        }
+        
+        .about-badge {
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            background: var(--gold);
+            color: var(--navy);
+            padding: 1.5rem 2rem;
+            border-radius: 15px;
+            font-weight: 700;
+            box-shadow: 0 10px 30px rgba(214, 158, 46, 0.3);
+        }
+        
+        .about-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--navy);
+            margin-bottom: 1.5rem;
+        }
+        
+        .about-content h2 span {
+            color: var(--gold);
+        }
+        
+        .about-text {
+            color: var(--medium-gray);
+            margin-bottom: 2rem;
+            font-size: 1.05rem;
+        }
+        
+        .about-text p {
+            margin-bottom: 1rem;
+        }
+        
+        .about-highlights {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .highlight-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .highlight-item i {
+            color: var(--gold);
+            font-size: 1.2rem;
+        }
+        
+        .highlight-item span {
+            font-weight: 600;
+            color: var(--dark-gray);
+        }
+        
+        /* Priorities Section */
+        .priorities {
+            background: white;
+        }
+        
+        .priorities-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        
+        .priority-card {
+            background: var(--light-gray);
+            border-radius: 20px;
+            padding: 2rem;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+        
+        .priority-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+            border-color: var(--gold);
+        }
+        
+        .priority-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .priority-icon i {
+            font-size: 1.8rem;
+            color: white;
+        }
+        
+        .priority-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: var(--navy);
+            margin-bottom: 1rem;
+        }
+        
+        .priority-card p {
+            color: var(--medium-gray);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+        
+        /* Accomplishments Section */
+        .accomplishments {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+            color: white;
+        }
+        
+        .accomplishments .section-label {
+            color: var(--gold-light);
+        }
+        
+        .accomplishments .section-title {
+            color: white;
+        }
+        
+        .accomplishments .section-subtitle {
+            color: rgba(255,255,255,0.8);
+        }
+        
+        .accomplishments-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+        }
+        
+        .accomplishment-item {
+            display: flex;
+            gap: 1.5rem;
+            padding: 2rem;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .accomplishment-icon {
+            width: 60px;
+            height: 60px;
+            min-width: 60px;
+            background: var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .accomplishment-icon i {
+            font-size: 1.5rem;
+            color: var(--navy);
+        }
+        
+        .accomplishment-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .accomplishment-content p {
+            opacity: 0.85;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        
+        /* Community Section */
+        .community {
+            background: var(--cream);
+        }
+        
+        .community-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+        
+        .community-text h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--navy);
+            margin-bottom: 1.5rem;
+        }
+        
+        .community-text h2 span {
+            color: var(--gold);
+        }
+        
+        .community-text p {
+            color: var(--medium-gray);
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+        
+        .community-quote {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 4px solid var(--gold);
+            margin: 2rem 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+        
+        .community-quote p {
+            font-style: italic;
+            font-size: 1.1rem;
+            color: var(--dark-gray);
+            margin: 0;
+        }
+        
+        .community-quote cite {
+            display: block;
+            margin-top: 1rem;
+            color: var(--medium-gray);
+            font-style: normal;
+            font-weight: 600;
+        }
+        
+        /* Events/Calendar Section */
+        .events {
+            background: white;
+        }
+        
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        
+        .event-card {
+            background: var(--light-gray);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+        
+        .event-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+        
+        .event-date {
+            background: var(--navy);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        
+        .event-date .day {
+            font-size: 2rem;
+            font-weight: 700;
+            display: block;
+        }
+        
+        .event-date .month {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .event-info {
+            padding: 1.5rem;
+        }
+        
+        .event-info h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--navy);
+            margin-bottom: 0.5rem;
+        }
+        
+        .event-info p {
+            color: var(--medium-gray);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        .event-info i {
+            color: var(--gold);
+            margin-right: 0.5rem;
+        }
+        
+        .event-info span {
+            font-size: 0.9rem;
+            color: var(--dark-gray);
+        }
+        
+        /* Get Involved Section */
+        .involve {
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+            padding: 6rem 2rem;
+        }
+        
+        .involve-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .involve-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: var(--navy);
+            margin-bottom: 1rem;
+        }
+        
+        .involve-content p {
+            font-size: 1.2rem;
+            color: var(--navy);
+            opacity: 0.8;
+            margin-bottom: 2.5rem;
+        }
+        
+        .involve-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .involve-buttons .btn {
+            background: var(--navy);
+            color: white;
+        }
+        
+        .involve-buttons .btn:hover {
+            background: var(--navy-light);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(26, 54, 93, 0.4);
+        }
+        
+        .involve-buttons .btn-secondary {
+            background: white;
+            color: var(--navy);
+            border-color: white;
+        }
+        
+        .involve-buttons .btn-secondary:hover {
+            background: var(--navy);
+            color: white;
+        }
+        
+        /* Contact Section */
+        .contact {
+            background: var(--light-gray);
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+        
+        .contact-info h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--navy);
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-info p {
+            color: var(--medium-gray);
+            margin-bottom: 2rem;
+            font-size: 1.05rem;
+        }
+        
+        .contact-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .contact-method {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .contact-method-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--navy);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .contact-method-icon i {
+            color: white;
+            font-size: 1.2rem;
+        }
+        
+        .contact-method-text h4 {
+            color: var(--dark-gray);
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+        
+        .contact-method-text p {
+            margin: 0;
+            color: var(--medium-gray);
+        }
+        
+        .contact-form {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+        }
+        
+        .contact-form h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--navy);
+            margin-bottom: 2rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            color: var(--dark-gray);
+            margin-bottom: 0.5rem;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--gold);
+        }
+        
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .form-submit {
+            width: 100%;
+            padding: 1rem;
+            background: var(--navy);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .form-submit:hover {
+            background: var(--navy-light);
+            transform: translateY(-2px);
+        }
+        
+        /* Social Section */
+        .social {
+            background: var(--navy);
+            color: white;
+            text-align: center;
+        }
+        
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .social-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+        
+        .social-icon:hover {
+            background: var(--gold);
+            transform: translateY(-5px);
+        }
+        
+        .social-icon i {
+            font-size: 1.5rem;
+            color: white;
+        }
+        
+        .social-icon:hover i {
+            color: var(--navy);
+        }
+        
+        .social p {
+            opacity: 0.8;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark-gray);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        
+        footer p {
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+        
+        footer a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+        
+        /* Responsive */
+        @media (max-width: 968px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .hero-image {
+                order: -1;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-buttons {
+                justify-content: center;
+            }
+            
+            .about-grid,
+            .contact-grid,
+            .community-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .priorities-grid,
+            .events-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .accomplishments-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-badge {
+                position: static;
+                margin-top: 1rem;
+                display: inline-block;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-toggle {
+                display: block;
+            }
+            
+            .nav-links.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: white;
+                padding: 2rem;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            }
+            
+            section {
+                padding: 4rem 1.5rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .priorities-grid,
+            .events-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .involve-content h2 {
+                font-size: 2rem;
+            }
+        }
+        
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Countdown */
+        .countdown {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            margin: 2rem 0;
+        }
+        
+        .countdown-item {
+            text-align: center;
+        }
+        
+        .countdown-item .number {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--gold);
+            display: block;
+        }
+        
+        .countdown-item .label {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--medium-gray);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span>Stacy</span> For Fairfax
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#priorities">Priorities</a></li>
+                <li><a href="#accomplishments">Accomplishments</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#involve" class="nav-cta">Donate</a></li>
+            </ul>
+            <button class="mobile-toggle" id="mobileToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="hero-badge">2025 City Council Election</div>
+                <h1>Re-Elect <span>Stacy R. Hall</span> for City Council</h1>
+                <p class="hero-tagline">Experienced. Transparent. Dedicated to Serving Our Community.</p>
+                <p style="opacity: 0.85; margin-bottom: 2rem; font-size: 1.1rem;">This is YOUR city and YOUR voice matters. Let's keep Fairfax thriving together.</p>
+                <div class="hero-buttons">
+                    <a href="#involve" class="btn btn-primary">
+                        <i class="fas fa-donate"></i> Donate
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <i class="fas fa-envelope"></i> Get In Touch
+                    </a>
+                </div>
+                <div class="countdown">
+                    <div class="countdown-item">
+                        <span class="number" id="days">--</span>
+                        <span class="label">Days</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="number" id="hours">--</span>
+                        <span class="label">Hours</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="number" id="minutes">--</span>
+                        <span class="label">Minutes</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-image-frame">
+                    <div class="hero-image-placeholder">
+                        <i class="fas fa-user-circle"></i>
+                        <p>Stacy R. Hall<br>Campaign Photo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="section-container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <div class="about-image-placeholder">
+                        <i class="fas fa-portrait"></i>
+                        <p>Professional Photo<br>of Stacy</p>
+                    </div>
+                    <div class="about-badge">Fairfax City Council<br>Since 2022</div>
+                </div>
+                <div class="about-content">
+                    <span class="section-label">About Stacy</span>
+                    <h2>Meet the Candidate <span>Who's Fighting for Fairfax</span></h2>
+                    <div class="about-text">
+                        <p>As the daughter of small business owners in Wilmington, DE, I grew up in a bagel and Italian bread bakery. My mom was a public high school teacher, and I remember many nights spent together watching her grade tests and papers on the couch. I learned the value of hard work at a very early age.</p>
+                        <p>I graduated from the University of Delaware — <strong>go Blue Hens!!</strong> — with a Bachelors of Science in Finance and minors in Economics and Biology. I played field hockey and lacrosse in middle and high school, and t-ball and softball through elementary and middle school.</p>
+                        <p>I relocated to the DC metro area in 2001 and have lived in Fairfax since 2011 with my husband and two sons and our two dogs. When we moved here, I was pregnant with our second child and our oldest was almost 2. They have been so fortunate to grow up in our community, attend our city schools, and have many of the same friends now that they made in preschool and kindergarten. <strong>Fairfax City truly is a gem, and I want to help protect, maintain and enhance what makes us shine.</strong></p>
+                    </div>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-calculator"></i>
+                            <span>Finance Professional</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-school"></i>
+                            <span>FCPS Parent</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-paw"></i>
+                            <span>Animal Health Sector</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-home"></i>
+                            <span>Fairfax Resident Since 2011</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Priorities Section -->
+    <section class="priorities" id="priorities">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">What I Stand For</span>
+                <h2 class="section-title">My Priorities for Our Community</h2>
+                <p class="section-subtitle">I love our city — these 6.2 square miles and ~24,000 people are our home. I want to keep our charm and small town feel, support our local businesses, and preserve our green spaces and waterways.</p>
+            </div>
+            <div class="priorities-grid">
+                <div class="priority-card fade-in">
+                    <div class="priority-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Public Safety & Security</h3>
+                    <p>Every resident, old, young or anywhere in between, deserves to feel safe. We need to address residents' concerns about rising crime by providing additional resources to our police and public safety officers, ensuring our police department is fully staffed and capable of protecting the community.</p>
+                </div>
+                <div class="priority-card fade-in">
+                    <div class="priority-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Environment & Green Spaces</h3>
+                    <p>We must protect and maintain our beautiful parks and other green spaces for our residents now, and for generations to come. We must preserve the few forests we have left and work together to promote renewable energy, clean energy and green buildings.</p>
+                </div>
+                <div class="priority-card fade-in">
+                    <div class="priority-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3>Fiscal Responsibility</h3>
+                    <p>Fiscal responsibility is about making sound financial decisions that support sustainable growth and stability. Needs vs. wants should be identified, and decisions should be made to ensure our needs are being met before we spend money on our wants.</p>
+                </div>
+                <div class="priority-card fade-in">
+                    <div class="priority-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Transparency & Engagement</h3>
+                    <p>Each project should consider our existing residents, yet plan for common sense growth. I have continued to advocate for greater transparency and more open communication between our city's leaders and residents. Our City Council leaders should represent the voice of our residents.</p>
+                </div>
+                <div class="priority-card fade-in">
+                    <div class="priority-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Strong City Schools</h3>
+                    <p>I recognize the importance of a strong public school system and support improvements to our schools so our students have safe, secure, modern and innovative learning spaces. Our students are the future, and they deserve the best we can provide.</p>
+                </div>
+                <div class="priority-card fade-in">
+                    <div class="priority-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Housing & Affordability</h3>
+                    <p>Working to ensure Fairfax remains accessible to families at all stages of life. We must balance growth with preserving our community character and ensure that housing options exist for our teachers, first responders, and essential workers.</p>
+                </div>
+                <div class="priority-card fade-in">
+                    <div class="priority-icon">
+                        <i class="fas fa-walking"></i>
+                    </div>
+                    <h3>Walkability & Connectivity</h3>
+                    <p>Whether you are walking your dog, riding your bike, or renting one of the many scooters and bikes in the city, areas should be well-lit and well maintained. There are many options to add bike/pedestrian paths both in and around our city.</p>
+                </div>
+                <div class="priority-card fade-in">
+                    <div class="priority-icon">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </div>
+                    <h3>Small Business Support</h3>
+                    <p>Our local businesses are the heart of our community. I am committed to supporting our small business owners, attracting new businesses to our city, and ensuring Fairfax remains a vibrant place to shop, dine, and gather.</p>
+                </div>
+                <div class="priority-card fade-in">
+                    <div class="priority-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Nonpartisan Leadership</h3>
+                    <p>Many of the concerns our residents have do not fall along party lines. It takes a council dedicated to open dialogue, communication and putting the needs of our current and future residents first. Regardless of your political affiliation, I ask that your vote is made in the best interest of our city.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Accomplishments Section -->
+    <section class="accomplishments" id="accomplishments">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">Track Record of Results</span>
+                <h2 class="section-title">Responsible Stewardship. Stronger Future.</h2>
+                <p class="section-subtitle">Over the past years on City Council, my focus has been simple: make decisions based on facts, protect our residents, taxpayers and their wallets, and ensure planned projects serve the needs of our residents today.</p>
+            </div>
+            <div class="accomplishments-grid">
+                <div class="accomplishment-item fade-in">
+                    <div class="accomplishment-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="accomplishment-content">
+                        <h3>Fiscal Transparency</h3>
+                        <p>Improved transparency around the true drivers of local tax pressure and reinforced accountability in financial decision-making. Ensured residents understand the budget, tax rates and the struggles we face as a city.</p>
+                    </div>
+                </div>
+                <div class="accomplishment-item fade-in">
+                    <div class="accomplishment-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="accomplishment-content">
+                        <h3>Capital Improvement Program</h3>
+                        <p>Advocated for comprehensive oversight of aging infrastructure requiring thoughtful reinvestment — from public buildings to essential infrastructure systems we rely on every day.</p>
+                    </div>
+                </div>
+                <div class="accomplishment-item fade-in">
+                    <div class="accomplishment-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <div class="accomplishment-content">
+                        <h3>School Board Liaison</h3>
+                        <p>Served as City Council's liaison to the School Board, advocating for our students' needs and ensuring city resources support our educational institutions effectively.</p>
+                    </div>
+                </div>
+                <div class="accomplishment-item fade-in">
+                    <div class="accomplishment-icon">
+                        <i class="fas fa-tree"></i>
+                    </div>
+                    <div class="accomplishment-content">
+                        <h3>Environmental Stewardship</h3>
+                        <p>Protected green spaces and advocated for sustainable development practices. Proposed common-sense solutions like restricting gas-powered leaf blower use and promoting electric alternatives.</p>
+                    </div>
+                </div>
+                <div class="accomplishment-item fade-in">
+                    <div class="accomplishment-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div class="accomplishment-content">
+                        <h3>Housing Affordability</h3>
+                        <p>Working to help those experiencing homelessness or close to it with access to resources such as shelters, financial assistance, housing programs, and comprehensive support services.</p>
+                    </div>
+                </div>
+                <div class="accomplishment-item fade-in">
+                    <div class="accomplishment-icon">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <div class="accomplishment-content">
+                        <h3>Asking Tough Questions</h3>
+                        <p>It takes courage to ask questions. Asking questions and raising concerns is not opposition to a project — it's part of my responsibility to ensure I'm representing our residents and making the most informed decision possible on their behalf.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Section -->
+    <section class="community" id="community">
+        <div class="section-container">
+            <div class="community-content">
+                <div class="community-text">
+                    <span class="section-label">In the Community</span>
+                    <h2>Fairfax is <span>My Home</span></h2>
+                    <p>I am the Controller for a company that advances care and innovation in the animal health sector. Prior to that, I was a public accountant for 9 years. I also run my own small business in the city, providing accounting, bookkeeping and tax services.</p>
+                    <p>I love cheering on our local sports teams, especially our FHS football and basketball teams on which my kids play. You can often find us at Rock The Block or many of the other amazing, family-friendly events our city hosts!</p>
+                    <div class="community-quote">
+                        <p>"Fairfax City truly is a gem, and I want to help protect, maintain and enhance what makes us shine."</p>
+                        <cite>— Stacy R. Hall</cite>
+                    </div>
+                </div>
+                <div class="community-image-placeholder" style="background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%); border-radius: 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; color: white; text-align: center; padding: 3rem; min-height: 400px;">
+                    <i class="fas fa-images" style="font-size: 5rem; margin-bottom: 1rem; opacity: 0.6;"></i>
+                    <p style="font-size: 1.2rem; opacity: 0.8; margin-bottom: 1rem;">Photos from Events & Community Activities</p>
+                    <p style="font-size: 0.9rem; opacity: 0.6;">Football games, community events, town halls,<br>and more moments with Fairfax residents</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section class="events" id="events">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">Join Me</span>
+                <h2 class="section-title">Upcoming Events & appearances</h2>
+                <p class="section-subtitle">Come meet Stacy at upcoming community events! Check back for new appearances.</p>
+            </div>
+            <div class="events-grid">
+                <div class="event-card fade-in">
+                    <div class="event-date">
+                        <span class="day">TBD</span>
+                        <span class="month">Summer 2025</span>
+                    </div>
+                    <div class="event-info">
+                        <h3>Community Town Hall</h3>
+                        <p>Stay tuned for our next town hall meeting where residents can ask questions and share concerns directly with Stacy.</p>
+                        <p><i class="fas fa-map-marker-alt"></i> <span>Location TBA</span></p>
+                    </div>
+                </div>
+                <div class="event-card fade-in">
+                    <div class="event-date">
+                        <span class="day">TBD</span>
+                        <span class="month">Fall 2025</span>
+                    </div>
+                    <div class="event-info">
+                        <h3>Fairfax Festival</h3>
+                        <p>Look for Stacy and her campaign team at the annual Fairfax Festival! Stop by our booth to say hello.</p>
+                        <p><i class="fas fa-map-marker-alt"></i> <span>Downtown Fairfax</span></p>
+                    </div>
+                </div>
+                <div class="event-card fade-in">
+                    <div class="event-date">
+                        <span class="day">TBD</span>
+                        <span class="month">Fall 2025</span>
+                    </div>
+                    <div class="event-info">
+                        <h3>Volunteer Meet & Greet</h3>
+                        <p>Interested in volunteering? Join us for an informal gathering to learn how you can help the campaign.</p>
+                        <p><i class="fas fa-map-marker-alt"></i> <span>Location TBA</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get Involved Section -->
+    <section class="involve" id="involve">
+        <div class="section-container">
+            <div class="involve-content">
+                <h2>Get Involved & Support the Campaign</h2>
+                <p>Every voice matters in Fairfax. Whether you can volunteer, donate, or simply share our message — your support makes a difference.</p>
+                <div class="involve-buttons">
+                    <a href="#contact" class="btn">
+                        <i class="fas fa-envelope"></i> Contact Us
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <i class="fas fa-hands-helping"></i> Volunteer
+                    </a>
+                    <a href="#contact" class="btn" style="background: var(--red); color: white;">
+                        <i class="fas fa-donate"></i> Donate
+                    </a>
+                    <a href="#" class="btn" style="background: white;">
+                        <i class="fas fa-sign"></i> Request Yard Sign
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="section-container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <span class="section-label">Get in Touch</span>
+                    <h2>Let's Start a Conversation</h2>
+                    <p>Have a question, concern, or idea for our city? I'd love to hear from you. Send me a message and I'll do my best to get back to you soon!</p>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="contact-method-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-method-text">
+                                <h4>Email</h4>
+                                <p>info@stacyforfairfax.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="contact-method-icon">
+                                <i class="fab fa-facebook-f"></i>
+                            </div>
+                            <div class="contact-method-text">
+                                <h4>Facebook</h4>
+                                <p>Stacy For Fairfax</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="contact-method-icon">
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                            <div class="contact-method-text">
+                                <h4>Instagram</h4>
+                                <p>@stacyforfairfax</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="contact-method-icon">
+                                <i class="fab fa-linkedin-in"></i>
+                            </div>
+                            <div class="contact-method-text">
+                                <h4>LinkedIn</h4>
+                                <p>Stacy Hall</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Send a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="Full Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="What's on your mind? Questions, concerns, or ideas for our city..." required></textarea>
+                        </div>
+                        <button type="submit" class="form-submit">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                    <p style="margin-top: 1rem; font-size: 0.8rem; color: var(--medium-gray); text-align: center;">
+                        This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Section -->
+    <section class="social">
+        <div class="section-container">
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 1rem;">Connect With Stacy</h2>
+            <p style="margin-bottom: 2rem;">Follow along for updates, community news, and behind-the-scenes moments.</p>
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank" class="social-icon" title="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" class="social-icon" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://linkedin.com" target="_blank" class="social-icon" title="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="mailto:info@stacyforfairfax.com" class="social-icon" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="section-container">
+            <p><strong>Stacy R. Hall for Fairfax City Council</strong></p>
+            <p style="margin-top: 0.5rem;">Paid for and authorized by Stacy For Fairfax</p>
+            <p style="margin-top: 1rem;">
+                <a href="#home">Home</a> | 
+                <a href="#about">About</a> | 
+                <a href="#priorities">Priorities</a> | 
+                <a href="#accomplishments">Accomplishments</a> | 
+                <a href="#contact">Contact</a>
+            </p>
+            <p style="margin-top: 2rem; opacity: 0.6;">&copy; 2025 Stacy For Fairfax. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation Toggle
+        document.getElementById('mobileToggle').addEventListener('click', function() {
+            document.getElementById('navLinks').classList.toggle('active');
+        });
+        
+        // Close mobile nav when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navLinks').classList.remove('active');
+            });
+        });
+        
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+        
+        // Election Countdown - November 4, 2025
+        const electionDate = new Date('November 4, 2025 00:00:00').getTime();
+        
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = electionDate - now;
+            
+            if (distance > 0) {
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                
+                document.getElementById('days').textContent = days;
+                document.getElementById('hours').textContent = hours;
+                document.getElementById('minutes').textContent = minutes;
+            } else {
+                document.getElementById('days').textContent = '0';
+                document.getElementById('hours').textContent = '0';
+                document.getElementById('minutes').textContent = '0';
+            }
+        }
+        
+        updateCountdown();
+        setInterval(updateCountdown, 60000);
+        
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+        
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! This form is for demonstration. In production, it would send an email to info@stacyforfairfax.com');
+        });
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
