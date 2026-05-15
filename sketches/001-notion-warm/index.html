@@ -59,9 +59,7 @@
       letter-spacing: -0.25px;
     }
     
-    .logo span {
-      color: var(--notion-blue);
-    }
+    .logo span { color: var(--notion-blue); }
     
     .nav-links {
       display: flex;
@@ -77,9 +75,7 @@
       transition: color 0.15s;
     }
     
-    .nav-links a:hover {
-      color: var(--notion-blue);
-    }
+    .nav-links a:hover { color: var(--notion-blue); }
     
     .nav-cta {
       background: var(--notion-blue);
@@ -90,21 +86,24 @@
       transition: background 0.15s;
     }
     
-    .nav-cta:hover {
-      background: var(--notion-blue-hover);
-    }
+    .nav-cta:hover { background: var(--notion-blue-hover); }
     
-    /* Hero Section */
+    /* Hero */
     .hero {
       background: var(--notion-warm-white);
-      padding: 100px 24px;
-      text-align: center;
+      padding: 80px 24px 100px;
     }
     
     .hero-inner {
-      max-width: 800px;
+      max-width: 1100px;
       margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 64px;
+      align-items: center;
     }
+    
+    .hero-content { order: 1; }
     
     .hero-badge {
       display: inline-block;
@@ -115,37 +114,32 @@
       letter-spacing: 0.125px;
       padding: 4px 10px;
       border-radius: 9999px;
-      margin-bottom: 24px;
+      margin-bottom: 20px;
     }
     
     .hero h1 {
-      font-size: 56px;
+      font-size: 52px;
       font-weight: 700;
-      letter-spacing: -2.125px;
+      letter-spacing: -2px;
       line-height: 1.0;
       color: var(--notion-dark);
       margin-bottom: 20px;
     }
     
-    .hero h1 .accent {
-      color: var(--notion-blue);
-    }
+    .hero h1 .accent { color: var(--notion-blue); }
     
     .hero-subtitle {
-      font-size: 20px;
+      font-size: 19px;
       font-weight: 400;
       color: var(--notion-gray-500);
-      line-height: 1.4;
-      margin-bottom: 36px;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
+      line-height: 1.55;
+      margin-bottom: 32px;
+      max-width: 520px;
     }
     
     .hero-actions {
       display: flex;
       gap: 12px;
-      justify-content: center;
       flex-wrap: wrap;
     }
     
@@ -160,15 +154,14 @@
       transition: all 0.15s;
       cursor: pointer;
       border: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
     }
     
     .btn-primary:hover {
       background: var(--notion-blue-hover);
       transform: scale(1.02);
-    }
-    
-    .btn-primary:active {
-      transform: scale(0.98);
     }
     
     .btn-secondary {
@@ -182,68 +175,160 @@
       transition: all 0.15s;
     }
     
-    .btn-secondary:hover {
-      background: rgba(0,0,0,0.08);
-    }
+    .btn-secondary:hover { background: rgba(0,0,0,0.08); }
     
     /* Countdown */
     .countdown {
       background: var(--notion-white);
       border: var(--border);
       border-radius: 12px;
-      padding: 32px;
-      margin-top: 48px;
+      padding: 24px 28px;
+      margin-top: 36px;
       display: inline-block;
+      box-shadow: var(--shadow-card);
     }
     
     .countdown-label {
-      font-size: 13px;
-      font-weight: 500;
+      font-size: 11px;
+      font-weight: 600;
       color: var(--notion-gray-500);
       text-transform: uppercase;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.8px;
       margin-bottom: 12px;
     }
     
     .countdown-numbers {
       display: flex;
-      gap: 24px;
-      justify-content: center;
+      gap: 16px;
+      align-items: center;
     }
     
-    .countdown-unit {
-      text-align: center;
-    }
+    .countdown-unit { text-align: center; }
     
     .countdown-number {
-      font-size: 40px;
+      font-size: 32px;
       font-weight: 700;
       color: var(--notion-dark);
-      letter-spacing: -1px;
+      letter-spacing: -0.5px;
       display: block;
     }
     
     .countdown-text {
-      font-size: 12px;
-      font-weight: 500;
+      font-size: 10px;
+      font-weight: 600;
       color: var(--notion-gray-500);
       text-transform: uppercase;
       letter-spacing: 0.5px;
     }
     
     .countdown-sep {
-      font-size: 40px;
+      font-size: 28px;
       font-weight: 300;
       color: var(--notion-gray-300);
+      margin-bottom: 16px;
+    }
+    
+    /* Image side */
+    .hero-image { order: 2; }
+    
+    .image-frame {
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+      aspect-ratio: 4/5;
+      position: relative;
+    }
+    
+    .image-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    
+    .image-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(transparent, rgba(0,0,0,0.6));
+      color: white;
+      padding: 32px 20px 16px;
+      font-size: 13px;
+      font-weight: 500;
+    }
+    
+    /* Community images strip */
+    .community-strip {
+      background: var(--notion-white);
+      padding: 48px 24px;
+    }
+    
+    .strip-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .strip-header {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    
+    .strip-header h2 {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: var(--notion-dark);
+      margin-bottom: 8px;
+    }
+    
+    .strip-header p {
+      color: var(--notion-gray-500);
+      font-size: 16px;
+    }
+    
+    .photo-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 16px;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--border);
+    }
+    
+    .photo-grid img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    
+    .photo-grid .main-photo {
+      grid-row: span 2;
+      aspect-ratio: auto;
+    }
+    
+    .photo-grid .small-photo {
+      aspect-ratio: 1;
     }
     
     /* Mobile */
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .hero-image { order: -1; max-width: 360px; margin: 0 auto; }
+      .hero h1 { font-size: 36px; }
+      .photo-grid { grid-template-columns: 1fr 1fr; }
+      .photo-grid .main-photo { grid-column: span 2; grid-row: auto; }
+    }
+    
+    @media (max-width: 600px) {
       .nav-links { display: none; }
-      .hero h1 { font-size: 36px; letter-spacing: -1px; }
-      .hero { padding: 64px 24px; }
-      .countdown-numbers { gap: 12px; }
-      .countdown-number { font-size: 28px; }
+      .hero { padding: 56px 24px 72px; }
+      .photo-grid { grid-template-columns: 1fr; }
+      .photo-grid .main-photo { grid-column: 1; }
     }
   </style>
 </head>
@@ -263,33 +348,55 @@
   
   <section class="hero">
     <div class="hero-inner">
-      <div class="hero-badge">🗳️ Election Day: November 4, 2025</div>
-      <h1>Experienced. <span class="accent">Committed.</span> Ready to Serve.</h1>
-      <p class="hero-subtitle">
-        Stacy R. Hall has spent 9 years serving Fairfax families — fighting for safer streets, better schools, and a community that works for everyone.
-      </p>
-      <div class="hero-actions">
-        <a href="#" class="btn-primary">Learn My Priorities</a>
-        <a href="#" class="btn-secondary">Volunteer</a>
-      </div>
-      <div class="countdown">
-        <div class="countdown-label">Time Until Election</div>
-        <div class="countdown-numbers">
-          <div class="countdown-unit">
-            <span class="countdown-number" id="days">---</span>
-            <span class="countdown-text">Days</span>
-          </div>
-          <span class="countdown-sep">:</span>
-          <div class="countdown-unit">
-            <span class="countdown-number" id="hours">--</span>
-            <span class="countdown-text">Hours</span>
-          </div>
-          <span class="countdown-sep">:</span>
-          <div class="countdown-unit">
-            <span class="countdown-number" id="minutes">--</span>
-            <span class="countdown-text">Min</span>
+      <div class="hero-content">
+        <div class="hero-badge">🗳️ Election Day: November 4, 2025</div>
+        <h1>Experienced. <span class="accent">Committed.</span> Ready to Serve.</h1>
+        <p class="hero-subtitle">
+          Stacy R. Hall has spent nine years serving Fairfax families — fighting for safer streets, better schools, and a community that works for everyone.
+        </p>
+        <div class="hero-actions">
+          <a href="#" class="btn-primary">Learn My Priorities →</a>
+          <a href="#" class="btn-secondary">Volunteer</a>
+        </div>
+        <div class="countdown">
+          <div class="countdown-label">Time Until Election</div>
+          <div class="countdown-numbers">
+            <div class="countdown-unit">
+              <span class="countdown-number" id="days">---</span>
+              <span class="countdown-text">Days</span>
+            </div>
+            <span class="countdown-sep">:</span>
+            <div class="countdown-unit">
+              <span class="countdown-number" id="hours">--</span>
+              <span class="countdown-text">Hours</span>
+            </div>
+            <span class="countdown-sep">:</span>
+            <div class="countdown-unit">
+              <span class="countdown-number" id="minutes">--</span>
+              <span class="countdown-text">Min</span>
+            </div>
           </div>
         </div>
+      </div>
+      <div class="hero-image">
+        <div class="image-frame">
+          <img src="../images/stacy-portrait.jpg" alt="Stacy R. Hall">
+          <div class="image-caption">Stacy R. Hall — Fairfax City Council</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="community-strip">
+    <div class="strip-inner">
+      <div class="strip-header">
+        <h2>Fairfax Is Our Home</h2>
+        <p>Preserving what makes our 6.2 square miles special</p>
+      </div>
+      <div class="photo-grid">
+        <img class="main-photo" src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&q=80" alt="Historic downtown city street">
+        <img class="small-photo" src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=400&q=80" alt="Residential neighborhood">
+        <img class="small-photo" src="../images/fairfax-paradise-lot.jpg" alt="Protecting our green spaces">
       </div>
     </div>
   </section>

@@ -28,7 +28,6 @@
       line-height: 1.43;
     }
     
-    /* Navigation */
     nav {
       background: var(--airbnb-white);
       border-bottom: 1px solid var(--airbnb-border);
@@ -55,15 +54,9 @@
       letter-spacing: -0.44px;
     }
     
-    .logo .accent {
-      color: var(--airbnb-red);
-    }
+    .logo .accent { color: var(--airbnb-red); }
     
-    .nav-links {
-      display: flex;
-      gap: 32px;
-      list-style: none;
-    }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
     
     .nav-links a {
       font-size: 15px;
@@ -73,9 +66,7 @@
       transition: color 0.2s;
     }
     
-    .nav-links a:hover {
-      color: var(--airbnb-red);
-    }
+    .nav-links a:hover { color: var(--airbnb-red); }
     
     .nav-cta {
       background: var(--airbnb-red);
@@ -92,58 +83,22 @@
       transform: translateY(-1px);
     }
     
-    /* Hero Section */
+    /* Hero */
     .hero {
       background: linear-gradient(135deg, #fff5f5 0%, #fff 50%, #f0fff4 100%);
-      padding: 100px 40px 120px;
+      padding: 80px 40px 100px;
     }
     
     .hero-inner {
-      max-width: 1000px;
+      max-width: 1100px;
       margin: 0 auto;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 80px;
+      gap: 72px;
       align-items: center;
     }
     
-    .hero-content {
-      order: 1;
-    }
-    
-    .hero-visual {
-      order: 2;
-      background: var(--airbnb-white);
-      border-radius: 20px;
-      box-shadow: var(--shadow-card);
-      overflow: hidden;
-      aspect-ratio: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    
-    .candidate-photo {
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(135deg, #1a365d 0%, #2d4a7c 100%);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 120px;
-      font-weight: 700;
-      opacity: 0.9;
-    }
-    
-    .candidate-photo span {
-      font-size: 16px;
-      font-weight: 400;
-      opacity: 0.7;
-      margin-top: 16px;
-      letter-spacing: 2px;
-    }
+    .hero-content { order: 1; }
     
     .hero-badge {
       display: inline-block;
@@ -153,35 +108,29 @@
       font-weight: 600;
       padding: 6px 14px;
       border-radius: 20px;
-      margin-bottom: 24px;
+      margin-bottom: 20px;
     }
     
     .hero h1 {
-      font-size: 48px;
+      font-size: 46px;
       font-weight: 700;
       letter-spacing: -0.44px;
       line-height: 1.1;
       color: var(--airbnb-dark);
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
     
-    .hero h1 .accent {
-      color: var(--airbnb-red);
-    }
+    .hero h1 .accent { color: var(--airbnb-red); }
     
     .hero-subtitle {
-      font-size: 17px;
+      font-size: 16px;
       font-weight: 400;
       color: var(--airbnb-gray);
       line-height: 1.6;
-      margin-bottom: 32px;
+      margin-bottom: 28px;
     }
     
-    .hero-actions {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
     
     .btn-primary {
       background: var(--airbnb-red);
@@ -194,6 +143,9 @@
       transition: all 0.2s;
       border: none;
       cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
     }
     
     .btn-primary:hover {
@@ -214,49 +166,40 @@
       border: 1px solid var(--airbnb-border);
     }
     
-    .btn-secondary:hover {
-      border-color: var(--airbnb-dark);
-      transform: translateY(-2px);
-    }
+    .btn-secondary:hover { border-color: var(--airbnb-dark); transform: translateY(-2px); }
     
     /* Countdown */
     .countdown-card {
       background: var(--airbnb-white);
       border-radius: 16px;
       box-shadow: var(--shadow-card);
-      padding: 28px 32px;
-      margin-top: 40px;
+      padding: 24px 28px;
+      margin-top: 32px;
       display: inline-block;
     }
     
     .countdown-header {
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 600;
       color: var(--airbnb-gray);
       text-transform: uppercase;
       letter-spacing: 0.8px;
-      margin-bottom: 16px;
+      margin-bottom: 12px;
     }
     
-    .countdown-numbers {
-      display: flex;
-      gap: 16px;
-      align-items: center;
-    }
+    .countdown-numbers { display: flex; gap: 14px; align-items: center; }
     
-    .countdown-unit {
-      text-align: center;
-    }
+    .countdown-unit { text-align: center; }
     
     .countdown-number {
-      font-size: 36px;
+      font-size: 30px;
       font-weight: 700;
       color: var(--airbnb-dark);
       display: block;
     }
     
     .countdown-text {
-      font-size: 11px;
+      font-size: 10px;
       font-weight: 500;
       color: var(--airbnb-gray);
       text-transform: uppercase;
@@ -264,42 +207,104 @@
     }
     
     .countdown-sep {
-      font-size: 24px;
+      font-size: 22px;
       font-weight: 300;
       color: #ddd;
+      margin-bottom: 12px;
     }
     
-    /* Pill Tags */
-    .pill-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 32px;
-    }
+    /* Pill tags */
+    .pill-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
     
     .pill {
       background: var(--airbnb-light);
       color: var(--airbnb-dark);
-      padding: 8px 16px;
+      padding: 6px 14px;
       border-radius: 20px;
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 500;
+    }
+    
+    /* Image side */
+    .hero-image { order: 2; }
+    
+    .image-frame {
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+      aspect-ratio: 4/5;
+    }
+    
+    .image-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    
+    /* Photo section */
+    .photo-section {
+      background: var(--airbnb-white);
+      padding: 64px 40px;
+    }
+    
+    .section-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .section-header {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+    
+    .section-header h2 {
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--airbnb-dark);
+      margin-bottom: 8px;
+    }
+    
+    .section-header p {
+      color: var(--airbnb-gray);
+      font-size: 15px;
+    }
+    
+    .photo-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      border-radius: 16px;
+      overflow: hidden;
+    }
+    
+    .photo-row img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s;
+    }
+    
+    .photo-row img:hover { transform: scale(1.04); }
+    
+    .photo-row .wide-img {
+      grid-column: span 2;
+      aspect-ratio: 16/9;
     }
     
     /* Mobile */
     @media (max-width: 900px) {
-      .hero-inner {
-        grid-template-columns: 1fr;
-        gap: 40px;
-      }
-      .hero-visual { order: -1; max-height: 300px; }
+      .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+      .hero-image { order: -1; max-width: 360px; margin: 0 auto; }
       .hero h1 { font-size: 36px; }
     }
     
-    @media (max-width: 768px) {
+    @media (max-width: 600px) {
       .nav-links { display: none; }
-      .hero { padding: 64px 24px 80px; }
-      .hero-inner { gap: 32px; }
+      .hero { padding: 56px 24px 72px; }
+      .photo-row { grid-template-columns: 1fr; }
+      .photo-row .wide-img { grid-column: 1; aspect-ratio: 16/9; }
     }
   </style>
 </head>
@@ -326,7 +331,7 @@
           Stacy R. Hall has spent nine years serving Fairfax families — fighting for safer streets, better schools, and a community that works for everyone.
         </p>
         <div class="hero-actions">
-          <a href="#" class="btn-primary">Learn My Priorities</a>
+          <a href="#" class="btn-primary">Learn My Priorities →</a>
           <a href="#" class="btn-secondary">Volunteer</a>
         </div>
         <div class="countdown-card">
@@ -355,10 +360,24 @@
           <span class="pill">✓ Walkable Community</span>
         </div>
       </div>
-      <div class="hero-visual">
-        <div class="candidate-photo">
-          <span>SRH</span>
+      <div class="hero-image">
+        <div class="image-frame">
+          <img src="../images/stacy-portrait.jpg" alt="Stacy R. Hall">
         </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="photo-section">
+    <div class="section-inner">
+      <div class="section-header">
+        <h2>Fairfax Is Our Home</h2>
+        <p>Preserving our community's character and green spaces for future generations</p>
+      </div>
+      <div class="photo-row">
+        <img class="wide-img" src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&q=80" alt="Historic Fairfax downtown">
+        <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=400&q=80" alt="Fairfax neighborhood">
+        <img src="../images/fairfax-paradise-lot.jpg" alt="Protecting green spaces">
       </div>
     </div>
   </section>

@@ -25,7 +25,6 @@
       -webkit-font-smoothing: antialiased;
     }
     
-    /* Header */
     header {
       background: var(--navy);
       color: white;
@@ -40,9 +39,7 @@
       margin-bottom: 12px;
     }
     
-    header h1 span {
-      color: var(--gold);
-    }
+    header h1 span { color: var(--gold); }
     
     header p {
       font-size: 18px;
@@ -51,7 +48,6 @@
       margin: 0 auto;
     }
     
-    /* Main */
     main {
       max-width: 1200px;
       margin: 0 auto;
@@ -76,7 +72,6 @@
       margin: 0 auto;
     }
     
-    /* Card Grid */
     .card-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -102,7 +97,7 @@
     
     .card-preview {
       background: #f3f4f6;
-      height: 240px;
+      height: 300px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -112,7 +107,7 @@
     }
     
     .card-preview::after {
-      content: 'Click to preview';
+      content: 'Click to preview →';
       position: absolute;
       bottom: 12px;
       right: 12px;
@@ -126,189 +121,303 @@
       transition: opacity 0.2s;
     }
     
-    .card:hover .card-preview::after {
-      opacity: 1;
-    }
+    .card:hover .card-preview::after { opacity: 1; }
     
-    /* Preview mockups */
-    .preview-notion {
+    /* Mini preview frames */
+    .preview-frame {
       width: 100%;
       height: 100%;
-      background: linear-gradient(180deg, #ffffff 0%, #f6f5f4 100%);
       display: flex;
       flex-direction: column;
-      padding: 24px;
     }
     
-    .preview-nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 24px;
-    }
-    
-    .preview-nav-logo {
-      font-weight: 700;
-      font-size: 14px;
-      color: var(--navy);
-    }
-    
-    .preview-nav-links {
-      display: flex;
-      gap: 16px;
-    }
-    
-    .preview-nav-link {
-      width: 40px;
-      height: 6px;
-      background: #e5e5e5;
-      border-radius: 3px;
-    }
-    
-    .preview-hero {
-      text-align: center;
+    /* Notion preview */
+    .preview-notion {
+      background: #f6f5f4;
       padding: 20px;
     }
     
-    .preview-badge {
-      width: 100px;
-      height: 20px;
-      background: #f2f9ff;
-      border-radius: 10px;
-      margin: 0 auto 12px;
-    }
-    
-    .preview-title {
-      height: 28px;
-      background: linear-gradient(90deg, var(--navy) 0%, var(--navy) 50%, var(--gold) 50%, var(--gold) 100%);
-      background-size: 200% 100%;
-      border-radius: 4px;
-      margin-bottom: 12px;
-    }
-    
-    .preview-subtitle {
-      height: 12px;
-      width: 80%;
-      background: #e5e5e5;
-      border-radius: 3px;
-      margin: 0 auto 16px;
-    }
-    
-    .preview-btns {
+    .preview-notion .topbar {
       display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+    }
+    
+    .preview-notion .topbar .logo {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--navy);
+    }
+    
+    .preview-notion .topbar .nav {
+      display: flex;
+      gap: 8px;
+    }
+    
+    .preview-notion .topbar .nav span {
+      width: 30px;
+      height: 4px;
+      background: #ddd;
+      border-radius: 2px;
+    }
+    
+    .preview-notion .content {
+      display: flex;
+      gap: 16px;
+      flex: 1;
+    }
+    
+    .preview-notion .text-side {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
       gap: 8px;
       justify-content: center;
     }
     
-    .preview-btn-primary {
+    .preview-notion .badge {
       width: 100px;
-      height: 36px;
-      background: #0075de;
-      border-radius: 4px;
+      height: 16px;
+      background: #f2f9ff;
+      border-radius: 8px;
     }
     
-    .preview-btn-secondary {
+    .preview-notion .title {
+      height: 20px;
+      background: linear-gradient(90deg, var(--navy) 30%, #2563eb 30%, #2563eb 60%, var(--navy) 60%);
+      background-size: 200% 100%;
+      border-radius: 3px;
+    }
+    
+    .preview-notion .subtitle {
+      height: 10px;
+      background: #e5e5e5;
+      border-radius: 2px;
+      width: 90%;
+    }
+    
+    .preview-notion .btns {
+      display: flex;
+      gap: 6px;
+      margin-top: 8px;
+    }
+    
+    .preview-notion .btn-blue {
       width: 80px;
-      height: 36px;
-      background: rgba(0,0,0,0.05);
-      border-radius: 4px;
+      height: 24px;
+      background: #0075de;
+      border-radius: 3px;
+    }
+    
+    .preview-notion .btn-gray {
+      width: 60px;
+      height: 24px;
+      background: rgba(0,0,0,0.06);
+      border-radius: 3px;
+    }
+    
+    .preview-notion .img-side {
+      width: 90px;
+      background: #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    
+    .preview-notion .img-side img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.9;
     }
     
     /* Stripe preview */
     .preview-stripe {
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(180deg, #ffffff 0%, #f8f9fc 100%);
+      background: linear-gradient(180deg, #fff 0%, #f8f9fc 100%);
+      padding: 20px;
+    }
+    
+    .preview-stripe .topbar {
       display: flex;
-      flex-direction: column;
-      padding: 24px;
-    }
-    
-    .preview-stripe .preview-nav {
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      padding-bottom: 10px;
       border-bottom: 1px solid #e5edf5;
-      padding-bottom: 16px;
     }
     
-    .preview-stripe .preview-hero {
+    .preview-stripe .topbar .logo {
+      font-size: 12px;
+      font-weight: 300;
+      color: #061b31;
+    }
+    
+    .preview-stripe .topbar .logo strong { font-weight: 600; }
+    
+    .preview-stripe .topbar .nav {
+      display: flex;
+      gap: 8px;
+    }
+    
+    .preview-stripe .topbar .nav span {
+      width: 30px;
+      height: 4px;
+      background: #e5edf5;
+      border-radius: 2px;
+    }
+    
+    .preview-stripe .content {
+      display: flex;
+      gap: 16px;
+      flex: 1;
+    }
+    
+    .preview-stripe .text-side {
       flex: 1;
       display: flex;
       flex-direction: column;
+      gap: 8px;
       justify-content: center;
     }
     
-    .preview-stripe .preview-title {
-      background: linear-gradient(90deg, #061b31 0%, #061b31 50%, #533afd 50%, #533afd 100%);
-      background-size: 200% 100%;
+    .preview-stripe .badge {
+      width: 120px;
+      height: 12px;
+      background: rgba(100,116,139,0.15);
+      border-radius: 3px;
     }
     
-    .preview-stripe .preview-btn-primary {
+    .preview-stripe .title {
+      height: 20px;
+      background: linear-gradient(90deg, #061b31 30%, #533afd 30%, #533afd 55%, #061b31 55%);
+      background-size: 200% 100%;
+      border-radius: 3px;
+    }
+    
+    .preview-stripe .subtitle {
+      height: 10px;
+      background: #e5e5e5;
+      border-radius: 2px;
+      width: 85%;
+    }
+    
+    .preview-stripe .btns {
+      display: flex;
+      gap: 6px;
+      margin-top: 8px;
+    }
+    
+    .preview-stripe .btn-purple {
+      width: 80px;
+      height: 24px;
       background: #533afd;
+      border-radius: 3px;
+    }
+    
+    .preview-stripe .btn-ghost {
+      width: 60px;
+      height: 24px;
+      background: transparent;
+      border: 1px solid rgba(83,58,253,0.3);
+      border-radius: 3px;
+    }
+    
+    .preview-stripe .img-side {
+      width: 90px;
+      background: #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(50,50,93,0.15);
+    }
+    
+    .preview-stripe .img-side img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.9;
     }
     
     /* Airbnb preview */
     .preview-airbnb {
-      width: 100%;
-      height: 100%;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      padding: 24px;
       background: linear-gradient(135deg, #fff5f5 0%, #fff 50%, #f0fff4 100%);
+      padding: 20px;
     }
     
-    .preview-airbnb-content {
+    .preview-airbnb .content {
+      display: flex;
+      gap: 12px;
+      flex: 1;
+    }
+    
+    .preview-airbnb .text-side {
+      flex: 1;
       display: flex;
       flex-direction: column;
+      gap: 6px;
       justify-content: center;
-      gap: 8px;
     }
     
-    .preview-airbnb .preview-badge {
+    .preview-airbnb .badge {
       width: 80px;
-      height: 16px;
+      height: 14px;
       background: rgba(255,56,92,0.15);
+      border-radius: 10px;
     }
     
-    .preview-airbnb .preview-title {
-      background: linear-gradient(90deg, #222 0%, #222 50%, #ff385c 50%, #ff385c 100%);
+    .preview-airbnb .title {
+      height: 18px;
+      background: linear-gradient(90deg, #222 40%, #ff385c 40%, #ff385c 55%, #222 55%);
       background-size: 200% 100%;
-      height: 22px;
+      border-radius: 3px;
     }
     
-    .preview-airbnb .preview-subtitle {
-      width: 90%;
+    .preview-airbnb .subtitle {
       height: 8px;
+      background: #e5e5e5;
+      border-radius: 2px;
+      width: 95%;
     }
     
-    .preview-airbnb .preview-btns {
-      margin-top: 8px;
-    }
-    
-    .preview-airbnb .preview-btn-primary {
-      background: #ff385c;
-      border-radius: 8px;
-    }
-    
-    .preview-airbnb-visual {
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    .preview-airbnb .btns {
       display: flex;
-      align-items: center;
-      justify-content: center;
+      gap: 6px;
+      margin-top: 6px;
     }
     
-    .preview-avatar {
-      width: 80px;
-      height: 80px;
-      background: linear-gradient(135deg, var(--navy) 0%, #2d4a7c 100%);
-      border-radius: 50%;
+    .preview-airbnb .btn-red {
+      width: 76px;
+      height: 26px;
+      background: #ff385c;
+      border-radius: 6px;
+    }
+    
+    .preview-airbnb .btn-outline {
+      width: 60px;
+      height: 26px;
+      background: white;
+      border: 1px solid rgba(0,0,0,0.1);
+      border-radius: 6px;
+    }
+    
+    .preview-airbnb .img-side {
+      width: 90px;
+      background: #ddd;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    
+    .preview-airbnb .img-side img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.9;
     }
     
     /* Card body */
-    .card-body {
-      padding: 24px;
-    }
+    .card-body { padding: 24px; }
     
     .card-number {
       display: inline-block;
@@ -368,16 +477,25 @@
       transition: background 0.2s;
     }
     
-    .card-link:hover {
-      background: #234876;
-    }
+    .card-link:hover { background: #234876; }
     
     .card-link svg {
       width: 16px;
       height: 16px;
     }
     
-    /* Footer */
+    .rec-badge {
+      background: linear-gradient(135deg, var(--gold) 0%, #e6b800 100%);
+      color: var(--navy);
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 4px 10px;
+      border-radius: 4px;
+      margin-left: 8px;
+    }
+    
     footer {
       text-align: center;
       padding: 40px 24px;
@@ -391,56 +509,43 @@
       text-decoration: none;
     }
     
-    footer a:hover {
-      text-decoration: underline;
-    }
-    
-    /* Recommendation badge */
-    .rec-badge {
-      background: linear-gradient(135deg, var(--gold) 0%, #e6b800 100%);
-      color: var(--navy);
-      font-size: 10px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      padding: 4px 10px;
-      border-radius: 4px;
-      margin-left: 8px;
-    }
+    footer a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
   <header>
     <h1>Stacy <span>For Fairfax</span></h1>
-    <p>Three design directions for the new campaign website — click any option to preview it live</p>
+    <p>Three design directions for the new campaign website — click any option to preview it live with real photos</p>
   </header>
   
   <main>
     <div class="intro">
       <h2>Choose a Design Direction</h2>
-      <p>Each option uses the same content (Stacy's bio, priorities, accomplishments) but with a different visual style. Click "View Live" to see the full interactive prototype.</p>
+      <p>Each option uses Stacy's real photo and Fairfax imagery. Click "View Live" to see the full interactive prototype — including the countdown timer and hover effects.</p>
     </div>
     
     <div class="card-grid">
       <!-- Notion -->
       <div class="card">
         <div class="card-preview">
-          <div class="preview-notion">
-            <div class="preview-nav">
-              <div class="preview-nav-logo">StacyHall</div>
-              <div class="preview-nav-links">
-                <div class="preview-nav-link"></div>
-                <div class="preview-nav-link"></div>
-                <div class="preview-nav-link"></div>
-              </div>
+          <div class="preview-frame preview-notion">
+            <div class="topbar">
+              <div class="logo">StacyHall</div>
+              <div class="nav"><span></span><span></span><span></span></div>
             </div>
-            <div class="preview-hero">
-              <div class="preview-badge"></div>
-              <div class="preview-title"></div>
-              <div class="preview-subtitle"></div>
-              <div class="preview-btns">
-                <div class="preview-btn-primary"></div>
-                <div class="preview-btn-secondary"></div>
+            <div class="content">
+              <div class="text-side">
+                <div class="badge"></div>
+                <div class="title"></div>
+                <div class="subtitle"></div>
+                <div class="subtitle" style="width:70%"></div>
+                <div class="btns">
+                  <div class="btn-blue"></div>
+                  <div class="btn-gray"></div>
+                </div>
+              </div>
+              <div class="img-side">
+                <img src="../images/stacy-portrait.jpg" alt="Stacy">
               </div>
             </div>
           </div>
@@ -448,19 +553,15 @@
         <div class="card-body">
           <span class="card-number">Option A</span>
           <h3 class="card-title">Notion Warm</h3>
-          <p class="card-desc">Clean, calm, and approachable. Think editorial magazine meets community newsletter — the kind of site that says "I'm reasonable and trustworthy."</p>
+          <p class="card-desc">Calm, clean, and approachable. The editorial-style layout says "I'm reasonable and trustworthy" — like a community newsletter meets modern design.</p>
           <ul class="card-traits">
-            <li>Warm neutral palette (off-white, gray)</li>
-            <li>Blue accent color</li>
-            <li>Clean typography with subtle negative letter-spacing</li>
-            <li>Minimal, breathable design</li>
+            <li>Warm off-white background</li>
+            <li>Subtle blue accents</li>
+            <li>Clean Inter typography</li>
+            <li>Minimal, breathable layout</li>
           </ul>
           <a href="001-notion-warm/index.html" class="card-link" target="_blank">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-              <polyline points="15 3 21 3 21 9"></polyline>
-              <line x1="10" y1="14" x2="21" y2="3"></line>
-            </svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
             View Live Prototype
           </a>
         </div>
@@ -469,22 +570,24 @@
       <!-- Stripe -->
       <div class="card">
         <div class="card-preview">
-          <div class="preview-stripe">
-            <div class="preview-nav">
-              <div class="preview-nav-logo" style="font-weight: 300;">Stacy <strong>Hall</strong></div>
-              <div class="preview-nav-links">
-                <div class="preview-nav-link"></div>
-                <div class="preview-nav-link"></div>
-                <div class="preview-nav-link"></div>
-              </div>
+          <div class="preview-frame preview-stripe">
+            <div class="topbar">
+              <div class="logo">Stacy <strong>Hall</strong></div>
+              <div class="nav"><span></span><span></span><span></span></div>
             </div>
-            <div class="preview-hero">
-              <div class="preview-badge" style="width: 120px; height: 16px; background: rgba(100,116,139,0.15);"></div>
-              <div class="preview-title"></div>
-              <div class="preview-subtitle"></div>
-              <div class="preview-btns">
-                <div class="preview-btn-primary"></div>
-                <div class="preview-btn-secondary"></div>
+            <div class="content">
+              <div class="text-side">
+                <div class="badge"></div>
+                <div class="title"></div>
+                <div class="subtitle"></div>
+                <div class="subtitle" style="width:70%"></div>
+                <div class="btns">
+                  <div class="btn-purple"></div>
+                  <div class="btn-ghost"></div>
+                </div>
+              </div>
+              <div class="img-side">
+                <img src="../images/stacy-portrait.jpg" alt="Stacy">
               </div>
             </div>
           </div>
@@ -492,19 +595,15 @@
         <div class="card-body">
           <span class="card-number">Option B</span>
           <h3 class="card-title">Stripe Premium <span class="rec-badge">Recommended</span></h3>
-          <p class="card-desc">Sleek, modern, professional. The tech-industry standard for "we know what we're doing." Feels competent and capable — like someone who delivers results.</p>
+          <p class="card-desc">Sleek, modern, professional. The tech-industry standard for "we know what we're doing." Premium shadows and light typography project competence and leadership.</p>
           <ul class="card-traits">
             <li>Navy &amp; purple accent</li>
-            <li>Light typography (weight 300)</li>
+            <li>Light weight typography (300)</li>
             <li>Multi-layer premium shadows</li>
             <li>Dark stat bar for credibility</li>
           </ul>
           <a href="002-stripe-premium/index.html" class="card-link" target="_blank">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-              <polyline points="15 3 21 3 21 9"></polyline>
-              <line x1="10" y1="14" x2="21" y2="3"></line>
-            </svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
             View Live Prototype
           </a>
         </div>
@@ -513,36 +612,37 @@
       <!-- Airbnb -->
       <div class="card">
         <div class="card-preview">
-          <div class="preview-airbnb">
-            <div class="preview-airbnb-content">
-              <div class="preview-badge"></div>
-              <div class="preview-title"></div>
-              <div class="preview-subtitle"></div>
-              <div class="preview-btns">
-                <div class="preview-btn-primary" style="width: 90px;"></div>
+          <div class="preview-frame preview-airbnb">
+            <div class="content">
+              <div class="text-side">
+                <div class="badge"></div>
+                <div class="title"></div>
+                <div class="subtitle"></div>
+                <div class="subtitle" style="width:80%"></div>
+                <div class="subtitle" style="width:60%"></div>
+                <div class="btns">
+                  <div class="btn-red"></div>
+                  <div class="btn-outline"></div>
+                </div>
               </div>
-            </div>
-            <div class="preview-airbnb-visual">
-              <div class="preview-avatar"></div>
+              <div class="img-side">
+                <img src="../images/stacy-portrait.jpg" alt="Stacy">
+              </div>
             </div>
           </div>
         </div>
         <div class="card-body">
           <span class="card-number">Option C</span>
           <h3 class="card-title">Airbnb Friendly</h3>
-          <p class="card-desc">Warm, welcoming, community-focused. Split layout with photo area gives a personal touch. The coral accent feels energetic and approachable.</p>
+          <p class="card-desc">Warm, welcoming, community-focused. Coral accents and rounded corners feel energetic and approachable — the split layout with photo puts a personal face front and center.</p>
           <ul class="card-traits">
             <li>Coral/red accent (energetic)</li>
-            <li>Split layout with photo placeholder</li>
+            <li>Split layout with photo</li>
             <li>Rounded corners, friendly buttons</li>
             <li>Personality-forward design</li>
           </ul>
           <a href="003-airbnb-friendly/index.html" class="card-link" target="_blank">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-              <polyline points="15 3 21 3 21 9"></polyline>
-              <line x1="10" y1="14" x2="21" y2="3"></line>
-            </svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
             View Live Prototype
           </a>
         </div>
