@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stacy R. Hall | Fairfax City Council</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    :root {
+      --notion-white: #ffffff;
+      --notion-warm-white: #f6f5f4;
+      --notion-dark: #31302e;
+      --notion-gray-500: #615d59;
+      --notion-gray-300: #a39e98;
+      --notion-blue: #0075de;
+      --notion-blue-hover: #005bab;
+      --notion-focus: #097fe8;
+      --notion-badge-bg: #f2f9ff;
+      --border: 1px solid rgba(0,0,0,0.1);
+      --shadow-card: rgba(0,0,0,0.04) 0px 4px 18px, rgba(0,0,0,0.027) 0px 2.025px 7.84688px, rgba(0,0,0,0.02) 0px 0.8px 2.925px, rgba(0,0,0,0.01) 0px 0.175px 1.04062px;
+    }
+    
+    body {
+      font-family: 'Inter', -apple-system, system-ui, 'Segoe UI', Roboto, sans-serif;
+      color: rgba(0,0,0,0.95);
+      background: var(--notion-white);
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.5;
+    }
+    
+    /* Navigation */
+    nav {
+      position: sticky;
+      top: 0;
+      background: rgba(255,255,255,0.9);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: var(--border);
+      z-index: 100;
+      padding: 0 24px;
+    }
+    
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+    
+    .logo {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--notion-dark);
+      text-decoration: none;
+      letter-spacing: -0.25px;
+    }
+    
+    .logo span {
+      color: var(--notion-blue);
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+    
+    .nav-links a {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--notion-dark);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    
+    .nav-links a:hover {
+      color: var(--notion-blue);
+    }
+    
+    .nav-cta {
+      background: var(--notion-blue);
+      color: white !important;
+      padding: 8px 16px;
+      border-radius: 4px;
+      font-weight: 600;
+      transition: background 0.15s;
+    }
+    
+    .nav-cta:hover {
+      background: var(--notion-blue-hover);
+    }
+    
+    /* Hero Section */
+    .hero {
+      background: var(--notion-warm-white);
+      padding: 100px 24px;
+      text-align: center;
+    }
+    
+    .hero-inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .hero-badge {
+      display: inline-block;
+      background: var(--notion-badge-bg);
+      color: var(--notion-focus);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.125px;
+      padding: 4px 10px;
+      border-radius: 9999px;
+      margin-bottom: 24px;
+    }
+    
+    .hero h1 {
+      font-size: 56px;
+      font-weight: 700;
+      letter-spacing: -2.125px;
+      line-height: 1.0;
+      color: var(--notion-dark);
+      margin-bottom: 20px;
+    }
+    
+    .hero h1 .accent {
+      color: var(--notion-blue);
+    }
+    
+    .hero-subtitle {
+      font-size: 20px;
+      font-weight: 400;
+      color: var(--notion-gray-500);
+      line-height: 1.4;
+      margin-bottom: 36px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    
+    .btn-primary {
+      background: var(--notion-blue);
+      color: white;
+      padding: 12px 24px;
+      border-radius: 4px;
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.15s;
+      cursor: pointer;
+      border: none;
+    }
+    
+    .btn-primary:hover {
+      background: var(--notion-blue-hover);
+      transform: scale(1.02);
+    }
+    
+    .btn-primary:active {
+      transform: scale(0.98);
+    }
+    
+    .btn-secondary {
+      background: rgba(0,0,0,0.05);
+      color: var(--notion-dark);
+      padding: 12px 24px;
+      border-radius: 4px;
+      font-size: 16px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.15s;
+    }
+    
+    .btn-secondary:hover {
+      background: rgba(0,0,0,0.08);
+    }
+    
+    /* Countdown */
+    .countdown {
+      background: var(--notion-white);
+      border: var(--border);
+      border-radius: 12px;
+      padding: 32px;
+      margin-top: 48px;
+      display: inline-block;
+    }
+    
+    .countdown-label {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--notion-gray-500);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 12px;
+    }
+    
+    .countdown-numbers {
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+    }
+    
+    .countdown-unit {
+      text-align: center;
+    }
+    
+    .countdown-number {
+      font-size: 40px;
+      font-weight: 700;
+      color: var(--notion-dark);
+      letter-spacing: -1px;
+      display: block;
+    }
+    
+    .countdown-text {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--notion-gray-500);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .countdown-sep {
+      font-size: 40px;
+      font-weight: 300;
+      color: var(--notion-gray-300);
+    }
+    
+    /* Mobile */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hero h1 { font-size: 36px; letter-spacing: -1px; }
+      .hero { padding: 64px 24px; }
+      .countdown-numbers { gap: 12px; }
+      .countdown-number { font-size: 28px; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <a href="#" class="logo">Stacy<span>Hall</span></a>
+      <ul class="nav-links">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Priorities</a></li>
+        <li><a href="#">Accomplishments</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#" class="nav-cta">Donate</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-badge">🗳️ Election Day: November 4, 2025</div>
+      <h1>Experienced. <span class="accent">Committed.</span> Ready to Serve.</h1>
+      <p class="hero-subtitle">
+        Stacy R. Hall has spent 9 years serving Fairfax families — fighting for safer streets, better schools, and a community that works for everyone.
+      </p>
+      <div class="hero-actions">
+        <a href="#" class="btn-primary">Learn My Priorities</a>
+        <a href="#" class="btn-secondary">Volunteer</a>
+      </div>
+      <div class="countdown">
+        <div class="countdown-label">Time Until Election</div>
+        <div class="countdown-numbers">
+          <div class="countdown-unit">
+            <span class="countdown-number" id="days">---</span>
+            <span class="countdown-text">Days</span>
+          </div>
+          <span class="countdown-sep">:</span>
+          <div class="countdown-unit">
+            <span class="countdown-number" id="hours">--</span>
+            <span class="countdown-text">Hours</span>
+          </div>
+          <span class="countdown-sep">:</span>
+          <div class="countdown-unit">
+            <span class="countdown-number" id="minutes">--</span>
+            <span class="countdown-text">Min</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <script>
+    function updateCountdown() {
+      const election = new Date('2025-11-04T00:00:00');
+      const now = new Date();
+      const diff = election - now;
+      
+      if (diff <= 0) {
+        document.getElementById('days').textContent = '0';
+        document.getElementById('hours').textContent = '0';
+        document.getElementById('minutes').textContent = '0';
+        return;
+      }
+      
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      
+      document.getElementById('days').textContent = days;
+      document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+      document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+    }
+    
+    updateCountdown();
+    setInterval(updateCountdown, 60000);
+  </script>
+</body>
+</html>

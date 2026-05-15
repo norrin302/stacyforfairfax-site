@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stacy R. Hall | Fairfax City Council</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    :root {
+      --airbnb-red: #ff385c;
+      --airbnb-deep-red: #e00b41;
+      --airbnb-dark: #222222;
+      --airbnb-gray: #6a6a6a;
+      --airbnb-light: #f2f2f2;
+      --airbnb-white: #ffffff;
+      --airbnb-border: rgba(0,0,0,0.08);
+      --shadow-card: rgba(0,0,0,0.02) 0px 0px 0px 1px, rgba(0,0,0,0.04) 0px 2px 6px, rgba(0,0,0,0.1) 0px 4px 8px;
+      --shadow-hover: rgba(0,0,0,0.08) 0px 4px 12px;
+    }
+    
+    body {
+      font-family: 'DM Sans', -apple-system, system-ui, 'Segoe UI', Roboto, sans-serif;
+      color: var(--airbnb-dark);
+      background: var(--airbnb-white);
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.43;
+    }
+    
+    /* Navigation */
+    nav {
+      background: var(--airbnb-white);
+      border-bottom: 1px solid var(--airbnb-border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 40px;
+      height: 72px;
+    }
+    
+    .logo {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--airbnb-dark);
+      text-decoration: none;
+      letter-spacing: -0.44px;
+    }
+    
+    .logo .accent {
+      color: var(--airbnb-red);
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+    
+    .nav-links a {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--airbnb-dark);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    
+    .nav-links a:hover {
+      color: var(--airbnb-red);
+    }
+    
+    .nav-cta {
+      background: var(--airbnb-red);
+      color: white !important;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+    
+    .nav-cta:hover {
+      background: var(--airbnb-deep-red);
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-1px);
+    }
+    
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, #fff5f5 0%, #fff 50%, #f0fff4 100%);
+      padding: 100px 40px 120px;
+    }
+    
+    .hero-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    
+    .hero-content {
+      order: 1;
+    }
+    
+    .hero-visual {
+      order: 2;
+      background: var(--airbnb-white);
+      border-radius: 20px;
+      box-shadow: var(--shadow-card);
+      overflow: hidden;
+      aspect-ratio: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .candidate-photo {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #1a365d 0%, #2d4a7c 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 120px;
+      font-weight: 700;
+      opacity: 0.9;
+    }
+    
+    .candidate-photo span {
+      font-size: 16px;
+      font-weight: 400;
+      opacity: 0.7;
+      margin-top: 16px;
+      letter-spacing: 2px;
+    }
+    
+    .hero-badge {
+      display: inline-block;
+      background: rgba(255,56,92,0.1);
+      color: var(--airbnb-red);
+      font-size: 13px;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 20px;
+      margin-bottom: 24px;
+    }
+    
+    .hero h1 {
+      font-size: 48px;
+      font-weight: 700;
+      letter-spacing: -0.44px;
+      line-height: 1.1;
+      color: var(--airbnb-dark);
+      margin-bottom: 20px;
+    }
+    
+    .hero h1 .accent {
+      color: var(--airbnb-red);
+    }
+    
+    .hero-subtitle {
+      font-size: 17px;
+      font-weight: 400;
+      color: var(--airbnb-gray);
+      line-height: 1.6;
+      margin-bottom: 32px;
+    }
+    
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    
+    .btn-primary {
+      background: var(--airbnb-red);
+      color: white;
+      padding: 14px 28px;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .btn-primary:hover {
+      background: var(--airbnb-deep-red);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-hover);
+    }
+    
+    .btn-secondary {
+      background: var(--airbnb-white);
+      color: var(--airbnb-dark);
+      padding: 14px 28px;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s;
+      border: 1px solid var(--airbnb-border);
+    }
+    
+    .btn-secondary:hover {
+      border-color: var(--airbnb-dark);
+      transform: translateY(-2px);
+    }
+    
+    /* Countdown */
+    .countdown-card {
+      background: var(--airbnb-white);
+      border-radius: 16px;
+      box-shadow: var(--shadow-card);
+      padding: 28px 32px;
+      margin-top: 40px;
+      display: inline-block;
+    }
+    
+    .countdown-header {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--airbnb-gray);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 16px;
+    }
+    
+    .countdown-numbers {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+    
+    .countdown-unit {
+      text-align: center;
+    }
+    
+    .countdown-number {
+      font-size: 36px;
+      font-weight: 700;
+      color: var(--airbnb-dark);
+      display: block;
+    }
+    
+    .countdown-text {
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--airbnb-gray);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .countdown-sep {
+      font-size: 24px;
+      font-weight: 300;
+      color: #ddd;
+    }
+    
+    /* Pill Tags */
+    .pill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 32px;
+    }
+    
+    .pill {
+      background: var(--airbnb-light);
+      color: var(--airbnb-dark);
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 500;
+    }
+    
+    /* Mobile */
+    @media (max-width: 900px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .hero-visual { order: -1; max-height: 300px; }
+      .hero h1 { font-size: 36px; }
+    }
+    
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hero { padding: 64px 24px 80px; }
+      .hero-inner { gap: 32px; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <a href="#" class="logo">Stacy<span class="accent">.</span>Hall</a>
+      <ul class="nav-links">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Priorities</a></li>
+        <li><a href="#">Accomplishments</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#" class="nav-cta">Donate</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge">🗳️ November 4, 2025</div>
+        <h1>Experienced. <span class="accent">Committed.</span> Ready to Serve.</h1>
+        <p class="hero-subtitle">
+          Stacy R. Hall has spent nine years serving Fairfax families — fighting for safer streets, better schools, and a community that works for everyone.
+        </p>
+        <div class="hero-actions">
+          <a href="#" class="btn-primary">Learn My Priorities</a>
+          <a href="#" class="btn-secondary">Volunteer</a>
+        </div>
+        <div class="countdown-card">
+          <div class="countdown-header">Time Until Election</div>
+          <div class="countdown-numbers">
+            <div class="countdown-unit">
+              <span class="countdown-number" id="days">---</span>
+              <span class="countdown-text">Days</span>
+            </div>
+            <span class="countdown-sep">:</span>
+            <div class="countdown-unit">
+              <span class="countdown-number" id="hours">--</span>
+              <span class="countdown-text">Hours</span>
+            </div>
+            <span class="countdown-sep">:</span>
+            <div class="countdown-unit">
+              <span class="countdown-number" id="minutes">--</span>
+              <span class="countdown-text">Min</span>
+            </div>
+          </div>
+        </div>
+        <div class="pill-tags">
+          <span class="pill">✓ Public Safety</span>
+          <span class="pill">✓ Fiscal Transparency</span>
+          <span class="pill">✓ Great Schools</span>
+          <span class="pill">✓ Walkable Community</span>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="candidate-photo">
+          <span>SRH</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <script>
+    function updateCountdown() {
+      const election = new Date('2025-11-04T00:00:00');
+      const now = new Date();
+      const diff = election - now;
+      
+      if (diff <= 0) {
+        document.getElementById('days').textContent = '0';
+        document.getElementById('hours').textContent = '0';
+        document.getElementById('minutes').textContent = '0';
+        return;
+      }
+      
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      
+      document.getElementById('days').textContent = days;
+      document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+      document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+    }
+    
+    updateCountdown();
+    setInterval(updateCountdown, 60000);
+  </script>
+</body>
+</html>
