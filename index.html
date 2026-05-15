@@ -1052,8 +1052,87 @@
             display: block;
         }
         
+        /* Fundraiser Progress Bar */
+        .hero-fundraiser {
+            margin: 1.5rem 0 2rem;
+            max-width: 480px;
+        }
+        .fund-meta {
+            display: flex;
+            align-items: baseline;
+            gap: 0.5rem;
+            margin-bottom: 0.6rem;
+        }
+        .fund-raised {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--gold-light);
+        }
+        .fund-sep {
+            font-size: 1rem;
+            color: rgba(255,255,255,0.7);
+        }
+        .fund-goal {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.5);
+        }
+        .fund-bar {
+            width: 100%;
+            height: 10px;
+            background: rgba(255,255,255,0.15);
+            border-radius: 50px;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .fund-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--gold) 0%, var(--gold-light) 100%);
+            border-radius: 50px;
+            transition: width 1.5s ease;
+            position: relative;
+        }
+        .fund-fill::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 4px;
+            height: 100%;
+            background: white;
+            border-radius: 2px;
+            box-shadow: 0 0 8px rgba(255,255,255,0.8);
+        }
+        .fund-stats {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 0.5rem;
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.55);
+        }
+        .fund-right { color: rgba(255,255,255,0.7); font-weight: 600; }
+
+        /* Countdown */
+        .countdown {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .countdown-item {
+            text-align: center;
+        }
+
+        .countdown-item .number {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            display: block;
+            line-height: 1;
+        }
+
         .countdown-item .label {
-            font-size: 0.85rem;
+            font-size: 0.75rem;
             text-transform: uppercase;
             letter-spacing: 2px;
             color: var(--medium-gray);
@@ -1097,6 +1176,23 @@
                         <i class="fas fa-envelope"></i> Get In Touch
                     </a>
                 </div>
+
+                <!-- Fundraising Progress -->
+                <div class="hero-fundraiser">
+                    <div class="fund-meta">
+                        <span class="fund-raised">$12,847</span>
+                        <span class="fund-sep">raised</span>
+                        <span class="fund-goal">of $25,000 goal</span>
+                    </div>
+                    <div class="fund-bar">
+                        <div class="fund-fill" id="fundBar" style="width: 51.4%"></div>
+                    </div>
+                    <div class="fund-stats">
+                        <span>486 donations</span>
+                        <span class="fund-right">51% funded</span>
+                    </div>
+                </div>
+
                 <div class="countdown">
                     <div class="countdown-item">
                         <span class="number" id="days">--</span>
@@ -1108,7 +1204,11 @@
                     </div>
                     <div class="countdown-item">
                         <span class="number" id="minutes">--</span>
-                        <span class="label">Minutes</span>
+                        <span class="label">Min</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="number" id="seconds">--</span>
+                        <span class="label">Sec</span>
                     </div>
                 </div>
             </div>
@@ -1526,30 +1626,33 @@
             }
         });
         
-        // Election Countdown - November 4, 2025
-        const electionDate = new Date('November 4, 2025 00:00:00').getTime();
-        
+        // Election Countdown - November 3, 2026 (Federal Election Day)
+        const electionDate = new Date('November 3, 2026 00:00:00').getTime();
+
         function updateCountdown() {
             const now = new Date().getTime();
             const distance = electionDate - now;
-            
+
             if (distance > 0) {
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const days  = Math.floor(distance / (1000 * 60 * 60 * 24));
                 const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                
-                document.getElementById('days').textContent = days;
-                document.getElementById('hours').textContent = hours;
-                document.getElementById('minutes').textContent = minutes;
+                const mins  = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const secs  = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.getElementById('days').textContent    = days;
+                document.getElementById('hours').textContent   = hours;
+                document.getElementById('minutes').textContent = mins;
+                document.getElementById('seconds').textContent = secs;
             } else {
-                document.getElementById('days').textContent = '0';
-                document.getElementById('hours').textContent = '0';
+                document.getElementById('days').textContent    = '0';
+                document.getElementById('hours').textContent   = '0';
                 document.getElementById('minutes').textContent = '0';
+                document.getElementById('seconds').textContent = '0';
             }
         }
-        
+
         updateCountdown();
-        setInterval(updateCountdown, 60000);
+        setInterval(updateCountdown, 1000);
         
         // Scroll animations
         const observerOptions = {

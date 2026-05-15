@@ -1,5 +1,6 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Stacy R. Hall | Fairfax City Council 2025</title><link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"><style>* { box-sizing: border-box; margin: 0; padding: 0; }
-:root { --sp:#533afd; --sph:#4434d4; --sn:#061b31; --ss:#64748b; --sl:#273951; --sb:#e5edf5; --sw:#ffffff; --sd:#1c1e54; --bdr:1px solid #e5edf5; --ssp:rgba(50,50,93,0.25) 0px 30px 45px -30px,rgba(0,0,0,0.1) 0px 18px 36px -18px; --ssa:rgba(23,23,23,0.08) 0px 15px 35px 0px; }
+:root {
+        --fg: #d69e2e;    /* gold fill */ --sp:#533afd; --sph:#4434d4; --sn:#061b31; --ss:#64748b; --sl:#273951; --sb:#e5edf5; --sw:#ffffff; --sd:#1c1e54; --bdr:1px solid #e5edf5; --ssp:rgba(50,50,93,0.25) 0px 30px 45px -30px,rgba(0,0,0,0.1) 0px 18px 36px -18px; --ssa:rgba(23,23,23,0.08) 0px 15px 35px 0px; }
 body { font-family:'Source Sans 3',-apple-system,system-ui,sans-serif; color:var(--sn); background:var(--sw); -webkit-font-smoothing:antialiased; line-height:1.4; font-weight:300; }
 a { color:var(--sp); text-decoration:none; } a:hover { color:var(--sph); }
 nav { position:sticky; top:0; background:rgba(255,255,255,0.95); backdrop-filter:blur(12px); border-bottom:var(--bdr); z-index:100; padding:0 48px; }
@@ -63,11 +64,21 @@ footer { background:var(--sn); color:white; padding:56px 48px; }
 .ds p { opacity:0.85; margin-bottom:24px; font-size:15px; }
 .dbtn { background:white; color:var(--sp); padding:12px 28px; border-radius:4px; font-weight:600; font-size:15px; text-decoration:none; display:inline-block; }
 .si { width:100%; border-radius:8px; box-shadow:var(--ssp); }
-@media(max-width:768px){ .g3,.g2{grid-template-columns:1fr} .hi{grid-template-columns:1fr} .hi img{order:-1} }</style></head><body><nav><div class="ni"><a href="index.html" class="logo">Stacy <strong>Hall</strong></a><ul class="nl"><li><a href="about.html">About</a></li><li><a href="priorities.html">Priorities</a></li><li><a href="accomplishments.html">Accomplishments</a></li><li><a href="contact.html" class="nc">Donate</a></li></ul></div></nav>
+@media(max-width:768px){ .g3,.g2{grid-template-columns:1fr} .hi{grid-template-columns:1fr} .hi img{order:-1} }
+        .hero-fundraiser { margin: 1.5rem 0 0; max-width: 480px; }
+        .fund-meta { display: flex; align-items: baseline; gap: 0.5rem; margin-bottom: 0.6rem; }
+        .fund-raised { font-family: 'Inter','DM Sans','Playfair Display',serif; font-size: 1.8rem; font-weight: 700; color: var(--fg); }
+        .fund-sep { font-size: 1rem; opacity: 0.7; }
+        .fund-goal { font-size: 0.9rem; opacity: 0.5; }
+        .fund-bar { width: 100%; height: 10px; background: rgba(0,0,0,0.08); border-radius: 50px; overflow: hidden; }
+        .fund-fill { height: 100%; background: linear-gradient(90deg, var(--fg) 0%, #f6e05e 100%); border-radius: 50px; }
+        .fund-stats { display: flex; justify-content: space-between; margin-top: 0.5rem; font-size: 0.8rem; opacity: 0.6; }
+        .fund-right { opacity: 1; font-weight: 600; }
+    </style></head><body><nav><div class="ni"><a href="index.html" class="logo">Stacy <strong>Hall</strong></a><ul class="nl"><li><a href="about.html">About</a></li><li><a href="priorities.html">Priorities</a></li><li><a href="accomplishments.html">Accomplishments</a></li><li><a href="contact.html" class="nc">Donate</a></li></ul></div></nav>
 <div class="hs">
   <div class="hi">
     <div class="ht">
-      <div class="badge"><svg viewBox="0 0 16 16" fill="none"><path d="M8 0l1.8 5.5H16l-4.5 3.3 1.7 5.2L8 11l-5.2 3 1.7-5.2L0 5.5h6.2z" fill="currentColor"/></svg>Fairfax City Council · November 4, 2025</div>
+      <div class="badge"><svg viewBox="0 0 16 16" fill="none"><path d="M8 0l1.8 5.5H16l-4.5 3.3 1.7 5.2L8 11l-5.2 3 1.7-5.2L0 5.5h6.2z" fill="currentColor"/></svg>Fairfax City Council · November 3, 2026</div>
       <h1>Experienced Leadership<br>for Fairfax's <span class="a">Future</span></h1>
       <p>14 years on City Council, 5 as Vice Mayor. CPA, small business owner, mom. Re-electing on November 4, 2025.</p>
       <div class="ha">
@@ -84,7 +95,7 @@ footer { background:var(--sn); color:white; padding:56px 48px; }
 </div>
 <script>
 (function(){var e=document.getElementById('cd');
-function u(){var d=new Date('2025-11-04T00:00:00')-new Date();if(d<=0){e.innerHTML='<span style="font-weight:600;font-size:18px;">Election Day!</span>';return}var tot=Math.floor(d/86400000),hr=Math.floor(d%86400000/3600000),mn=Math.floor(d%3600000/60000),sc=Math.floor(d%60000/1000);e.innerHTML='<div class="cdu"><span class="cdnh">'+tot+'</span><span>Days</span></div><div class="cdns">:</div><div class="cdu"><span class="cdnh">'+hr+'</span><span>Hours</span></div><div class="cdns">:</div><div class="cdu"><span class="cdnh">'+mn+'</span><span>Mins</span></div><div class="cdns">:</div><div class="cdu"><span class="cdnh">'+sc+'</span><span>Secs</span></div>';}u();setInterval(u,1000);})();
+function u(){var d=new Date('2026-11-03T00:00:00')-new Date();if(d<=0){e.innerHTML='<span style="font-weight:600;font-size:18px;">Election Day!</span>';return}var tot=Math.floor(d/86400000),hr=Math.floor(d%86400000/3600000),mn=Math.floor(d%3600000/60000),sc=Math.floor(d%60000/1000);e.innerHTML='<div class="cdu"><span class="cdnh">'+tot+'</span><span>Days</span></div><div class="cdns">:</div><div class="cdu"><span class="cdnh">'+hr+'</span><span>Hours</span></div><div class="cdns">:</div><div class="cdu"><span class="cdnh">'+mn+'</span><span>Mins</span></div><div class="cdns">:</div><div class="cdu"><span class="cdnh">'+sc+'</span><span>Secs</span></div>';}u();setInterval(u,1000);})();
 </script>
 <section class="sec">
   <div class="cn">
