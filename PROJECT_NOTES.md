@@ -1,9 +1,9 @@
 # Stacy For Fairfax Campaign Website - Project Notes
 
 ## Overview
-Built a complete, modern campaign website for Stacy R. Hall's Fairfax City Council re-election campaign (Nov 4, 2025). The original site on GoDaddy had limited design capabilities, so we built a new site elsewhere that can be launched without touching the existing domain.
+Built a complete, modern campaign website for Stacy R. Hall's Fairfax City Council re-election campaign (Nov 3, 2026). The original site on GoDaddy had limited design capabilities, so we built a new site elsewhere that can be launched without touching the existing domain.
 
-**Election:** November 4, 2025
+**Election:** November 3, 2026
 
 ## Original Site
 - URL: www.stacyforfairfax.com (GoDaddy)
@@ -31,7 +31,7 @@ Built a complete, modern campaign website for Stacy R. Hall's Fairfax City Counc
 - **Animations:** Scroll fade-ins, hover effects, smooth scrolling
 
 ## Features
-- [x] Election countdown timer (to Nov 4, 2025)
+- [x] Election countdown timer (to Nov 3, 2026)
 - [x] Responsive navigation with mobile hamburger menu
 - [x] Priority cards with icons
 - [x] Accomplishments section with stats
@@ -137,4 +137,4 @@ stacyforfairfax-site/
 ---
 *Last Updated: May 14, 2026*
 *Built by: Hermes AI Agent*
-*For: Stacy R. Hall City Council Campaign 2025*
+*For: Stacy R. Hall City Council Campaign 2026*
