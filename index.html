@@ -86,9 +86,19 @@
         
         .nav-links {
             display: flex;
-            gap: 2rem;
+            gap: 1.25rem;
             list-style: none;
             align-items: center;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
+        /* Long nav item (Google Form link) */
+        .nav-long {
+            font-size: 0.9rem;
+            line-height: 1.2;
+            max-width: 360px;
+            white-space: normal;
         }
         
         .nav-links a {
@@ -1152,6 +1162,7 @@
                 <li><a href="#accomplishments">Accomplishments</a></li>
                 <li><a href="#events">Events</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSexty6qU33Ciek7fIa2fnBw5LAeFR6G5UXeiNKclPJPc3PCrw/viewform" target="_blank" rel="noopener" class="nav-long">Request a Yard Sign, Host a Meet &amp; Greet, Help out in other ways</a></li>
                 <li><a href="#involve" class="nav-cta">Donate</a></li>
             </ul>
             <button class="mobile-toggle" id="mobileToggle">
@@ -1232,9 +1243,7 @@
                     <span class="section-label">About Stacy</span>
                     <h2>Meet the Candidate <span>Who's Fighting for Fairfax</span></h2>
                     <div class="about-text">
-                        <p>As the daughter of small business owners in Wilmington, DE, I grew up in a bagel and Italian bread bakery. My mom was a public high school teacher, and I remember many nights spent together watching her grade tests and papers on the couch. I learned the value of hard work at a very early age.</p>
-                        <p>I graduated from the University of Delaware — <strong>go Blue Hens!!</strong> — with a Bachelors of Science in Finance and minors in Economics and Biology. I played field hockey and lacrosse in middle and high school, and t-ball and softball through elementary and middle school.</p>
-                        <p>I relocated to the DC metro area in 2001 and have lived in Fairfax since 2011 with my husband and two sons and our two dogs. When we moved here, I was pregnant with our second child and our oldest was almost 2. They have been so fortunate to grow up in our community, attend our city schools, and have many of the same friends now that they made in preschool and kindergarten. <strong>Fairfax City truly is a gem, and I want to help protect, maintain and enhance what makes us shine.</strong></p>
+                        <p>I love our city - these 6.2 square miles and ~24,000 people are our home. Fairfax City truly is a gem, and I want to help protect, maintain and enhance what makes us shine. I want to keep our charm and small town feel, support our local businesses, and preserve our green spaces and waterways. I want our future generations to be proud of what we accomplished in our lifetime, and to appreciate that we left it better than we found it.</p>
                     </div>
                     <div class="about-highlights">
                         <div class="highlight-item">
@@ -1483,8 +1492,8 @@
                     <a href="#contact" class="btn" style="background: var(--red); color: white;">
                         <i class="fas fa-donate"></i> Donate
                     </a>
-                    <a href="https://www.facebook.com/stacyrhall" class="btn" style="background: white;">
-                        <i class="fas fa-sign"></i> Request Yard Sign
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSexty6qU33Ciek7fIa2fnBw5LAeFR6G5UXeiNKclPJPc3PCrw/viewform" target="_blank" rel="noopener" class="btn" style="background: white;">
+                        <i class="fas fa-sign"></i> Request a Yard Sign / Host a Meet &amp; Greet
                     </a>
                 </div>
             </div>
