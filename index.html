@@ -180,11 +180,11 @@
         .hero-content {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 4rem 2rem;
+            padding: 3.5rem 2rem;
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
-            align-items: center;
+            align-items: stretch;
             position: relative;
             z-index: 1;
         }
@@ -280,24 +280,25 @@
         
         .hero-image {
             position: relative;
+            height: 100%;
+            display: flex;
+            align-items: stretch;
         }
         
         .hero-image-frame {
             position: relative;
             border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 30px 60px rgba(0,0,0,0.3);
-            transform: perspective(1000px) rotateY(-5deg);
-            transition: transform 0.5s;
-        }
-        
-        .hero-image-frame:hover {
-            transform: perspective(1000px) rotateY(0deg);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.28);
+            height: 100%;
+            min-height: 520px;
         }
         
         .hero-image-frame img {
             width: 100%;
-            height: auto;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
             display: block;
         }
         
@@ -1062,70 +1063,19 @@
             display: block;
         }
         
-        /* Fundraiser Progress Bar */
-        .hero-fundraiser {
-            margin: 1.5rem 0 2rem;
-            max-width: 480px;
-        }
-        .fund-meta {
-            display: flex;
-            align-items: baseline;
-            gap: 0.5rem;
-            margin-bottom: 0.6rem;
-        }
-        .fund-raised {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--gold-light);
-        }
-        .fund-sep {
-            font-size: 1rem;
-            color: rgba(255,255,255,0.7);
-        }
-        .fund-goal {
-            font-size: 0.9rem;
-            color: rgba(255,255,255,0.5);
-        }
-        .fund-bar {
-            width: 100%;
-            height: 10px;
-            background: rgba(255,255,255,0.15);
-            border-radius: 50px;
-            overflow: hidden;
-            border: 1px solid rgba(255,255,255,0.2);
-        }
-        .fund-fill {
-            height: 100%;
-            background: linear-gradient(90deg, var(--gold) 0%, var(--gold-light) 100%);
-            border-radius: 50px;
-            transition: width 1.5s ease;
-            position: relative;
-        }
-        .fund-fill::after {
-            content: '';
-            position: absolute;
-            right: 0;
-            top: 0;
-            width: 4px;
-            height: 100%;
-            background: white;
-            border-radius: 2px;
-            box-shadow: 0 0 8px rgba(255,255,255,0.8);
-        }
-        .fund-stats {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 0.5rem;
-            font-size: 0.8rem;
-            color: rgba(255,255,255,0.55);
-        }
-        .fund-right { color: rgba(255,255,255,0.7); font-weight: 600; }
-
         /* Countdown */
         .countdown {
             display: flex;
             gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .countdown-title {
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.85);
             margin-top: 1.5rem;
         }
 
@@ -1163,7 +1113,7 @@
                 <li><a href="#events">Events</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSexty6qU33Ciek7fIa2fnBw5LAeFR6G5UXeiNKclPJPc3PCrw/viewform" target="_blank" rel="noopener" class="nav-long">Request a Yard Sign, Host a Meet &amp; Greet, Help out in other ways</a></li>
-                <li><a href="#involve" class="nav-cta">Donate</a></li>
+                <li><a href="https://secure.anedot.com/stacy-for-fairfax/b2509222-d06a-4603-b408-6231bd9d929e" target="_blank" rel="noopener" class="nav-cta">Donate</a></li>
             </ul>
             <button class="mobile-toggle" id="mobileToggle">
                 <i class="fas fa-bars"></i>
@@ -1180,7 +1130,7 @@
                 <p class="hero-tagline">Experienced. Transparent. Dedicated to Serving Our Community.</p>
                 <p style="opacity: 0.85; margin-bottom: 2rem; font-size: 1.1rem;">This is YOUR city and YOUR voice matters. Let's keep Fairfax thriving together.</p>
                 <div class="hero-buttons">
-                    <a href="#involve" class="btn btn-primary">
+                    <a href="https://secure.anedot.com/stacy-for-fairfax/b2509222-d06a-4603-b408-6231bd9d929e" target="_blank" rel="noopener" class="btn btn-primary">
                         <i class="fas fa-donate"></i> Donate
                     </a>
                     <a href="#contact" class="btn btn-secondary">
@@ -1188,22 +1138,8 @@
                     </a>
                 </div>
 
-                <!-- Fundraising Progress -->
-                <div class="hero-fundraiser">
-                    <div class="fund-meta">
-                        <span class="fund-raised">$12,847</span>
-                        <span class="fund-sep">raised</span>
-                        <span class="fund-goal">of $25,000 goal</span>
-                    </div>
-                    <div class="fund-bar">
-                        <div class="fund-fill" id="fundBar" style="width: 51.4%"></div>
-                    </div>
-                    <div class="fund-stats">
-                        <span>486 donations</span>
-                        <span class="fund-right">51% funded</span>
-                    </div>
-                </div>
 
+                <div class="countdown-title">Countdown to the election</div>
                 <div class="countdown">
                     <div class="countdown-item">
                         <span class="number" id="days">--</span>
@@ -1489,7 +1425,7 @@
                     <a href="#contact" class="btn btn-secondary">
                         <i class="fas fa-hands-helping"></i> Volunteer
                     </a>
-                    <a href="#contact" class="btn" style="background: var(--red); color: white;">
+                    <a href="https://secure.anedot.com/stacy-for-fairfax/b2509222-d06a-4603-b408-6231bd9d929e" target="_blank" rel="noopener" class="btn" style="background: var(--red); color: white;">
                         <i class="fas fa-donate"></i> Donate
                     </a>
                     <a href="https://docs.google.com/forms/d/e/1FAIpQLSexty6qU33Ciek7fIa2fnBw5LAeFR6G5UXeiNKclPJPc3PCrw/viewform" target="_blank" rel="noopener" class="btn" style="background: white;">
