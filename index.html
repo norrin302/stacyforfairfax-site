@@ -236,10 +236,22 @@
             min-height: 100vh;
             display: flex;
             align-items: center;
-            background: #1a237e;
+            background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
             position: relative;
             overflow: hidden;
             padding-top: 80px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 80%;
+            height: 200%;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.5;
         }
         
         .hero-content {
@@ -255,67 +267,104 @@
         }
         
         .hero-text {
-            color: white;
+            color: var(--navy);
         }
         
         .hero-logo {
-            margin-bottom: 1.5rem;
-            background: white;
-            padding: 1rem;
-            border-radius: 4px;
-            display: inline-block;
+            margin-bottom: 1rem;
         }
         .hero-logo img {
-            width: 200px;
+            width: 180px;
             height: auto;
-            display: block;
+            border-radius: 8px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
         }
         
-        .hero-name {
-            font-family: 'Playfair Display', serif;
-            font-size: 4.5rem;
-            font-weight: 800;
-            line-height: 1;
-            margin-bottom: 0.25rem;
-            color: white;
-            text-transform: none;
-            letter-spacing: 0;
-        }
-        
-        .hero-for {
-            font-size: 1.6rem;
-            font-weight: 700;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: white;
-            margin-bottom: 1.5rem;
-            background: #1a237e;
+        .hero-badge {
             display: inline-block;
-            padding: 0.25rem 0.5rem;
-            border: 2px solid white;
+            background: var(--navy);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            color: var(--red);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .hero h1 span {
+            color: var(--navy);
         }
         
         .hero-tagline {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            margin-bottom: 1.5rem;
-            font-weight: 400;
-            color: white;
-            opacity: 0.95;
+            font-size: 1.3rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            font-weight: 300;
         }
         
-        .hero-re-elect {
-            font-size: 1.15rem;
-            font-weight: 600;
+        .hero-slogan {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.4rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 0.5rem;
+            color: var(--red);
+        }
+        
+        .hero-slogan-sub {
+            font-size: 1.25rem;
+            color: var(--dark-gray);
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+        
+        /* Sticky slogan bar */
+        .slogan-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(26, 54, 93, 0.96);
+            backdrop-filter: blur(10px);
             color: white;
-            margin-bottom: 1.5rem;
+            padding: 0.85rem 2rem;
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            z-index: 999;
+            transform: translateY(-100%);
+            transition: transform 0.35s ease;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            border-bottom: 2px solid var(--gold);
+        }
+        
+        .slogan-bar.visible {
+            transform: translateY(0);
+        }
+        
+        .slogan-bar span {
+            color: var(--gold-light);
         }
         
         .hero-buttons {
             display: flex;
             gap: 1rem;
             flex-wrap: wrap;
-            margin-bottom: 1.5rem;
         }
         
         .btn {
@@ -330,74 +379,38 @@
             font-size: 1rem;
         }
         
-        .btn-red {
-            background: #c41e3a;
+        .btn-primary {
+            background: var(--navy);
             color: white;
-            border: 2px solid #c41e3a;
+        }
+        
+        .btn-primary:hover {
+            background: var(--navy-light);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(26, 54, 93, 0.3);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--navy);
+            border: 2px solid var(--navy);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--navy);
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        .btn-red {
+            background: var(--red);
+            color: white;
         }
         
         .btn-red:hover {
-            background: #a01830;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(196, 30, 58, 0.4);
-        }
-        
-        .hero-checkmarks {
-            margin-top: 1rem;
-        }
-        
-        .check-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 0.75rem;
-            margin-bottom: 0.75rem;
-            color: white;
-            font-size: 1rem;
-            font-weight: 500;
-        }
-        
-        .check-item i {
-            color: white;
-            font-size: 1rem;
-            margin-top: 0.2rem;
-            flex-shrink: 0;
-        }
-        
-        /* Countdown on dark bg */
-        .countdown-title {
-            font-size: 0.85rem;
-            font-weight: 700;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            color: rgba(255,255,255,0.7);
-            margin-top: 2rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .countdown {
-            display: flex;
-            gap: 1.5rem;
-            margin-top: 0.5rem;
-        }
-        
-        .countdown-item {
-            text-align: center;
-        }
-        
-        .countdown-item .number {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.8rem;
-            font-weight: 700;
-            display: block;
-            line-height: 1;
-            color: white;
-        }
-        
-        .countdown-item .label {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: rgba(255,255,255,0.7);
+            background: #e53e3e;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(197, 48, 48, 0.4);
         }
         
         .hero-image {
@@ -410,15 +423,18 @@
             position: relative;
             border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.28);
             width: 100%;
-            aspect-ratio: 3 / 4;
+            /* Match the hero image aspect ratio (cropped to ~4:3) so it fills cleanly without cutting anyone off */
+            aspect-ratio: 4 / 3;
             min-height: 360px;
+            background: rgba(255,255,255,0.06);
         }
         
         .hero-image-frame img {
             width: 100%;
             height: 100%;
+            /* Fill the frame while keeping the full width (no right-edge cut-off) */
             object-fit: cover;
             object-position: center top;
             display: block;
@@ -1080,19 +1096,12 @@
                 order: -1;
             }
             
-            .hero-name {
-                font-size: 3rem;
+            .hero h1 {
+                font-size: 2.5rem;
             }
             
             .hero-buttons {
                 justify-content: center;
-            }
-            
-            .hero-checkmarks {
-                text-align: left;
-                max-width: 400px;
-                margin-left: auto;
-                margin-right: auto;
             }
             
             .about-grid,
@@ -1211,6 +1220,8 @@
 </head>
 <body>
     <a href="#home" class="skip-link">Skip to main content</a>
+    <!-- Sticky slogan bar (appears on scroll) -->
+    <div class="slogan-bar" id="sloganBar">This is YOUR city and <span>YOUR voice matters</span></div>
     <!-- Navigation -->
     <nav id="navbar">
         <div class="nav-container">
@@ -1239,38 +1250,21 @@
                 <div class="hero-logo">
                     <img src="images/stacy-logo.png" alt="Stacy Hall for City Council campaign logo">
                 </div>
-                
-                <h1 class="hero-name">Stacy R. Hall</h1>
-                <p class="hero-for">FOR CITY COUNCIL</p>
-                
-                <p class="hero-tagline">I love our city - these 6.2 square miles and ~24,000 people are our home. Fairfax City truly is a gem, and I want to help protect, maintain and enhance what makes us shine. I want to keep our charm and small town feel, support our local businesses, and preserve our green spaces and waterways. I want our future generations to be proud of what we accomplished in our lifetime, and to appreciate that we left it better than we found it.</p>
-                
-                <p class="hero-re-elect">Re-elect Stacy R. Hall for Fairfax City Council</p>
-                
+                <div class="hero-badge">Election Day: November 3, 2026</div>
+                <h1>Re-Elect <span>Stacy R. Hall</span> for City Council</h1>
+                <p class="hero-tagline">Experienced. Transparent. Dedicated to Serving Our Community.</p>
+                <h2 class="hero-slogan">This is YOUR city and YOUR voice matters</h2>
+                <p class="hero-slogan-sub">Let's keep Fairfax thriving together.</p>
                 <div class="hero-buttons">
-                    <a href="https://secure.anedot.com/stacy-for-fairfax/b2509222-d06a-4603-b408-6231bd9d929e" target="_blank" rel="noopener" class="btn btn-red">
-                        <i class="fas fa-hand-holding-heart"></i> Donate Today
+                    <a href="https://secure.anedot.com/stacy-for-fairfax/b2509222-d06a-4603-b408-6231bd9d929e" target="_blank" rel="noopener" class="btn btn-primary">
+                        <i class="fas fa-hand-holding-heart"></i> Donate
                     </a>
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSexty6qU33Ciek7fIa2fnBw5LAeFR6G5UXeiNKclPJPc3PCrw/viewform" target="_blank" rel="noopener" class="btn btn-red">
-                        <i class="fas fa-flag"></i> Request Yard Sign
+                    <a href="#contact" class="btn btn-secondary">
+                        <i class="fas fa-envelope"></i> Get In Touch
                     </a>
                 </div>
-                
-                <div class="hero-checkmarks">
-                    <div class="check-item">
-                        <i class="fas fa-check"></i>
-                        <span>Focused on fiscal responsibility and transparent spending</span>
-                    </div>
-                    <div class="check-item">
-                        <i class="fas fa-check"></i>
-                        <span>Advocating for smart, sustainable growth</span>
-                    </div>
-                    <div class="check-item">
-                        <i class="fas fa-check"></i>
-                        <span>Listening to residents and delivering results</span>
-                    </div>
-                </div>
-                
+
+
                 <div class="countdown-title">Countdown to the election</div>
                 <div class="countdown">
                     <div class="countdown-item">
@@ -1291,10 +1285,9 @@
                     </div>
                 </div>
             </div>
-            
             <div class="hero-image">
                 <div class="hero-image-frame">
-                    <img src="images/stacy-about-new.jpg" alt="Stacy R. Hall - Fairfax City Council" style="width:100%;display:block;">
+                    <img src="images/stacy-portrait.png?v=2026-05-23" alt="Stacy R. Hall - Fairfax City Council" style="width:100%;display:block;">
                 </div>
             </div>
         </div>
@@ -1708,13 +1701,20 @@
             });
         });
         
-        // Navbar scroll effect
+        // Navbar scroll effect + slogan bar reveal
         window.addEventListener('scroll', () => {
             const nav = document.getElementById('navbar');
+            const bar = document.getElementById('sloganBar');
             if (window.scrollY > 50) {
                 nav.classList.add('scrolled');
             } else {
                 nav.classList.remove('scrolled');
+            }
+            // Show slogan bar when scrolled past hero (approx 500px)
+            if (window.scrollY > 500) {
+                bar.classList.add('visible');
+            } else {
+                bar.classList.remove('visible');
             }
         });
         
