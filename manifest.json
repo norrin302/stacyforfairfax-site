@@ -1,0 +1,14 @@
+{
+    "name": "Stacy R. Hall for Fairfax City Council",
+    "short_name": "Stacy For Fairfax",
+    "icons": [
+        {
+            "src": "icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#1a365d",
+    "background_color": "#fffaf0",
+    "display": "standalone"
+}
