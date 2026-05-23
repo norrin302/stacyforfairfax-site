@@ -301,6 +301,53 @@
             font-weight: 300;
         }
         
+        .hero-slogan {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.4rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 0.5rem;
+            color: var(--gold-light);
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        
+        .hero-slogan-sub {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+        
+        /* Sticky slogan bar */
+        .slogan-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(26, 54, 93, 0.96);
+            backdrop-filter: blur(10px);
+            color: white;
+            padding: 0.85rem 2rem;
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            z-index: 999;
+            transform: translateY(-100%);
+            transition: transform 0.35s ease;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            border-bottom: 2px solid var(--gold);
+        }
+        
+        .slogan-bar.visible {
+            transform: translateY(0);
+        }
+        
+        .slogan-bar span {
+            color: var(--gold-light);
+        }
+        
         .hero-buttons {
             display: flex;
             gap: 1rem;
@@ -1159,6 +1206,8 @@
 </head>
 <body>
     <a href="#home" class="skip-link">Skip to main content</a>
+    <!-- Sticky slogan bar (appears on scroll) -->
+    <div class="slogan-bar" id="sloganBar">This is YOUR city and <span>YOUR voice matters</span></div>
     <!-- Navigation -->
     <nav id="navbar">
         <div class="nav-container">
@@ -1187,7 +1236,8 @@
                 <div class="hero-badge">Election Day: November 3, 2026</div>
                 <h1>Re-Elect <span>Stacy R. Hall</span> for City Council</h1>
                 <p class="hero-tagline">Experienced. Transparent. Dedicated to Serving Our Community.</p>
-                <p style="opacity: 0.85; margin-bottom: 2rem; font-size: 1.1rem;">This is YOUR city and YOUR voice matters. Let's keep Fairfax thriving together.</p>
+                <h2 class="hero-slogan">This is YOUR city and YOUR voice matters</h2>
+                <p class="hero-slogan-sub">Let's keep Fairfax thriving together.</p>
                 <div class="hero-buttons">
                     <a href="https://secure.anedot.com/stacy-for-fairfax/b2509222-d06a-4603-b408-6231bd9d929e" target="_blank" rel="noopener" class="btn btn-primary">
                         <i class="fas fa-hand-holding-heart"></i> Donate
@@ -1625,13 +1675,20 @@
             });
         });
         
-        // Navbar scroll effect
+        // Navbar scroll effect + slogan bar reveal
         window.addEventListener('scroll', () => {
             const nav = document.getElementById('navbar');
+            const bar = document.getElementById('sloganBar');
             if (window.scrollY > 50) {
                 nav.classList.add('scrolled');
             } else {
                 nav.classList.remove('scrolled');
+            }
+            // Show slogan bar when scrolled past hero (approx 500px)
+            if (window.scrollY > 500) {
+                bar.classList.add('visible');
+            } else {
+                bar.classList.remove('visible');
             }
         });
         
