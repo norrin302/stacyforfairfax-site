@@ -702,8 +702,10 @@
         
         .accomplishments-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 3rem;
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
+            max-width: 900px;
+            margin: 0 auto;
         }
         
         .accomplishment-item {
@@ -742,6 +744,121 @@
             opacity: 0.85;
             font-size: 0.95rem;
             line-height: 1.6;
+        }
+        
+        /* Accomplishment Cards (redesigned for detailed content) */
+        .accomplishment-card {
+            background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 2.5rem;
+            border: 1px solid rgba(255,255,255,0.15);
+            transition: all 0.3s ease;
+        }
+        
+        .accomplishment-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--gold);
+            background: rgba(255,255,255,0.12);
+        }
+        
+        .accomplishment-card-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .accomplishment-card-icon {
+            width: 50px;
+            height: 50px;
+            min-width: 50px;
+            background: var(--gold);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .accomplishment-card-icon i {
+            font-size: 1.4rem;
+            color: var(--navy);
+        }
+        
+        .accomplishment-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: white;
+            margin: 0;
+        }
+        
+        .accomplishment-card h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--gold);
+            margin: 1.5rem 0 0.75rem 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .accomplishment-card p {
+            color: rgba(255,255,255,0.85);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 0.75rem;
+        }
+        
+        .accomplishment-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0.5rem 0 1rem 0;
+        }
+        
+        .accomplishment-card ul li {
+            color: rgba(255,255,255,0.85);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 0.5rem;
+        }
+        
+        .accomplishment-card ul li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-weight: bold;
+        }
+        
+        .accomplishment-card .gold-sep {
+            border: 0;
+            height: 1px;
+            background: linear-gradient(to right, transparent, rgba(212,168,83,0.5), transparent);
+            margin: 1rem 0;
+        }
+        
+        .accomplishment-card .impact-box {
+            background: rgba(212,168,83,0.15);
+            border-left: 3px solid var(--gold);
+            padding: 1rem 1.25rem;
+            border-radius: 0 10px 10px 0;
+            margin-top: 1rem;
+        }
+        
+        .accomplishment-card .impact-box strong {
+            color: var(--gold);
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .accomplishment-card .impact-box p {
+            margin: 0;
+            font-size: 0.9rem;
         }
         
         /* Community Section */
@@ -1479,64 +1596,109 @@
         <div class="section-container">
             <div class="section-header">
                 <span class="section-label">Track Record of Results</span>
-                <h2 class="section-title">Responsible Stewardship. Stronger Future.</h2>
-                <p class="section-subtitle">Over the past years on City Council, my focus has been simple: make decisions based on facts, protect our residents, taxpayers and their wallets, and ensure planned projects serve the needs of our residents today.</p>
+                <h2 class="section-title">Delivering Results for Our City</h2>
+                <p class="section-subtitle">Over the past two years, my focus on City Council has been simple: make decisions based on facts, protect our residents, taxpayers and their wallets, and ensure long-ago planned projects still serve the needs of our residents today.</p>
             </div>
             <div class="accomplishments-grid">
-                <div class="accomplishment-item fade-in">
-                    <div class="accomplishment-icon">
-                        <i class="fas fa-chart-line"></i>
+                
+                <!-- Governance Approach -->
+                <div class="accomplishment-card fade-in">
+                    <div class="accomplishment-card-header">
+                        <div class="accomplishment-card-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Governance Approach</h3>
                     </div>
-                    <div class="accomplishment-content">
-                        <h3>Fiscal Transparency</h3>
-                        <p>Improved transparency around the true drivers of local tax pressure and reinforced accountability in financial decision-making. Ensured residents understand the budget, tax rates and the struggles we face as a city.</p>
+                    <p>Beyond individual votes or projects, my approach has centered on:</p>
+                    <ul>
+                        <li>Transparent decision-making</li>
+                        <li>Direct communication with residents</li>
+                        <li>Fact-based evaluation over political messaging</li>
+                        <li>Keeping City Council focused on local issues — not partisan conflict</li>
+                    </ul>
+                    <p>Fairfax City works best when council members focus on solving problems, not playing politics.</p>
+                </div>
+                
+                <!-- Fiscal Responsibility & Taxpayer Protection -->
+                <div class="accomplishment-card fade-in">
+                    <div class="accomplishment-card-header">
+                        <div class="accomplishment-card-icon">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <h3>Fiscal Responsibility &amp; Taxpayer Protection</h3>
+                    </div>
+                    <p>A major focus has been ensuring residents understand the budget, the tax rates and the struggles we face as a city.</p>
+                    <h4>Key Actions:</h4>
+                    <ul>
+                        <li>We held a Budget Open House in 2025 and our first Community Budget Exchange in person and via Zoom for the FY 2027 budget</li>
+                        <li>We hired a new City Manager following a nearly year-long search that included multiple rounds of candidates and interviews. This was a thorough process designed to ensure we selected the right leader for our community. I am confident we have made a strong choice to help guide the city forward in the years ahead.</li>
+                        <li>Prioritized careful review of budget decisions to ensure accountability and sustainability</li>
+                        <li>Supported an efficiency audit to evaluate how city services are delivered, including a broad review of staffing, organizational structure, and ways to improve efficiency and effectiveness. Also prioritized stronger long-term planning through early community engagement and Council-led goal setting, along with developing clearer performance measures to better track outcomes and improve transparency and accountability in reporting.</li>
+                    </ul>
+                    <div class="impact-box">
+                        <strong>Impact</strong>
+                        <p>Improved transparency around the true drivers of local tax pressure and reinforced accountability in financial decision-making.</p>
                     </div>
                 </div>
-                <div class="accomplishment-item fade-in">
-                    <div class="accomplishment-icon">
-                        <i class="fas fa-building"></i>
+                
+                <!-- Capital Improvement Program (CIP) -->
+                <div class="accomplishment-card fade-in">
+                    <div class="accomplishment-card-header">
+                        <div class="accomplishment-card-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3>Capital Improvement Program (CIP)</h3>
                     </div>
-                    <div class="accomplishment-content">
-                        <h3>Capital Improvement Program</h3>
-                        <p>Advocated for comprehensive oversight of aging infrastructure requiring thoughtful reinvestment — from public buildings to essential infrastructure systems we rely on every day.</p>
-                    </div>
-                </div>
-                <div class="accomplishment-item fade-in">
-                    <div class="accomplishment-icon">
-                        <i class="fas fa-book-open"></i>
-                    </div>
-                    <div class="accomplishment-content">
-                        <h3>School Board Liaison</h3>
-                        <p>Served as City Council's liaison to the School Board, advocating for our students' needs and ensuring city resources support our educational institutions effectively.</p>
-                    </div>
-                </div>
-                <div class="accomplishment-item fade-in">
-                    <div class="accomplishment-icon">
-                        <i class="fas fa-tree"></i>
-                    </div>
-                    <div class="accomplishment-content">
-                        <h3>Environmental Stewardship</h3>
-                        <p>Protected green spaces and advocated for sustainable development practices. Proposed common-sense solutions like restricting gas-powered leaf blower use and promoting electric alternatives.</p>
+                    <p>From public buildings to essential infrastructure, Fairfax City is facing the reality that many of the systems we rely on every day are aging and require thoughtful reinvestment.</p>
+                    <h4>Key Actions:</h4>
+                    <ul>
+                        <li>The city's CIP (Capital Improvement Program) previously included many items that were better described as operating and maintenance items. After speaking with our CFO and Budget Director, I learned they had the same concerns. Beginning with the FY2027 budget, these items have been reallocated to more properly reflect them as operating expenses in the general fund.</li>
+                        <li>Supported clearer communication and transparency around long-term fiscal obligations — most notably the Willard Sherwood Health and Community Center (which passed unanimously on April 28, 2026). I heavily advocated for cost-recovery models to ensure the ongoing operations and maintenance are not a burden for our taxpayers. The cost for the construction and ongoing operation/maintenance went from 9.7 cents on the tax rate to 4.33 cents. This is now a building I am proud to support and I feel it is much more affordable for our taxpayers.</li>
+                        <li>Future projects anticipated over the next several years include the renovation of our two elementary schools, a new roof at the high school, Fire Station #3, and improvements to the property yard, among others. As we move forward, we will need to carefully evaluate our options, identify cost-saving measures that do not reduce service levels, and prioritize long-term value for taxpayers. Our goal should be to invest in facilities that are built to serve our community reliably for decades to come. I will bring the same questions/concerns and cost reduction philosophies that I brought to help create a more affordable and sustainable Willard Sherwood Health and Community Center.</li>
+                    </ul>
+                    <div class="impact-box">
+                        <strong>Impact</strong>
+                        <p>Improved transparency around the true drivers of local tax pressure and reinforced accountability in financial decision-making.</p>
                     </div>
                 </div>
-                <div class="accomplishment-item fade-in">
-                    <div class="accomplishment-icon">
-                        <i class="fas fa-home"></i>
+                
+                <!-- Strong City Schools -->
+                <div class="accomplishment-card fade-in">
+                    <div class="accomplishment-card-header">
+                        <div class="accomplishment-card-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>Strong City Schools</h3>
                     </div>
-                    <div class="accomplishment-content">
-                        <h3>Housing Affordability</h3>
-                        <p>Working to help those experiencing homelessness or close to it with access to resources such as shelters, financial assistance, housing programs, and comprehensive support services.</p>
+                    <p>I recognize the importance of a strong public school system and I support improvements to our schools so our students have safe, secure, modern and innovative learning spaces. Our students are the future, and they deserve the best we can provide. I'm proud that my two kids attended Providence Elementary School, and Katherine Johnson Middle School, and are currently enrolled at Fairfax High School (and the Academy!).</p>
+                    <h4>Key Actions:</h4>
+                    <ul>
+                        <li>Raised concerns and advocated for additional communication with our City of Fairfax School Board and Fairfax County Public Schools to ensure our School Services Agreement is still serving the needs of our students. I did this while I served on the School Board and I have continued advocating as a Council Member.</li>
+                        <li>Our CFO and School Board have worked hard to provide transparency around the tuition contract. From FY 2023 ($55.3 million) to the FY 2026 estimate ($72.7 million), the total increase is $17.4 million, representing 31.5% growth, or the equivalent of approximately 19.7 cents on the real estate tax rate. Looking ahead, FCPS has indicated that the proposed FY 2027 amount of $76.4 million is sufficient at this time, with no recommended adjustments. This would bring the total increase from FY 2023 to FY 2027 to $21.1 million, or 38.2%, equivalent to approximately 23.9 cents on the real estate tax rate. This is not sustainable, especially if we try to keep our tax rates low.</li>
+                    </ul>
+                    <div class="impact-box">
+                        <strong>Impact</strong>
+                        <p>I have advocated for an educational feasibility study to assess our current agreement with FCPS and see what it might cost to run our own school system. It's not possible to make data-driven decisions without knowing the pros and cons for our city students, their families and our taxpayers.</p>
                     </div>
                 </div>
-                <div class="accomplishment-item fade-in">
-                    <div class="accomplishment-icon">
-                        <i class="fas fa-question-circle"></i>
+                
+                <!-- Land Use, Environment, and Responsible Development -->
+                <div class="accomplishment-card fade-in">
+                    <div class="accomplishment-card-header">
+                        <div class="accomplishment-card-icon">
+                            <i class="fas fa-tree"></i>
+                        </div>
+                        <h3>Land Use, Environment, and Responsible Development</h3>
                     </div>
-                    <div class="accomplishment-content">
-                        <h3>Asking Tough Questions</h3>
-                        <p>It takes courage to ask questions. Asking questions and raising concerns is not opposition to a project — it's part of my responsibility to ensure I'm representing our residents and making the most informed decision possible on their behalf.</p>
-                    </div>
+                    <p>City decisions around land use and development require careful balance between growth and preservation.</p>
+                    <ul>
+                        <li>Paused and reviewed trail and development proposals where environmental impacts required closer examination.</li>
+                        <li>Supported stronger scrutiny of projects affecting sensitive natural areas and community spaces</li>
+                        <li>Emphasized data-driven review before moving forward on major land use decisions</li>
+                    </ul>
+                    <p>This approach has focused on ensuring development is responsible, not rushed.</p>
                 </div>
+                
             </div>
         </div>
     </section>
