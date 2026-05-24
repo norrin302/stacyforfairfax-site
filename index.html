@@ -295,6 +295,35 @@
             margin-top: 2rem;
         }
         
+        /* Hero endorser logos - small badges */
+        .hero-badges {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 1.5rem 0;
+            flex-wrap: wrap;
+        }
+        .hero-badges .badge-img {
+            width: 70px;
+            height: 70px;
+            object-fit: contain;
+            border-radius: 50%;
+            background: white;
+            padding: 3px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            transition: transform 0.3s;
+        }
+        .hero-badges .badge-img:hover {
+            transform: scale(1.1);
+        }
+        .hero-badges .badge-img.for-you {
+            width: 80px;
+            height: 80px;
+            padding: 0;
+            background: transparent;
+            box-shadow: none;
+        }
+        
         .hero-logo {
             margin-bottom: 1rem;
         }
@@ -1590,6 +1619,14 @@
                 </div>
             </div>
             <div class="hero-text">
+                <div class="hero-badges">
+                    <a href="https://www.fairfaxcountygop.org" target="_blank" rel="noopener" title="For You, Fairfax">
+                        <img src="images/logo-for-you-fairfax.png" alt="For You, Fairfax - Responsible Stewardship Stronger Future" class="badge-img for-you">
+                    </a>
+                    <a href="https://www.momsdemandaction.org" target="_blank" rel="noopener" title="Moms Demand Action">
+                        <img src="images/logo-moms-demand.png" alt="Moms Demand Action" class="badge-img">
+                    </a>
+                </div>
                 <p class="hero-tagline">Experienced. Transparent. Dedicated to Serving Our Community.</p>
                 <h2 class="hero-slogan">This is YOUR city and YOUR voice matters</h2>
                 <p class="hero-slogan-sub">Fairfax deserves thoughtful leadership - and real results.</p>
@@ -2112,7 +2149,7 @@
                             </div>
                             <div class="contact-method-text">
                                 <h4>Facebook</h4>
-                                <p>Stacy For Fairfax</p>
+                                <p><a href="https://www.facebook.com/StacyHallCouncil" target="_blank">Stacy Hall Council</a></p>
                             </div>
                         </div>
                         <div class="contact-method">
@@ -2121,16 +2158,7 @@
                             </div>
                             <div class="contact-method-text">
                                 <h4>Instagram</h4>
-                                <p>@stacyforfairfax</p>
-                            </div>
-                        </div>
-                        <div class="contact-method">
-                            <div class="contact-method-icon">
-                                <i class="fab fa-linkedin-in"></i>
-                            </div>
-                            <div class="contact-method-text">
-                                <h4>LinkedIn</h4>
-                                <p>Stacy Hall</p>
+                                <p><a href="https://www.instagram.com/stacyrhall_citycouncil/" target="_blank">@stacyrhall_citycouncil</a></p>
                             </div>
                         </div>
                     </div>
@@ -2174,11 +2202,8 @@
                 <a href="https://www.facebook.com/StacyHallCouncil" target="_blank" class="social-icon" title="Facebook" aria-label="Facebook">
                     <i class="fab fa-facebook-f"></i>
                 </a>
-                <a href="https://www.instagram.com/shall279" target="_blank" class="social-icon" title="Instagram" aria-label="Instagram">
+                <a href="https://www.instagram.com/stacyrhall_citycouncil/" target="_blank" class="social-icon" title="Instagram" aria-label="Instagram">
                     <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/stacyrhall" target="_blank" class="social-icon" title="LinkedIn" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin-in"></i>
                 </a>
                 <a href="mailto:stacyforfairfax@gmail.com" class="social-icon" title="Email" aria-label="Email Stacy">
                     <i class="fas fa-envelope"></i>
