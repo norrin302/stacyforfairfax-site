@@ -559,9 +559,25 @@
             font-size: 1.05rem;
         }
         
+        .rumor-mill-intro-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+        
+        .rumor-mill-intro-row .section-subtitle {
+            flex: 1;
+            max-width: 600px;
+            margin: 0;
+            text-align: left;
+        }
+        
         .rumor-mill-logo-wrapper {
-            text-align: center;
-            margin-bottom: 2rem;
+            flex-shrink: 0;
+            margin-left: 2rem;
         }
         
         .rumor-mill-logo-small {
@@ -1521,10 +1537,12 @@
             <div class="section-header">
                 <span class="section-label">Setting the Record Straight</span>
                 <h2 class="section-title">Dispelling Rumors...more to come</h2>
-                <p class="section-subtitle">In a small town like ours, word travels fast — and not always accurately. This space is dedicated to addressing the rumors, misinformation, and speculation that occasionally make their way around our community. If you've heard something that doesn't sound quite right, check here first.</p>
-            </div>
-            <div class="rumor-mill-logo-wrapper">
-                <img src="images/rumor-mill-logo.jpg" alt="So get this..." class="rumor-mill-logo-small" loading="lazy">
+                <div class="rumor-mill-intro-row">
+                    <p class="section-subtitle">In a small town like ours, word travels fast — and not always accurately. This space is dedicated to addressing the rumors, misinformation, and speculation that occasionally make their way around our community. If you've heard something that doesn't sound quite right, check here first.</p>
+                    <div class="rumor-mill-logo-wrapper">
+                        <img src="images/rumor-mill-logo.jpg" alt="So get this..." class="rumor-mill-logo-small" loading="lazy">
+                    </div>
+                </div>
             </div>
             <div class="priorities-grid">
                 <div class="rumor-item">
