@@ -1040,7 +1040,10 @@
         }
         
         .community-image-wrapper {
-            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
         }
         
         .community-badge {
@@ -1055,6 +1058,19 @@
             box-shadow: 0 10px 30px rgba(212,168,83,0.3);
             font-size: 0.9rem;
             line-height: 1.3;
+        }
+        
+        .community-image-wrapper .community-badge {
+            position: relative;
+            bottom: auto;
+            right: auto;
+            margin-top: -2rem;
+            z-index: 2;
+        }
+        
+        .community-image-wrapper .community-highlights {
+            margin-top: 0.5rem;
+            width: 100%;
         }
         
         /* Events/Calendar Section */
@@ -1402,11 +1418,13 @@
                 grid-template-columns: 1fr;
             }
             
-            .community-badge {
-                position: static;
-                margin-top: 1rem;
-                text-align: center;
-                display: inline-block;
+            .community-image-wrapper .community-badge {
+                position: relative;
+                margin-top: -1rem;
+            }
+            
+            .community-image-wrapper .community-highlights {
+                margin-top: 0.5rem;
             }
             
             .priorities-grid,
@@ -1544,6 +1562,7 @@
                 <span class="nav-slogan">This is YOUR city and <span>YOUR voice matters</span></span>
             </div>
             <ul class="nav-links" id="navLinks">
+                <li><a href="#community">About Stacy</a></li>
                 <li><a href="#priorities">Priorities</a></li>
                 <li><a href="#accomplishments">Accomplishments</a></li>
                 <li><a href="#rumor-mill">Rumor Mill</a></li>
@@ -1615,6 +1634,53 @@
     </section>
 
     <!-- Priorities Section -->
+    <section class="community" id="community">
+        <div class="section-container">
+            <div class="community-content">
+                <div class="community-text">
+                    <span class="section-label">In the Community</span>
+                    <h2>Fairfax is <span>My Home</span></h2>
+                    <p>As the daughter of small business owners in Wilmington, DE, I grew up in a bagel and Italian bread bakery. My mom was a public high school teacher, and I remember many nights spent together watching her grade tests and papers on the couch. I learned the value of hard work at a very early age, working in our bagel shops and bakery. My parents taught me and my sister to work hard and play hard, and I've practiced this philosophy my entire life.</p>
+                    <p>I graduated from the University of Delaware — go Blue Hens!! — with a Bachelors of Science in Finance and minors in Economics and Biology. I played field hockey and lacrosse in middle and high school, and t-ball and softball through elementary and middle school.</p>
+                    <p>I relocated to the DC metro area in 2001 and I have lived in Fairfax since 2011 with my husband and two sons and our two dogs. When we moved here, I was pregnant with our second child and our oldest was almost 2. They have been so fortunate to grow up in our community, attend our city schools, and have many of the same friends now that they made in preschool and kindergarten. Fairfax City truly is a gem, and I want to help protect, maintain and enhance what makes us shine.</p>
+                    <p>I am the Controller for a company that advances care and innovation in the animal health sector. Prior to that, I was a public accountant for 9 years. I also run my own small business in the city, providing accounting, bookkeeping and tax services.</p>
+                    <p>I love cheering on our local sports teams, especially our FHS football and basketball teams on which my kids play. You can often find us at Rock The Block or many of the other amazing, family-friendly events our city hosts!</p>
+                    <p>I love most outdoor activities, especially walking/hiking with my family and our dogs. I enjoy boating, water skiing, swimming and tubing on the Sassafras River when we visit family.</p>
+                </div>
+                <div class="community-image-wrapper">
+                    <img src="images/stacy-about-new.jpg" alt="Stacy Hall" loading="lazy" style="width:100%;max-width:400px;height:auto;border-radius:20px;box-shadow:0 20px 50px rgba(0,0,0,0.1);object-fit:cover;margin:0 auto;display:block;">
+                    <div class="community-badge">Fairfax City Council<br>Since 2025</div>
+                    
+                    <div class="community-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-calculator"></i>
+                            <span>Finance Professional</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-school"></i>
+                            <span>City of Fairfax Schools Parent</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-paw"></i>
+                            <span>Animal Health Sector</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-home"></i>
+                            <span>Fairfax Resident Since 2011</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-user-tie"></i>
+                            <span>Providence ES PTA President 2019–2022</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-leaf"></i>
+                            <span>Environmental Sustainability Committee 2023–2024</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="priorities" id="priorities">
         <div class="section-container">
             <div class="section-header">
@@ -1956,52 +2022,6 @@
     </section>
 
     <!-- Community Section -->
-    <section class="community" id="community">
-        <div class="section-container">
-            <div class="community-content">
-                <div class="community-text">
-                    <span class="section-label">In the Community</span>
-                    <h2>Fairfax is <span>My Home</span></h2>
-                    <p>As the daughter of small business owners in Wilmington, DE, I grew up in a bagel and Italian bread bakery. My mom was a public high school teacher, and I remember many nights spent together watching her grade tests and papers on the couch. I learned the value of hard work at a very early age, working in our bagel shops and bakery. My parents taught me and my sister to work hard and play hard, and I've practiced this philosophy my entire life.</p>
-                    <p>I graduated from the University of Delaware — go Blue Hens!! — with a Bachelors of Science in Finance and minors in Economics and Biology. I played field hockey and lacrosse in middle and high school, and t-ball and softball through elementary and middle school.</p>
-                    <p>I relocated to the DC metro area in 2001 and I have lived in Fairfax since 2011 with my husband and two sons and our two dogs. When we moved here, I was pregnant with our second child and our oldest was almost 2. They have been so fortunate to grow up in our community, attend our city schools, and have many of the same friends now that they made in preschool and kindergarten. Fairfax City truly is a gem, and I want to help protect, maintain and enhance what makes us shine.</p>
-                    <p>I am the Controller for a company that advances care and innovation in the animal health sector. Prior to that, I was a public accountant for 9 years. I also run my own small business in the city, providing accounting, bookkeeping and tax services.</p>
-                    <p>I love cheering on our local sports teams, especially our FHS football and basketball teams on which my kids play. You can often find us at Rock The Block or many of the other amazing, family-friendly events our city hosts!</p>
-                    <p>I love most outdoor activities, especially walking/hiking with my family and our dogs. I enjoy boating, water skiing, swimming and tubing on the Sassafras River when we visit family.</p>
-                    <div class="community-highlights">
-                        <div class="highlight-item">
-                            <i class="fas fa-calculator"></i>
-                            <span>Finance Professional</span>
-                        </div>
-                        <div class="highlight-item">
-                            <i class="fas fa-school"></i>
-                            <span>City of Fairfax Schools Parent</span>
-                        </div>
-                        <div class="highlight-item">
-                            <i class="fas fa-paw"></i>
-                            <span>Animal Health Sector</span>
-                        </div>
-                        <div class="highlight-item">
-                            <i class="fas fa-home"></i>
-                            <span>Fairfax Resident Since 2011</span>
-                        </div>
-                        <div class="highlight-item">
-                            <i class="fas fa-user-tie"></i>
-                            <span>Providence ES PTA President 2019–2022</span>
-                        </div>
-                        <div class="highlight-item">
-                            <i class="fas fa-leaf"></i>
-                            <span>Environmental Sustainability Committee 2023–2024</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="community-image-wrapper">
-                    <img src="images/stacy-about-new.jpg" alt="Stacy Hall" loading="lazy" style="width:100%;max-width:400px;height:auto;border-radius:20px;box-shadow:0 20px 50px rgba(0,0,0,0.1);object-fit:cover;margin:0 auto;display:block;">
-                    <div class="community-badge">Fairfax City Council<br>Since 2022</div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Events Section -->
     <section class="events" id="events">
