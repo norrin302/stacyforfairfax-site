@@ -561,24 +561,70 @@
         
         .rumor-item {
             background: white;
-            border-radius: 15px;
-            padding: 2rem;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-            border-left: 4px solid var(--red);
+            border-radius: 20px;
+            padding: 0;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+            border: 1px solid rgba(0,0,0,0.04);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
         
-        .rumor-item h4 {
-            font-family: 'Playfair Display', serif;
+        .rumor-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+        }
+        
+        .rumor-item-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.25rem 1.5rem;
+            background: linear-gradient(135deg, var(--light-gray) 0%, #f0f0f0 100%);
+            border-bottom: 1px solid rgba(0,0,0,0.04);
+        }
+        
+        .rumor-item-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        
+        .rumor-item-icon i {
+            color: white;
             font-size: 1.3rem;
-            color: var(--navy);
-            margin: 1rem 0 0.75rem;
-            font-style: italic;
         }
         
-        .rumor-item p {
+        .rumor-item-title-area {
+            flex: 1;
+        }
+        
+        .rumor-item-title-area h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: var(--navy);
+            margin: 0;
+            font-style: italic;
+            line-height: 1.4;
+        }
+        
+        .rumor-item-body {
+            padding: 1.5rem;
+        }
+        
+        .rumor-item-body p {
             color: var(--medium-gray);
             line-height: 1.7;
+            margin-bottom: 0.75rem;
+        }
+        
+        .rumor-item-body p:last-child {
+            margin-bottom: 0;
         }
         
         .rumor-badge {
@@ -590,6 +636,7 @@
             font-size: 0.8rem;
             font-weight: 700;
             letter-spacing: 1px;
+            margin-bottom: 0.75rem;
         }
         
         .rumor-footer {
@@ -1461,34 +1508,69 @@
                         <p>In a small town like ours, word travels fast — and not always accurately. This space is dedicated to addressing the rumors, misinformation, and speculation that occasionally make their way around our community. If you've heard something that doesn't sound quite right, check here first.</p>
                         
                         <div class="rumor-item">
-                            <div class="rumor-badge false">FALSE</div>
-                            <h4>"Stacy doesn't want any massive complexes and wants to keep us a sleepy town."</h4>
-                            <p><strong>The Truth:</strong> Every development proposal deserves careful, individual review. I evaluate each project based on its impact on traffic, schools, infrastructure, and neighborhood character. I have opposed projects that didn't fit our community's needs and supported ones that included meaningful community benefits. One size does not fit all.</p>
+                            <div class="rumor-item-header">
+                                <div class="rumor-item-icon"><i class="fas fa-building"></i></div>
+                                <div class="rumor-item-title-area">
+                                    <div class="rumor-badge false">FALSE</div>
+                                    <h4>"Stacy doesn't want any massive complexes and wants to keep us a sleepy town."</h4>
+                                </div>
+                            </div>
+                            <div class="rumor-item-body">
+                                <p><strong>The Truth:</strong> Every development proposal deserves careful, individual review. I evaluate each project based on its impact on traffic, schools, infrastructure, and neighborhood character. I have opposed projects that didn't fit our community's needs and supported ones that included meaningful community benefits. One size does not fit all.</p>
+                            </div>
                         </div>
                         
                         <div class="rumor-item">
-                            <div class="rumor-badge false">FALSE</div>
-                            <h4>"You want to eliminate our trash service."</h4>
-                            <p><strong>The Truth:</strong> City trash service costs $5.1M/year, serving about 7,000 homes. Currently, 30% of taxpayers who don't get service still pay via taxes. Switching to an enterprise fund would charge serviced homes $729/year instead of $519, costing users about $210 more. Those without service would see a decrease in their taxes. Changes to bulk pickup and frequency could also affect costs. I also want to explore curbside composting and glass recycling.</p>
-                            <p><strong>Something to consider — yes.</strong></p>
+                            <div class="rumor-item-header">
+                                <div class="rumor-item-icon"><i class="fas fa-trash-alt"></i></div>
+                                <div class="rumor-item-title-area">
+                                    <div class="rumor-badge false">FALSE</div>
+                                    <h4>"You want to eliminate our trash service."</h4>
+                                </div>
+                            </div>
+                            <div class="rumor-item-body">
+                                <p><strong>The Truth:</strong> City trash service costs $5.1M/year, serving about 7,000 homes. Currently, 30% of taxpayers who don't get service still pay via taxes. Switching to an enterprise fund would charge serviced homes $729/year instead of $519, costing users about $210 more. Those without service would see a decrease in their taxes. Changes to bulk pickup and frequency could also affect costs. I also want to explore curbside composting and glass recycling.</p>
+                                <p><strong>Something to consider — yes.</strong></p>
+                            </div>
                         </div>
                         
                         <div class="rumor-item">
-                            <div class="rumor-badge false">FALSE</div>
-                            <h4>"You didn't support the Willard Sherwood Health Center."</h4>
-                            <p><strong>The Truth:</strong> Early cost projections raised serious concerns, with high operating expenses and limited revenue creating potential tax impacts that I could not initially support. Working closely with staff and fellow councilmembers, we pushed for a more sustainable financial plan that significantly reduced costs and improved the long-term outlook. With new cost-sharing commitments and a stronger cost-recovery model in place, the project is now on much firmer financial footing and I was happy to vote YES on April 28.</p>
+                            <div class="rumor-item-header">
+                                <div class="rumor-item-icon"><i class="fas fa-hospital"></i></div>
+                                <div class="rumor-item-title-area">
+                                    <div class="rumor-badge false">FALSE</div>
+                                    <h4>"You didn't support the Willard Sherwood Health Center."</h4>
+                                </div>
+                            </div>
+                            <div class="rumor-item-body">
+                                <p><strong>The Truth:</strong> Early cost projections raised serious concerns, with high operating expenses and limited revenue creating potential tax impacts that I could not initially support. Working closely with staff and fellow councilmembers, we pushed for a more sustainable financial plan that significantly reduced costs and improved the long-term outlook. With new cost-sharing commitments and a stronger cost-recovery model in place, the project is now on much firmer financial footing and I was happy to vote YES on April 28.</p>
+                            </div>
                         </div>
                         
                         <div class="rumor-item">
-                            <div class="rumor-badge false">FALSE</div>
-                            <h4>"You ask too many questions."</h4>
-                            <p><strong>The Truth:</strong> I trust our staff and value the expertise they bring to their work every day. Asking questions is not about doubting their ability — it's about ensuring I fully understand the details before making decisions that affect our community. Careful review and open dialogue are part of responsible governance, not a lack of trust.</p>
+                            <div class="rumor-item-header">
+                                <div class="rumor-item-icon"><i class="fas fa-question-circle"></i></div>
+                                <div class="rumor-item-title-area">
+                                    <div class="rumor-badge false">FALSE</div>
+                                    <h4>"You ask too many questions."</h4>
+                                </div>
+                            </div>
+                            <div class="rumor-item-body">
+                                <p><strong>The Truth:</strong> I trust our staff and value the expertise they bring to their work every day. Asking questions is not about doubting their ability — it's about ensuring I fully understand the details before making decisions that affect our community. Careful review and open dialogue are part of responsible governance, not a lack of trust.</p>
+                            </div>
                         </div>
                         
                         <div class="rumor-item">
-                            <div class="rumor-badge false">FALSE</div>
-                            <h4>"You think the city should run its own school system."</h4>
-                            <p><strong>The Truth:</strong> This is a significant decision that deserves careful, data-driven evaluation — not assumptions. Our current partnership with Fairfax County Public Schools provides our students with access to a wide range of academic programs, specialized services, and extracurricular opportunities that would be challenging to replicate on our own. Before considering any change, we need a comprehensive, transparent analysis that fully examines the costs, impacts on students, and potential benefits of independence. Until we have that, it would be premature to draw conclusions.</p>
+                            <div class="rumor-item-header">
+                                <div class="rumor-item-icon"><i class="fas fa-graduation-cap"></i></div>
+                                <div class="rumor-item-title-area">
+                                    <div class="rumor-badge false">FALSE</div>
+                                    <h4>"You think the city should run its own school system."</h4>
+                                </div>
+                            </div>
+                            <div class="rumor-item-body">
+                                <p><strong>The Truth:</strong> This is a significant decision that deserves careful, data-driven evaluation — not assumptions. Our current partnership with Fairfax County Public Schools provides our students with access to a wide range of academic programs, specialized services, and extracurricular opportunities that would be challenging to replicate on our own. Before considering any change, we need a comprehensive, transparent analysis that fully examines the costs, impacts on students, and potential benefits of independence. Until we have that, it would be premature to draw conclusions.</p>
+                            </div>
                         </div>
                         
                         <p class="rumor-footer"><i class="fas fa-envelope"></i> Have you heard a rumor that needs addressing? <a href="#contact">Contact me directly</a> — I'll set the record straight.</p>
