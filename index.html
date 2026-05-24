@@ -519,108 +519,111 @@
             margin: 0 auto;
         }
         
-        /* About Section */
-        .about {
+        /* Rumor Mill Section */
+        .rumor-mill {
             background: var(--light-gray);
         }
         
-        .about-grid {
+        .rumor-mill-grid {
             display: grid;
             grid-template-columns: 1fr 1.5fr;
             gap: 4rem;
-            align-items: center;
+            align-items: flex-start;
         }
         
-        .about-image {
+        .rumor-mill-image {
             position: relative;
+            top: 2rem;
         }
         
-        .about-image-main {
+        .rumor-mill-logo {
             width: 100%;
-            aspect-ratio: 1;
-            object-fit: cover;
             border-radius: 20px;
             box-shadow: 0 20px 50px rgba(0,0,0,0.1);
         }
         
-        .about-image-placeholder {
-            width: 100%;
-            aspect-ratio: 1;
-            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
-            border-radius: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-align: center;
-            padding: 2rem;
-        }
-        
-        .about-image-placeholder i {
-            font-size: 5rem;
-            margin-bottom: 1rem;
-            opacity: 0.6;
-        }
-        
-        .about-badge {
-            position: absolute;
-            bottom: -20px;
-            right: -20px;
-            background: var(--gold);
-            color: var(--navy);
-            padding: 1.5rem 2rem;
-            border-radius: 15px;
-            font-weight: 700;
-            box-shadow: 0 10px 30px rgba(214, 158, 46, 0.3);
-        }
-        
-        .about-content h2 {
+        .rumor-mill-content h2 {
             font-family: 'Playfair Display', serif;
             font-size: 2.5rem;
             color: var(--navy);
             margin-bottom: 1.5rem;
         }
         
-        .about-content h2 span {
+        .rumor-mill-content h2 span {
             color: var(--gold);
         }
         
-        .about-text {
+        .rumor-mill-text {
             color: var(--medium-gray);
             margin-bottom: 2rem;
             font-size: 1.05rem;
         }
         
-        .about-text p {
-            margin-bottom: 1rem;
-        }
-        
-        .about-highlights {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-        
-        .highlight-item {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            padding: 1rem;
+        .rumor-item {
             background: white;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            border-left: 4px solid var(--red);
         }
         
-        .highlight-item i {
-            color: var(--gold);
-            font-size: 1.2rem;
+        .rumor-item h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: var(--navy);
+            margin: 1rem 0 0.75rem;
+            font-style: italic;
         }
         
-        .highlight-item span {
+        .rumor-item p {
+            color: var(--medium-gray);
+            line-height: 1.7;
+        }
+        
+        .rumor-badge {
+            display: inline-block;
+            background: var(--red);
+            color: white;
+            padding: 0.35rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        
+        .rumor-footer {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 2px solid var(--gold);
             font-weight: 600;
-            color: var(--dark-gray);
+            color: var(--navy);
+        }
+        
+        .rumor-footer a {
+            color: var(--red);
+            text-decoration: underline;
+        }
+        
+        .rumor-footer a:hover {
+            color: var(--navy);
+        }
+        
+        @media (max-width: 768px) {
+            .rumor-mill-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .rumor-mill-image {
+                max-width: 300px;
+                margin: 0 auto;
+                top: 0;
+            }
+            
+            .rumor-item {
+                padding: 1.5rem;
+            }
         }
         
         /* Priorities Section */
@@ -1374,7 +1377,7 @@
                 <span>Stacy</span> For Fairfax
             </a>
             <ul class="nav-links" id="navLinks">
-                <li><a href="#about">About</a></li>
+                <li><a href="#rumor-mill">Rumor Mill</a></li>
                 <li><a href="#priorities">Priorities</a></li>
                 <li><a href="#accomplishments">Accomplishments</a></li>
                 <li><a href="#events">Events</a></li>
@@ -1444,42 +1447,38 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section class="about" id="about">
+    <!-- Rumor Mill Section -->
+    <section class="rumor-mill" id="rumor-mill">
         <div class="section-container">
-            <div class="about-grid">
-                <div class="about-image">
-                    <img src="images/stacy-about-new.jpg" alt="Stacy R. Hall, Fairfax City Council Member" class="about-image-main" loading="lazy">
-                    <div class="about-badge">Fairfax City Council<br>Since 2025</div>
+            <div class="rumor-mill-grid">
+                <div class="rumor-mill-image">
+                    <img src="images/rumor-mill-logo.jpg" alt="The Rumor Mill - So get this..." class="rumor-mill-logo" loading="lazy">
                 </div>
-                <div class="about-content">
-                    <span class="section-label">About Stacy</span>
-                    <h2>Meet the Candidate <span>Who's Fighting for Fairfax</span></h2>
-                    <div class="about-text">
-                        <p>As the daughter of small business owners in Wilmington, DE, I grew up in a bagel and Italian bread bakery. My mom was a public high school teacher, and I remember many nights spent together watching her grade tests and papers on the couch. I learned the value of hard work at a very early age, working in our bagel shops and bakery. My parents taught me and my sister to work hard and play hard, and I've practiced this philosophy my entire life.</p>
-                        <p>I graduated from the University of Delaware - <strong>go Blue Hens!!</strong> - with a Bachelors of Science in Finance and minors in Economics and Biology. I played field hockey and lacrosse in middle and high school, and t-ball and softball through elementary and middle school.</p>
-                        <p>I relocated to the DC metro area in 2001 and I have lived in Fairfax since 2011 with my husband and two sons and our two dogs. When we moved here, I was pregnant with our second child and our oldest was almost 2. They have been so fortunate to grow up in our community, attend our city schools, and have many of the same friends now that they made in preschool and kindergarten. Fairfax City truly is a gem, and I want to help protect, maintain and enhance what makes us shine.</p>
-                        <p>I am the Controller for a company that advances care and innovation in the animal health sector. Prior to that, I was a public accountant for 9 years. I also run my own small business in the city, providing accounting, bookkeeping and tax services.</p>
-                        <p>I love cheering on our local sports teams, especially our FHS football and basketball teams on which my kids play. You can often find us at Rock The Block or many of the other amazing, family-friendly events our city hosts!</p>
-                        <p>I love most outdoor activities, especially walking/hiking with my family and our dogs. I enjoy boating, water skiing, swimming and tubing on the Sassafras River when we visit family.</p>
-                    </div>
-                    <div class="about-highlights">
-                        <div class="highlight-item">
-                            <i class="fas fa-calculator"></i>
-                            <span>Finance Professional</span>
+                <div class="rumor-mill-content">
+                    <span class="section-label">Setting the Record Straight</span>
+                    <h2>The Rumor Mill</span></h2>
+                    <div class="rumor-mill-text">
+                        <p>In a small town like ours, word travels fast — and not always accurately. This space is dedicated to addressing the rumors, misinformation, and speculation that occasionally make their way around our community. If you've heard something that doesn't sound quite right, check here first.</p>
+                        
+                        <div class="rumor-item">
+                            <div class="rumor-badge false">FALSE</div>
+                            <h4>"Stacy supports massive apartment complexes that will ruin our neighborhoods."</h4>
+                            <p><strong>The Truth:</strong> Every development proposal deserves careful, individual review. I evaluate each project based on its impact on traffic, schools, infrastructure, and neighborhood character. I have opposed projects that didn't fit our community's needs and supported ones that included meaningful community benefits. One size does not fit all.</p>
                         </div>
-                        <div class="highlight-item">
-                            <i class="fas fa-school"></i>
-                            <span>City of Fairfax Schools Parent</span>
+                        
+                        <div class="rumor-item">
+                            <div class="rumor-badge false">FALSE</div>
+                            <h4>"Stacy wants to cut funding for our schools."</h4>
+                            <p><strong>The Truth:</strong> As a parent of two children in Fairfax City Public Schools and former School Board Member, I am deeply committed to strong public education. I advocate for adequate funding, modern facilities, and safe learning environments. My record shows consistent support for our schools and our students.</p>
                         </div>
-                        <div class="highlight-item">
-                            <i class="fas fa-paw"></i>
-                            <span>Animal Health Sector</span>
+                        
+                        <div class="rumor-item">
+                            <div class="rumor-badge false">FALSE</div>
+                            <h4>"Stacy is only focused on partisan politics, not local issues."</h4>
+                            <p><strong>The Truth:</strong> Fairfax City Council is nonpartisan by design, and I take that seriously. My focus is exclusively on local issues that affect our 6.2 square miles — budgets, schools, public safety, roads, and parks. I work for all residents, regardless of party affiliation.</p>
                         </div>
-                        <div class="highlight-item">
-                            <i class="fas fa-home"></i>
-                            <span>Fairfax Resident Since 2011</span>
-                        </div>
+                        
+                        <p class="rumor-footer"><i class="fas fa-envelope"></i> Have you heard a rumor that needs addressing? <a href="#contact">Contact me directly</a> — I'll set the record straight.</p>
                     </div>
                 </div>
             </div>
@@ -1945,7 +1944,7 @@
             <p style="margin-top: 0.5rem;">Paid for and authorized by Stacy For Fairfax</p>
             <p style="margin-top: 1rem;">
                 <a href="#home">Home</a> | 
-                <a href="#about">About</a> | 
+                <a href="#rumor-mill">Rumor Mill</a> | 
                 <a href="#priorities">Priorities</a> | 
                 <a href="#accomplishments">Accomplishments</a> | 
                 <a href="#events">Events</a> | 
