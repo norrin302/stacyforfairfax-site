@@ -1036,6 +1036,53 @@
             font-weight: 600;
         }
         
+        .community-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 2rem;
+        }
+        
+        .community-buttons .btn-primary {
+            background: var(--navy);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .community-buttons .btn-primary:hover {
+            background: var(--navy-light);
+            transform: translateY(-2px);
+        }
+        
+        .community-buttons .btn-secondary {
+            background: white;
+            color: var(--navy);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            border: 2px solid var(--navy);
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .community-buttons .btn-secondary:hover {
+            background: var(--navy);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
         /* Events/Calendar Section */
         .events {
             background: white;
@@ -1936,8 +1983,23 @@
                     <p>I am the Controller for a company that advances care and innovation in the animal health sector. Prior to that, I was a public accountant for 9 years. I also run my own small business in the city, providing accounting, bookkeeping and tax services.</p>
                     <p>I love cheering on our local sports teams, especially our FHS football and basketball teams on which my kids play. You can often find us at Rock The Block or many of the other amazing, family-friendly events our city hosts!</p>
                     <p>I love most outdoor activities, especially walking/hiking with my family and our dogs. I enjoy boating, water skiing, swimming and tubing on the Sassafras River when we visit family.</p>
+                    <div class="community-quote">
+                        <p>"Fairfax City truly is a gem, and I want to help protect, maintain and enhance what makes us shine."</p>
+                        <cite>— Stacy R. Hall</cite>
+                    </div>
+                    <div class="community-buttons">
+                        <a href="https://secure.anedot.com/stacy-for-fairfax/b2509222-d06a-4603-b408-6231bd9d929e" target="_blank" rel="noopener" class="btn btn-primary">
+                            <i class="fas fa-hand-holding-heart"></i> Donate
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <i class="fas fa-envelope"></i> Get In Touch
+                        </a>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSexty6qU33Ciek7fIa2fnBw5LAeFR6G5UXeiNKclPJPc3PCrw/viewform" target="_blank" rel="noopener" class="btn btn-secondary">
+                            <i class="fas fa-sign"></i> Request a Yard Sign
+                        </a>
+                    </div>
                 </div>
-                <img src="images/stacy-logo.png" alt="Stacy Hall for City Council campaign logo" loading="lazy" style="width:100%;max-width:400px;height:auto;border-radius:20px;box-shadow:0 20px 50px rgba(0,0,0,0.1);object-fit:cover;margin:0 auto;display:block;">
+                <img src="images/stacy-about-new.jpg" alt="Stacy Hall" loading="lazy" style="width:100%;max-width:400px;height:auto;border-radius:20px;box-shadow:0 20px 50px rgba(0,0,0,0.1);object-fit:cover;margin:0 auto;display:block;">
             </div>
         </div>
     </section>
