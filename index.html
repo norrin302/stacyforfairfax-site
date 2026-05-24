@@ -656,7 +656,18 @@
             color: var(--navy);
         }
         
+        .rumor-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
         @media (max-width: 768px) {
+            .rumor-cards-grid {
+                grid-template-columns: 1fr;
+            }
+            
             .rumor-mill-grid {
                 grid-template-columns: 1fr;
                 gap: 2rem;
@@ -1507,6 +1518,7 @@
                     <div class="rumor-mill-text">
                         <p>In a small town like ours, word travels fast — and not always accurately. This space is dedicated to addressing the rumors, misinformation, and speculation that occasionally make their way around our community. If you've heard something that doesn't sound quite right, check here first.</p>
                         
+                        <div class="rumor-cards-grid">
                         <div class="rumor-item">
                             <div class="rumor-item-header">
                                 <div class="rumor-item-icon"><i class="fas fa-building"></i></div>
@@ -1571,6 +1583,7 @@
                             <div class="rumor-item-body">
                                 <p><strong>The Truth:</strong> This is a significant decision that deserves careful, data-driven evaluation — not assumptions. Our current partnership with Fairfax County Public Schools provides our students with access to a wide range of academic programs, specialized services, and extracurricular opportunities that would be challenging to replicate on our own. Before considering any change, we need a comprehensive, transparent analysis that fully examines the costs, impacts on students, and potential benefits of independence. Until we have that, it would be premature to draw conclusions.</p>
                             </div>
+                        </div>
                         </div>
                         
                         <p class="rumor-footer"><i class="fas fa-envelope"></i> Have you heard a rumor that needs addressing? <a href="#contact">Contact me directly</a> — I'll set the record straight.</p>
