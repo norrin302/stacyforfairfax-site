@@ -295,33 +295,53 @@
             margin-top: 2rem;
         }
         
-        /* Hero endorser logos - small badges */
-        .hero-badges {
+        /* Hero endorser logos - positioned beside countdown */
+        .countdown-row {
             display: flex;
+            align-items: center;
             justify-content: center;
-            gap: 2rem;
-            margin: 1.5rem 0;
+            gap: 2.5rem;
+            margin-top: 0.5rem;
             flex-wrap: wrap;
         }
-        .hero-badges .badge-img {
-            width: 70px;
-            height: 70px;
+        .endorse-logo {
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+        }
+        .endorse-img {
+            width: 100px;
+            height: 100px;
             object-fit: contain;
             border-radius: 50%;
             background: white;
-            padding: 3px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            padding: 4px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.12);
             transition: transform 0.3s;
         }
-        .hero-badges .badge-img:hover {
-            transform: scale(1.1);
+        .endorse-img:hover {
+            transform: scale(1.08);
         }
-        .hero-badges .badge-img.for-you {
-            width: 80px;
-            height: 80px;
+        .endorse-img.for-you {
+            width: 120px;
+            height: 120px;
             padding: 0;
             background: transparent;
             box-shadow: none;
+        }
+        
+        @media (max-width: 768px) {
+            .countdown-row {
+                gap: 1.5rem;
+            }
+            .endorse-img {
+                width: 70px;
+                height: 70px;
+            }
+            .endorse-img.for-you {
+                width: 85px;
+                height: 85px;
+            }
         }
         
         .hero-logo {
@@ -1619,14 +1639,6 @@
                 </div>
             </div>
             <div class="hero-text">
-                <div class="hero-badges">
-                    <a href="https://www.fairfaxcountygop.org" target="_blank" rel="noopener" title="For You, Fairfax">
-                        <img src="images/logo-for-you-fairfax.png" alt="For You, Fairfax - Responsible Stewardship Stronger Future" class="badge-img for-you">
-                    </a>
-                    <a href="https://www.momsdemandaction.org" target="_blank" rel="noopener" title="Moms Demand Action">
-                        <img src="images/logo-moms-demand.png" alt="Moms Demand Action" class="badge-img">
-                    </a>
-                </div>
                 <p class="hero-tagline">Experienced. Transparent. Dedicated to Serving Our Community.</p>
                 <h2 class="hero-slogan">This is YOUR city and YOUR voice matters</h2>
                 <p class="hero-slogan-sub">Fairfax deserves thoughtful leadership - and real results.</p>
@@ -1649,23 +1661,31 @@
                 </div>
                 <div class="hero-badge">Election Day: November 3, 2026 · <a href="https://www.fairfaxva.gov/Government/Elections/How-To-Vote/City-Polling-Locations" target="_blank" rel="noopener" style="color:#fff;text-decoration:underline;text-underline-offset:3px;">Find Your Polling Location</a></div>
                 <div class="countdown-title">Countdown to the election</div>
-                <div class="countdown">
-                    <div class="countdown-item">
-                        <span class="number" id="days">--</span>
-                        <span class="label">Days</span>
+                <div class="countdown-row">
+                    <a href="https://www.fairfaxcountygop.org" target="_blank" rel="noopener" title="For You, Fairfax" class="endorse-logo">
+                        <img src="images/logo-for-you-fairfax.png" alt="For You, Fairfax" class="endorse-img for-you">
+                    </a>
+                    <div class="countdown">
+                        <div class="countdown-item">
+                            <span class="number" id="days">--</span>
+                            <span class="label">Days</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="number" id="hours">--</span>
+                            <span class="label">Hours</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="number" id="minutes">--</span>
+                            <span class="label">Min</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="number" id="seconds">--</span>
+                            <span class="label">Sec</span>
+                        </div>
                     </div>
-                    <div class="countdown-item">
-                        <span class="number" id="hours">--</span>
-                        <span class="label">Hours</span>
-                    </div>
-                    <div class="countdown-item">
-                        <span class="number" id="minutes">--</span>
-                        <span class="label">Min</span>
-                    </div>
-                    <div class="countdown-item">
-                        <span class="number" id="seconds">--</span>
-                        <span class="label">Sec</span>
-                    </div>
+                    <a href="https://www.momsdemandaction.org" target="_blank" rel="noopener" title="Moms Demand Action" class="endorse-logo">
+                        <img src="images/logo-moms-demand.png" alt="Moms Demand Action" class="endorse-img">
+                    </a>
                 </div>
             </div>
         </div>
