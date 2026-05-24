@@ -160,6 +160,29 @@
             color: var(--gold);
         }
         
+        .nav-left {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            flex-shrink: 1;
+            min-width: 0;
+        }
+        
+        .nav-slogan {
+            font-family: 'Playfair Display', serif;
+            font-size: 0.85rem;
+            color: var(--medium-gray);
+            font-style: italic;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .nav-slogan span {
+            color: var(--gold);
+            font-weight: 600;
+        }
+        
         .nav-links {
             display: flex;
             gap: 1.25rem;
@@ -323,6 +346,13 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             text-align: center;
+        }
+        
+        .hero-office {
+            display: block;
+            font-size: 2rem;
+            font-weight: 600;
+            margin-top: 0.25rem;
         }
         
         .hero-tagline {
@@ -1326,6 +1356,10 @@
                 font-size: 2.5rem;
             }
             
+            .hero-office {
+                font-size: 1.5rem;
+            }
+            
             .hero-buttons {
                 justify-content: center;
             }
@@ -1362,6 +1396,10 @@
                 display: none;
             }
             
+            .nav-slogan {
+                display: none;
+            }
+            
             .mobile-toggle {
                 display: block;
             }
@@ -1393,6 +1431,10 @@
             
             .hero h1 {
                 font-size: 2rem;
+            }
+            
+            .hero-office {
+                font-size: 1.2rem;
             }
             
             .hero-photos {
@@ -1461,9 +1503,12 @@
     <!-- Navigation -->
     <nav id="navbar">
         <div class="nav-container">
-            <a href="https://www.facebook.com/StacyHallCouncil" class="nav-logo">
-                <span>Stacy</span> For Fairfax
-            </a>
+            <div class="nav-left">
+                <a href="https://www.facebook.com/StacyHallCouncil" class="nav-logo">
+                    <span>Stacy</span> For Fairfax
+                </a>
+                <span class="nav-slogan">This is YOUR city and <span>YOUR voice matters</span></span>
+            </div>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#rumor-mill">Rumor Mill</a></li>
                 <li><a href="#priorities">Priorities</a></li>
@@ -1481,7 +1526,7 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-content">
-            <h1>Re-Elect Stacy R. Hall for City Council</h1>
+            <h1>Re-Elect Stacy R. Hall<br><span class="hero-office">for City Council</span></h1>
             <div class="hero-photos">
                 <div class="hero-photo-frame">
                     <img src="images/community-photo.jpg?v=2026-05-23" alt="Stacy Hall in the Fairfax community" style="width:100%;height:100%;object-fit:cover;display:block;">
@@ -1532,92 +1577,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Rumor Mill Section -->
-    <section class="rumor-mill" id="rumor-mill">
-        <div class="section-container">
-            <div class="section-header">
-                <span class="section-label">Setting the Record Straight</span>
-                <h2 class="section-title">Dispelling Rumors...more to come</h2>
-                <div class="rumor-mill-intro-row">
-                    <p class="section-subtitle">In a small town like ours, word travels fast — and not always accurately. This space is dedicated to addressing the rumors, misinformation, and speculation that occasionally make their way around our community. If you've heard something that doesn't sound quite right, check here first.</p>
-                    <div class="rumor-mill-logo-wrapper">
-                        <img src="images/rumor-mill-logo.jpg" alt="So get this..." class="rumor-mill-logo-small" loading="lazy">
-                    </div>
-                </div>
-            </div>
-            <div class="priorities-grid">
-                <div class="rumor-item">
-                    <div class="rumor-item-header">
-                        <div class="rumor-item-icon"><i class="fas fa-building"></i></div>
-                        <div class="rumor-item-title-area">
-                            <div class="rumor-badge false">FALSE</div>
-                            <h4>"You don't want any massive complexes and you want to keep us a sleepy town."</h4>
-                        </div>
-                    </div>
-                    <div class="rumor-item-body">
-                        <p><strong>The Truth:</strong> Every development proposal deserves careful, individual review. I evaluate each project based on its impact on traffic, schools, infrastructure, and neighborhood character. I have opposed projects that didn't fit our community's needs and supported ones that included meaningful community benefits. One size does not fit all.</p>
-                    </div>
-                </div>
-                
-                <div class="rumor-item">
-                    <div class="rumor-item-header">
-                        <div class="rumor-item-icon"><i class="fas fa-trash-alt"></i></div>
-                        <div class="rumor-item-title-area">
-                            <div class="rumor-badge false">FALSE</div>
-                            <h4>"You want to eliminate our trash service."</h4>
-                        </div>
-                    </div>
-                    <div class="rumor-item-body">
-                        <p><strong>The Truth:</strong> City trash service costs $5.1M/year, serving about 7,000 homes. Currently, 30% of taxpayers who don't get service still pay via taxes. Switching to an enterprise fund would charge serviced homes $729/year instead of $519, costing users about $210 more. Those without service would see a decrease in their taxes. Changes to bulk pickup and frequency could also affect costs. I also want to explore curbside composting and glass recycling.</p>
-                        <p><strong>Something to consider — yes.</strong></p>
-                    </div>
-                </div>
-                
-                <div class="rumor-item">
-                    <div class="rumor-item-header">
-                        <div class="rumor-item-icon"><i class="fas fa-question-circle"></i></div>
-                        <div class="rumor-item-title-area">
-                            <div class="rumor-badge false">FALSE</div>
-                            <h4>"You ask too many questions."</h4>
-                        </div>
-                    </div>
-                    <div class="rumor-item-body">
-                        <p><strong>The Truth:</strong> I trust our staff and value the expertise they bring to their work every day. Asking questions is not about doubting their ability — it's about ensuring I fully understand the details before making decisions that affect our community. Careful review and open dialogue are part of responsible governance, not a lack of trust.</p>
-                    </div>
-                </div>
-                
-                <div class="rumor-item">
-                    <div class="rumor-item-header">
-                        <div class="rumor-item-icon"><i class="fas fa-hospital"></i></div>
-                        <div class="rumor-item-title-area">
-                            <div class="rumor-badge false">FALSE</div>
-                            <h4>"You didn't support the Willard Sherwood Health & Community Center."</h4>
-                        </div>
-                    </div>
-                    <div class="rumor-item-body">
-                        <p><strong>The Truth:</strong> Early cost projections raised serious concerns, with high operating expenses and limited revenue creating potential tax impacts that I could not initially support. Working closely with staff and fellow councilmembers, we pushed for a more sustainable financial plan that significantly reduced costs and improved the long-term outlook.</p>
-                        <p><strong>With new cost-sharing commitments and a stronger cost-recovery model in place, the project is now on much firmer financial footing and I was happy to vote YES on April 28.</strong></p>
-                    </div>
-                </div>
-                
-                <div class="rumor-item">
-                    <div class="rumor-item-header">
-                        <div class="rumor-item-icon"><i class="fas fa-graduation-cap"></i></div>
-                        <div class="rumor-item-title-area">
-                            <div class="rumor-badge false">FALSE</div>
-                            <h4>"You think the city should run its own school system."</h4>
-                        </div>
-                    </div>
-                    <div class="rumor-item-body">
-                        <p><strong>The Truth:</strong> This is a significant decision that deserves careful, data-driven evaluation — not assumptions. Our current partnership with Fairfax County Public Schools provides our students with access to a wide range of academic programs, specialized services, and extracurricular opportunities that would be challenging to replicate on our own. Before considering any change, we need a comprehensive, transparent analysis that fully examines the costs, impacts on students, and potential benefits of independence. Until we have that, it would be premature to draw conclusions.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <p class="rumor-footer"><i class="fas fa-envelope"></i> Have you heard a rumor that needs addressing? <a href="#contact">Contact me directly</a> — I'll set the record straight.</p>
         </div>
     </section>
 
@@ -1872,6 +1831,93 @@
                 </div>
                 
             </div>
+        </div>
+    </section>
+
+
+    <!-- Rumor Mill Section -->
+    <section class="rumor-mill" id="rumor-mill">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">Setting the Record Straight</span>
+                <h2 class="section-title">Dispelling Rumors...more to come</h2>
+                <div class="rumor-mill-intro-row">
+                    <p class="section-subtitle">In a small town like ours, word travels fast — and not always accurately. This space is dedicated to addressing the rumors, misinformation, and speculation that occasionally make their way around our community. If you've heard something that doesn't sound quite right, check here first.</p>
+                    <div class="rumor-mill-logo-wrapper">
+                        <img src="images/rumor-mill-logo.jpg" alt="So get this..." class="rumor-mill-logo-small" loading="lazy">
+                    </div>
+                </div>
+            </div>
+            <div class="priorities-grid">
+                <div class="rumor-item">
+                    <div class="rumor-item-header">
+                        <div class="rumor-item-icon"><i class="fas fa-building"></i></div>
+                        <div class="rumor-item-title-area">
+                            <div class="rumor-badge false">FALSE</div>
+                            <h4>"You don't want any massive complexes and you want to keep us a sleepy town."</h4>
+                        </div>
+                    </div>
+                    <div class="rumor-item-body">
+                        <p><strong>The Truth:</strong> Every development proposal deserves careful, individual review. I evaluate each project based on its impact on traffic, schools, infrastructure, and neighborhood character. I have opposed projects that didn't fit our community's needs and supported ones that included meaningful community benefits. One size does not fit all.</p>
+                    </div>
+                </div>
+                
+                <div class="rumor-item">
+                    <div class="rumor-item-header">
+                        <div class="rumor-item-icon"><i class="fas fa-trash-alt"></i></div>
+                        <div class="rumor-item-title-area">
+                            <div class="rumor-badge false">FALSE</div>
+                            <h4>"You want to eliminate our trash service."</h4>
+                        </div>
+                    </div>
+                    <div class="rumor-item-body">
+                        <p><strong>The Truth:</strong> City trash service costs $5.1M/year, serving about 7,000 homes. Currently, 30% of taxpayers who don't get service still pay via taxes. Switching to an enterprise fund would charge serviced homes $729/year instead of $519, costing users about $210 more. Those without service would see a decrease in their taxes. Changes to bulk pickup and frequency could also affect costs. I also want to explore curbside composting and glass recycling.</p>
+                        <p><strong>Something to consider — yes.</strong></p>
+                    </div>
+                </div>
+                
+                <div class="rumor-item">
+                    <div class="rumor-item-header">
+                        <div class="rumor-item-icon"><i class="fas fa-question-circle"></i></div>
+                        <div class="rumor-item-title-area">
+                            <div class="rumor-badge false">FALSE</div>
+                            <h4>"You ask too many questions."</h4>
+                        </div>
+                    </div>
+                    <div class="rumor-item-body">
+                        <p><strong>The Truth:</strong> I trust our staff and value the expertise they bring to their work every day. Asking questions is not about doubting their ability — it's about ensuring I fully understand the details before making decisions that affect our community. Careful review and open dialogue are part of responsible governance, not a lack of trust.</p>
+                    </div>
+                </div>
+                
+                <div class="rumor-item">
+                    <div class="rumor-item-header">
+                        <div class="rumor-item-icon"><i class="fas fa-hospital"></i></div>
+                        <div class="rumor-item-title-area">
+                            <div class="rumor-badge false">FALSE</div>
+                            <h4>"You didn't support the Willard Sherwood Health & Community Center."</h4>
+                        </div>
+                    </div>
+                    <div class="rumor-item-body">
+                        <p><strong>The Truth:</strong> Early cost projections raised serious concerns, with high operating expenses and limited revenue creating potential tax impacts that I could not initially support. Working closely with staff and fellow councilmembers, we pushed for a more sustainable financial plan that significantly reduced costs and improved the long-term outlook.</p>
+                        <p><strong>With new cost-sharing commitments and a stronger cost-recovery model in place, the project is now on much firmer financial footing and I was happy to vote YES on April 28.</strong></p>
+                    </div>
+                </div>
+                
+                <div class="rumor-item">
+                    <div class="rumor-item-header">
+                        <div class="rumor-item-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <div class="rumor-item-title-area">
+                            <div class="rumor-badge false">FALSE</div>
+                            <h4>"You think the city should run its own school system."</h4>
+                        </div>
+                    </div>
+                    <div class="rumor-item-body">
+                        <p><strong>The Truth:</strong> This is a significant decision that deserves careful, data-driven evaluation — not assumptions. Our current partnership with Fairfax County Public Schools provides our students with access to a wide range of academic programs, specialized services, and extracurricular opportunities that would be challenging to replicate on our own. Before considering any change, we need a comprehensive, transparent analysis that fully examines the costs, impacts on students, and potential benefits of independence. Until we have that, it would be premature to draw conclusions.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <p class="rumor-footer"><i class="fas fa-envelope"></i> Have you heard a rumor that needs addressing? <a href="#contact">Contact me directly</a> — I'll set the record straight.</p>
         </div>
     </section>
 
