@@ -603,37 +603,41 @@
         }
         
         .rumor-item-header {
-            display: block;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
             padding: 0;
+            margin-bottom: 1.25rem;
             background: none;
             border-bottom: none;
         }
         
         .rumor-item-icon {
-            width: 70px;
-            height: 70px;
-            border-radius: 15px;
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
             background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 1.5rem;
+            flex-shrink: 0;
         }
         
         .rumor-item-icon i {
             color: white;
-            font-size: 1.8rem;
+            font-size: 1.4rem;
         }
         
         .rumor-item-title-area {
-            flex: none;
+            flex: 1;
+            min-width: 0;
         }
         
         .rumor-item-title-area h4 {
             font-family: 'Playfair Display', serif;
             font-size: 1.4rem;
             color: var(--navy);
-            margin: 0 0 1rem 0;
+            margin: 0;
             font-style: normal;
             line-height: 1.3;
         }
@@ -1560,6 +1564,33 @@
                 
                 <div class="rumor-item">
                     <div class="rumor-item-header">
+                        <div class="rumor-item-icon"><i class="fas fa-question-circle"></i></div>
+                        <div class="rumor-item-title-area">
+                            <div class="rumor-badge false">FALSE</div>
+                            <h4>"You ask too many questions."</h4>
+                        </div>
+                    </div>
+                    <div class="rumor-item-body">
+                        <p><strong>The Truth:</strong> I trust our staff and value the expertise they bring to their work every day. Asking questions is not about doubting their ability — it's about ensuring I fully understand the details before making decisions that affect our community. Careful review and open dialogue are part of responsible governance, not a lack of trust.</p>
+                    </div>
+                </div>
+                
+                <div class="rumor-item">
+                    <div class="rumor-item-header">
+                        <div class="rumor-item-icon"><i class="fas fa-hospital"></i></div>
+                        <div class="rumor-item-title-area">
+                            <div class="rumor-badge false">FALSE</div>
+                            <h4>"You didn't support the Willard Sherwood Health & Community Center."</h4>
+                        </div>
+                    </div>
+                    <div class="rumor-item-body">
+                        <p><strong>The Truth:</strong> Early cost projections raised serious concerns, with high operating expenses and limited revenue creating potential tax impacts that I could not initially support. Working closely with staff and fellow councilmembers, we pushed for a more sustainable financial plan that significantly reduced costs and improved the long-term outlook.</p>
+                        <p><strong>With new cost-sharing commitments and a stronger cost-recovery model in place, the project is now on much firmer financial footing and I was happy to vote YES on April 28.</strong></p>
+                    </div>
+                </div>
+                
+                <div class="rumor-item">
+                    <div class="rumor-item-header">
                         <div class="rumor-item-icon"><i class="fas fa-trash-alt"></i></div>
                         <div class="rumor-item-title-area">
                             <div class="rumor-badge false">FALSE</div>
@@ -1569,32 +1600,6 @@
                     <div class="rumor-item-body">
                         <p><strong>The Truth:</strong> City trash service costs $5.1M/year, serving about 7,000 homes. Currently, 30% of taxpayers who don't get service still pay via taxes. Switching to an enterprise fund would charge serviced homes $729/year instead of $519, costing users about $210 more. Those without service would see a decrease in their taxes. Changes to bulk pickup and frequency could also affect costs. I also want to explore curbside composting and glass recycling.</p>
                         <p><strong>Something to consider — yes.</strong></p>
-                    </div>
-                </div>
-                
-                <div class="rumor-item">
-                    <div class="rumor-item-header">
-                        <div class="rumor-item-icon"><i class="fas fa-hospital"></i></div>
-                        <div class="rumor-item-title-area">
-                            <div class="rumor-badge false">FALSE</div>
-                            <h4>"You didn't support the Willard Sherwood Health Center."</h4>
-                        </div>
-                    </div>
-                    <div class="rumor-item-body">
-                        <p><strong>The Truth:</strong> Early cost projections raised serious concerns, with high operating expenses and limited revenue creating potential tax impacts that I could not initially support. Working closely with staff and fellow councilmembers, we pushed for a more sustainable financial plan that significantly reduced costs and improved the long-term outlook. With new cost-sharing commitments and a stronger cost-recovery model in place, the project is now on much firmer financial footing and I was happy to vote YES on April 28.</p>
-                    </div>
-                </div>
-                
-                <div class="rumor-item">
-                    <div class="rumor-item-header">
-                        <div class="rumor-item-icon"><i class="fas fa-question-circle"></i></div>
-                        <div class="rumor-item-title-area">
-                            <div class="rumor-badge false">FALSE</div>
-                            <h4>"You ask too many questions."</h4>
-                        </div>
-                    </div>
-                    <div class="rumor-item-body">
-                        <p><strong>The Truth:</strong> I trust our staff and value the expertise they bring to their work every day. Asking questions is not about doubting their ability — it's about ensuring I fully understand the details before making decisions that affect our community. Careful review and open dialogue are part of responsible governance, not a lack of trust.</p>
                     </div>
                 </div>
                 
