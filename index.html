@@ -2364,42 +2364,130 @@
     }
 </style>
 
-<!-- DRAFT GALLERY PREVIEW - NOT FINAL -->
-<section class="draft-gallery-section" style="padding: 4rem 1rem; background: var(--cream, #fffaf0);">
+<!-- Community Moments Carousel -->
+<style>
+    .community-carousel-section {
+        padding: 4rem 1rem;
+        background: var(--cream, #fffaf0);
+        position: relative;
+    }
+    .community-carousel-wrapper {
+        position: relative;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 3rem;
+    }
+    .community-carousel {
+        display: flex;
+        gap: 1.5rem;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        padding: 0.5rem 0.25rem 1rem;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+    .community-carousel::-webkit-scrollbar {
+        display: none;
+    }
+    .community-carousel figure {
+        flex: 0 0 auto;
+        width: 300px;
+        margin: 0;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        background: white;
+        scroll-snap-align: start;
+    }
+    .community-carousel img {
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+        display: block;
+    }
+    .community-carousel img.holiday-market {
+        object-position: center top;
+    }
+    .community-carousel figcaption {
+        padding: 0.85rem 1rem;
+        font-size: 0.95rem;
+        color: var(--dark-gray, #2d3748);
+        text-align: center;
+        font-weight: 500;
+        min-height: 3.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .carousel-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background: var(--navy, #1a365d);
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        z-index: 2;
+        transition: background 0.2s;
+    }
+    .carousel-btn:hover {
+        background: var(--red, #c53030);
+    }
+    .carousel-btn.prev { left: 0; }
+    .carousel-btn.next { right: 0; }
+    @media (max-width: 640px) {
+        .community-carousel-wrapper { padding: 0 2.25rem; }
+        .community-carousel figure { width: 260px; }
+        .carousel-btn { width: 36px; height: 36px; }
+    }
+</style>
+
+<section class="community-carousel-section">
     <div style="max-width: 1200px; margin: 0 auto;">
         <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; color: var(--navy, #1a365d); text-align: center; margin-bottom: 0.5rem;">Community Moments</h2>
-        <p style="text-align: center; color: var(--medium-gray, #718096); margin-bottom: 2.5rem; font-size: 1.1rem;">Draft preview — photos from stacyforfairfax.com</p>
+        <p style="text-align: center; color: var(--medium-gray, #718096); margin-bottom: 2rem; font-size: 1.1rem;">Scroll through highlights from around Fairfax City</p>
+    </div>
 
-        <div class="draft-gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
-            <figure style="margin: 0; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); background: white; display: flex; flex-direction: column; height: 100%;">
-                <img src="images/labor-day-car-show.png" alt="Labor Day Car Show" style="width: 100%; height: 280px; object-fit: cover; display: block; flex-shrink: 0;">
-                <figcaption style="padding: 0.85rem 1rem; font-size: 0.95rem; color: var(--dark-gray, #2d3748); text-align: center; font-weight: 500;">Labor Day Car Show</figcaption>
+    <div class="community-carousel-wrapper">
+        <button class="carousel-btn prev" type="button" aria-label="Previous photo" onclick="document.getElementById('communityCarousel').scrollBy({left:-320,behavior:'smooth'})"><i class="fas fa-chevron-left"></i></button>
+
+        <div class="community-carousel" id="communityCarousel">
+            <figure>
+                <img src="images/labor-day-car-show.png" alt="Labor Day Car Show" loading="lazy">
+                <figcaption>Labor Day Car Show</figcaption>
             </figure>
-            <figure style="margin: 0; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); background: white; display: flex; flex-direction: column; height: 100%;">
-                <img src="images/stacy-with-dara.jpg" alt="Fairfax City Holiday Market" style="width: 100%; height: 280px; object-fit: cover; display: block; flex-shrink: 0;">
-                <figcaption style="padding: 0.85rem 1rem; font-size: 0.95rem; color: var(--dark-gray, #2d3748); text-align: center; font-weight: 500;">Fairfax City Holiday Market</figcaption>
+            <figure>
+                <img src="images/stacy-with-dara.jpg" alt="Fairfax City Holiday Market" class="holiday-market" loading="lazy">
+                <figcaption>Fairfax City Holiday Market</figcaption>
             </figure>
-            <figure style="margin: 0; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); background: white; display: flex; flex-direction: column; height: 100%;">
-                <img src="images/stacy-group-mural.png" alt="Group at mural" style="width: 100%; height: 280px; object-fit: cover; display: block; flex-shrink: 0;">
-                <figcaption style="padding: 0.85rem 1rem; font-size: 0.95rem; color: var(--dark-gray, #2d3748); text-align: center; font-weight: 500;">Celebrating Fairfax City Pride</figcaption>
+            <figure>
+                <img src="images/stacy-group-mural.png" alt="Celebrating Fairfax City Pride" loading="lazy">
+                <figcaption>Celebrating Fairfax City Pride</figcaption>
             </figure>
-            <figure style="margin: 0; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); background: white; display: flex; flex-direction: column; height: 100%;">
-                <img src="images/stacy-friends-green-shirts.png" alt="Friends in green shirts" style="width: 100%; height: 280px; object-fit: cover; display: block; flex-shrink: 0;">
-                <figcaption style="padding: 0.85rem 1rem; font-size: 0.95rem; color: var(--dark-gray, #2d3748); text-align: center; font-weight: 500;">George Mason University Homecoming City Crawl</figcaption>
+            <figure>
+                <img src="images/stacy-friends-green-shirts.png" alt="George Mason University Homecoming City Crawl" loading="lazy">
+                <figcaption>George Mason University Homecoming City Crawl</figcaption>
             </figure>
-            <figure style="margin: 0; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); background: white; display: flex; flex-direction: column; height: 100%;">
-                <img src="images/fairfax-womens-history-month.png" alt="Women's History Month" style="width: 100%; height: 280px; object-fit: cover; display: block; flex-shrink: 0;">
-                <figcaption style="padding: 0.85rem 1rem; font-size: 0.95rem; color: var(--dark-gray, #2d3748); text-align: center; font-weight: 500;">Fairfax City Women's History Month</figcaption>
+            <figure>
+                <img src="images/fairfax-womens-history-month.png" alt="Fairfax City Women's History Month" loading="lazy">
+                <figcaption>Fairfax City Women's History Month</figcaption>
             </figure>
-            <figure style="margin: 0; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); background: white; display: flex; flex-direction: column; height: 100%;">
-                <img src="images/stacy-mascot-red-shirts.png" alt="With mascot" style="width: 100%; height: 280px; object-fit: cover; display: block; flex-shrink: 0;">
-                <figcaption style="padding: 0.85rem 1rem; font-size: 0.95rem; color: var(--dark-gray, #2d3748); text-align: center; font-weight: 500;">Chocolate Lover's Festival</figcaption>
+            <figure>
+                <img src="images/stacy-mascot-red-shirts.png" alt="Chocolate Lover's Festival" loading="lazy">
+                <figcaption>Chocolate Lover's Festival</figcaption>
             </figure>
         </div>
 
-        <p style="text-align: center; margin-top: 2rem; font-size: 0.9rem; color: var(--red, #c53030);">
-            <i class="fas fa-eye"></i> This gallery is a draft preview only. It has not been pushed to the live site.
-        </p>
+        <button class="carousel-btn next" type="button" aria-label="Next photo" onclick="document.getElementById('communityCarousel').scrollBy({left:320,behavior:'smooth'})"><i class="fas fa-chevron-right"></i></button>
     </div>
 </section>
 
