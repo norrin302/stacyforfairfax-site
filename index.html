@@ -2350,5 +2350,58 @@
             });
         });
     </script>
+
+<style>
+    .draft-gallery-grid {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    @media (min-width: 900px) {
+        .draft-gallery-grid { grid-template-columns: repeat(3, 1fr) !important; }
+    }
+    @media (min-width: 600px) and (max-width: 899px) {
+        .draft-gallery-grid { grid-template-columns: repeat(2, 1fr) !important; }
+    }
+</style>
+
+<!-- DRAFT GALLERY PREVIEW - NOT FINAL -->
+<section class="draft-gallery-section" style="padding: 4rem 1rem; background: var(--cream, #fffaf0);">
+    <div style="max-width: 1200px; margin: 0 auto;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; color: var(--navy, #1a365d); text-align: center; margin-bottom: 0.5rem;">Community Moments</h2>
+        <p style="text-align: center; color: var(--medium-gray, #718096); margin-bottom: 2.5rem; font-size: 1.1rem;">Draft preview — photos from stacyforfairfax.com</p>
+
+        <div class="draft-gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+            <figure style="margin: 0; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); background: white; display: flex; flex-direction: column; height: 100%;">
+                <img src="images/labor-day-car-show.png" alt="Labor Day Car Show" style="width: 100%; height: 280px; object-fit: cover; display: block; flex-shrink: 0;">
+                <figcaption style="padding: 0.85rem 1rem; font-size: 0.95rem; color: var(--dark-gray, #2d3748); text-align: center; font-weight: 500;">Labor Day Car Show</figcaption>
+            </figure>
+            <figure style="margin: 0; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); background: white; display: flex; flex-direction: column; height: 100%;">
+                <img src="images/stacy-with-dara.jpg" alt="Fairfax City Holiday Market" style="width: 100%; height: 280px; object-fit: cover; display: block; flex-shrink: 0;">
+                <figcaption style="padding: 0.85rem 1rem; font-size: 0.95rem; color: var(--dark-gray, #2d3748); text-align: center; font-weight: 500;">Fairfax City Holiday Market</figcaption>
+            </figure>
+            <figure style="margin: 0; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); background: white; display: flex; flex-direction: column; height: 100%;">
+                <img src="images/stacy-group-mural.png" alt="Group at mural" style="width: 100%; height: 280px; object-fit: cover; display: block; flex-shrink: 0;">
+                <figcaption style="padding: 0.85rem 1rem; font-size: 0.95rem; color: var(--dark-gray, #2d3748); text-align: center; font-weight: 500;">Celebrating Fairfax City Pride</figcaption>
+            </figure>
+            <figure style="margin: 0; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); background: white; display: flex; flex-direction: column; height: 100%;">
+                <img src="images/stacy-friends-green-shirts.png" alt="Friends in green shirts" style="width: 100%; height: 280px; object-fit: cover; display: block; flex-shrink: 0;">
+                <figcaption style="padding: 0.85rem 1rem; font-size: 0.95rem; color: var(--dark-gray, #2d3748); text-align: center; font-weight: 500;">George Mason University Homecoming City Crawl</figcaption>
+            </figure>
+            <figure style="margin: 0; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); background: white; display: flex; flex-direction: column; height: 100%;">
+                <img src="images/fairfax-womens-history-month.png" alt="Women's History Month" style="width: 100%; height: 280px; object-fit: cover; display: block; flex-shrink: 0;">
+                <figcaption style="padding: 0.85rem 1rem; font-size: 0.95rem; color: var(--dark-gray, #2d3748); text-align: center; font-weight: 500;">Fairfax City Women's History Month</figcaption>
+            </figure>
+            <figure style="margin: 0; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); background: white; display: flex; flex-direction: column; height: 100%;">
+                <img src="images/stacy-mascot-red-shirts.png" alt="With mascot" style="width: 100%; height: 280px; object-fit: cover; display: block; flex-shrink: 0;">
+                <figcaption style="padding: 0.85rem 1rem; font-size: 0.95rem; color: var(--dark-gray, #2d3748); text-align: center; font-weight: 500;">Chocolate Lover's Festival</figcaption>
+            </figure>
+        </div>
+
+        <p style="text-align: center; margin-top: 2rem; font-size: 0.9rem; color: var(--red, #c53030);">
+            <i class="fas fa-eye"></i> This gallery is a draft preview only. It has not been pushed to the live site.
+        </p>
+    </div>
+</section>
+
 </body>
 </html>
