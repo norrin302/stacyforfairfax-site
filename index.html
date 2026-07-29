@@ -769,7 +769,13 @@
         }
 
         .rumor-item-wide {
-            grid-column: 1 / -1;
+            grid-column: span 2;
+        }
+
+        @media (max-width: 768px) {
+            .rumor-item-wide {
+                grid-column: 1 / -1;
+            }
         }
 
         .rumor-infographic {
