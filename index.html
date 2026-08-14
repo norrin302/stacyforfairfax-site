@@ -1250,7 +1250,7 @@
         
         .events-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
         
@@ -1610,7 +1610,7 @@
             
             .priorities-grid,
             .events-grid {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: 1fr;
             }
             
             .accomplishments-grid {
@@ -2515,16 +2515,56 @@
                 <p class="section-subtitle">Come meet Stacy at upcoming community events! Check back for new appearances.</p>
             </div>
             <div class="events-grid">
-            <div class="event-card fade-in">
-                <div class="event-date">
-                    <span class="day">Fall Festival</span>
-                    <span class="month">Sat, Oct 1 · 10 AM – 5 PM</span>
+                <div class="event-card fade-in">
+                    <div class="event-date">
+                        <span class="day">Rock The Block</span>
+                        <span class="month">Fri, Aug 28 · 6:30 PM</span>
+                    </div>
+                    <div class="event-info">
+                        <p>Come out and rock the block with the campaign!</p>
+                    </div>
                 </div>
-                <div class="event-info">
-                    <p>Join us at the annual Fall Festival! Stop by our booth to say hello.</p>
-                    <p><i class="fas fa-map-marker-alt"></i> <span>Downtown Fairfax</span></p>
+
+                <div class="event-card fade-in">
+                    <div class="event-date">
+                        <span class="day">Fiesta Fairfax</span>
+                        <span class="month">Sat, Sep 3</span>
+                    </div>
+                    <div class="event-info">
+                        <p>Celebrate with the Fairfax community at Fiesta Fairfax.</p>
+                    </div>
                 </div>
-            </div>
+
+                <div class="event-card fade-in">
+                    <div class="event-date">
+                        <span class="day">Country Club Hills Candidate Meet &amp; Greet</span>
+                        <span class="month">Sat, Sep 27 · 5:30 PM</span>
+                    </div>
+                    <div class="event-info">
+                        <p>Meet Stacy and learn about the campaign in Country Club Hills.</p>
+                    </div>
+                </div>
+
+                <div class="event-card fade-in">
+                    <div class="event-date">
+                        <span class="day">Rock The Block</span>
+                        <span class="month">Fri, Oct 23 · 6:30 PM</span>
+                    </div>
+                    <div class="event-info">
+                        <p>Another chance to rock the block and connect with neighbors.</p>
+                    </div>
+                </div>
+
+                <div class="event-card fade-in">
+                    <div class="event-date">
+                        <span class="day">Fall Festival</span>
+                        <span class="month">Sat, Oct 1 · 10 AM – 5 PM</span>
+                    </div>
+                    <div class="event-info">
+                        <p>Join us at the annual Fall Festival! Stop by our booth to say hello.</p>
+                        <p><i class="fas fa-map-marker-alt"></i> <span>Downtown Fairfax</span></p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
